@@ -73,3 +73,15 @@ docker run -p 8080:8080 \
 - 新增功能前先看现有代码结构，保持风格一致
 - SQL写在XML里，不要用注解方式
 - 不要修改 Dockerfile 和 .github/workflows/cicd.yml，除非明确要求
+
+## 常用指令
+- "帮我部署" → 读取并执行 .claude/skills/deploy.md 的流程
+- "帮我测试" → 读取并执行 .claude/skills/test.md 的流程
+- "查看日志" → 去CloudWatch查 /ecs/springboot-ecs-demo 日志组
+- "新增CRUD" → 读取并执行 .claude/skills/crud.md 的流程
+- "帮我review" → 读取并执行 .claude/skills/review.md 的流程
+- "帮我debug" → 读取并执行 .claude/skills/debug.md 的流程
+
+## Skills说明
+所有skill文件在 .claude/skills/ 目录下
+执行任何指令前先读取对应的skill文件

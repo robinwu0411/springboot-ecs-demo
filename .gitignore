@@ -22,6 +22,7 @@ aws-credentials
 
 # MCP配置（里面有数据库密码和AWS Key）
 .claude/
+.mcp.json
 
 # ================================
 # Maven构建产物
