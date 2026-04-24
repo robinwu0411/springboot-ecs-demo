@@ -8,11 +8,11 @@ on:
 
 env:
   AWS_REGION: ap-northeast-1
-  ECR_REPOSITORY: demo                  # ⚠️ 你的ECR仓库名
-  ECS_CLUSTER: springboot-cluster       # ⚠️ 你的ECS集群名
-  ECS_SERVICE: springboot-service       # ⚠️ 你的ECS服务名
-  ECS_TASK_DEFINITION: springboot-task  # ⚠️ 你的Task Definition名
-  CONTAINER_NAME: springboot-ecs-demo   # ⚠️ 你的容器名
+  ECR_REPOSITORY: demo                            # ⚠️ 你的ECR仓库名
+  ECS_CLUSTER: springboot-demo-cluster-0411       # ⚠️ 你的ECS集群名
+  ECS_SERVICE: springboot-task-service-a9l5598u   # ⚠️ 你的ECS服务名
+  ECS_TASK_DEFINITION: springboot-task            # ⚠️ 你的Task Definition名
+  CONTAINER_NAME: springboot-ecs-demo             # ⚠️ 你的容器名
 
 jobs:
   # ─── Job1: 构建测试 ───────────────────────────────────
