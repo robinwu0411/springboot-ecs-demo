@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.crud.mapper.MetricMonthlyDataMapper">
+
+    <select id="findByMetricAndYear" resultType="MetricMonthlyData">
+        SELECT id, metric_id, `year`, `month`, actual, jbp_goal
+        FROM metric_monthly_data
+        WHERE metric_id = #{metricId} AND `year` = #{year}
+        ORDER BY `month`
+    </select>
+
+    <select id="findByMetricYearMonth" resultType="MetricMonthlyData">
+        SELECT id, metric_id, `year`, `month`, actual, jbp_goal
+        FROM metric_monthly_data
+        WHERE metric_id = #{metricId} AND `year` = #{year} AND `month` = #{month}
+    </select>
+
+    <select id="findLatestMonth" resultType="java.lang.Integer">
+        SELECT MAX(`month`)
+        FROM metric_monthly_data
+        WHERE `year` = #{year}
+    </select>
+
+</mapper>

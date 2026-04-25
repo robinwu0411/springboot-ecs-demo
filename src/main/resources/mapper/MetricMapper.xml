@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.crud.mapper.MetricMapper">
+
+    <select id="findAll" resultType="Metric">
+        SELECT id, metric_key, metric_name, metric_type, sort_order, bad_direction
+        FROM metrics
+        ORDER BY sort_order
+    </select>
+
+    <select id="findById" resultType="Metric">
+        SELECT id, metric_key, metric_name, metric_type, sort_order, bad_direction
+        FROM metrics
+        WHERE id = #{id}
+    </select>
+
+</mapper>

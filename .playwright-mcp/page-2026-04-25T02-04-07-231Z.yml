@@ -1,0 +1,205 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "CloudWatch Logs" [level=1] [ref=e3]
+    - generic [ref=e4]: ap-northeast-1
+    - generic [ref=e5]: /ecs/springboot-ecs-demo
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: 日志组
+      - generic [ref=e9]: /ecs/springboot-ecs-demo
+    - generic [ref=e10]:
+      - generic [ref=e11]: 创建用户数
+      - generic [ref=e12]: "10"
+    - generic [ref=e13]:
+      - generic [ref=e14]: 扫描记录数
+      - generic [ref=e15]: "870"
+    - generic [ref=e16]:
+      - generic [ref=e17]: 查询时间范围
+      - generic [ref=e18]: 2026-04-24
+  - generic [ref=e19]: 成功创建的用户记录（INFO 日志）
+  - table [ref=e21]:
+    - rowgroup [ref=e22]:
+      - row "# 时间戳 (UTC) 用户 ID 用户名 邮箱 手机号 状态" [ref=e23]:
+        - columnheader "#" [ref=e24]
+        - columnheader "时间戳 (UTC)" [ref=e25]
+        - columnheader "用户 ID" [ref=e26]
+        - columnheader "用户名" [ref=e27]
+        - columnheader "邮箱" [ref=e28]
+        - columnheader "手机号" [ref=e29]
+        - columnheader "状态" [ref=e30]
+    - rowgroup [ref=e31]:
+      - row "1 2026-04-24 20:21:56 4 用户001 user001@example.com 13800000001 成功" [ref=e32]:
+        - cell "1" [ref=e33]
+        - cell "2026-04-24 20:21:56" [ref=e34]
+        - cell "4" [ref=e35]
+        - cell "用户001" [ref=e36]
+        - cell "user001@example.com" [ref=e37]
+        - cell "13800000001" [ref=e38]
+        - cell "成功" [ref=e39]:
+          - generic [ref=e40]: 成功
+      - row "2 2026-04-24 20:22:06 5 用户002 user002@example.com 13800000002 成功" [ref=e42]:
+        - cell "2" [ref=e43]
+        - cell "2026-04-24 20:22:06" [ref=e44]
+        - cell "5" [ref=e45]
+        - cell "用户002" [ref=e46]
+        - cell "user002@example.com" [ref=e47]
+        - cell "13800000002" [ref=e48]
+        - cell "成功" [ref=e49]:
+          - generic [ref=e50]: 成功
+      - row "3 2026-04-24 20:22:22 6 用户003 user003@example.com 13800000003 成功" [ref=e52]:
+        - cell "3" [ref=e53]
+        - cell "2026-04-24 20:22:22" [ref=e54]
+        - cell "6" [ref=e55]
+        - cell "用户003" [ref=e56]
+        - cell "user003@example.com" [ref=e57]
+        - cell "13800000003" [ref=e58]
+        - cell "成功" [ref=e59]:
+          - generic [ref=e60]: 成功
+      - row "4 2026-04-24 20:22:29 7 用户004 user004@example.com 13800000004 成功" [ref=e62]:
+        - cell "4" [ref=e63]
+        - cell "2026-04-24 20:22:29" [ref=e64]
+        - cell "7" [ref=e65]
+        - cell "用户004" [ref=e66]
+        - cell "user004@example.com" [ref=e67]
+        - cell "13800000004" [ref=e68]
+        - cell "成功" [ref=e69]:
+          - generic [ref=e70]: 成功
+      - row "5 2026-04-24 20:22:35 8 用户005 user005@example.com 13800000005 成功" [ref=e72]:
+        - cell "5" [ref=e73]
+        - cell "2026-04-24 20:22:35" [ref=e74]
+        - cell "8" [ref=e75]
+        - cell "用户005" [ref=e76]
+        - cell "user005@example.com" [ref=e77]
+        - cell "13800000005" [ref=e78]
+        - cell "成功" [ref=e79]:
+          - generic [ref=e80]: 成功
+      - row "6 2026-04-24 20:22:43 9 用户006 user006@example.com 13800000006 成功" [ref=e82]:
+        - cell "6" [ref=e83]
+        - cell "2026-04-24 20:22:43" [ref=e84]
+        - cell "9" [ref=e85]
+        - cell "用户006" [ref=e86]
+        - cell "user006@example.com" [ref=e87]
+        - cell "13800000006" [ref=e88]
+        - cell "成功" [ref=e89]:
+          - generic [ref=e90]: 成功
+      - row "7 2026-04-24 20:22:49 10 用户007 user007@example.com 13800000007 成功" [ref=e92]:
+        - cell "7" [ref=e93]
+        - cell "2026-04-24 20:22:49" [ref=e94]
+        - cell "10" [ref=e95]
+        - cell "用户007" [ref=e96]
+        - cell "user007@example.com" [ref=e97]
+        - cell "13800000007" [ref=e98]
+        - cell "成功" [ref=e99]:
+          - generic [ref=e100]: 成功
+      - row "8 2026-04-24 20:22:56 11 用户008 user008@example.com 13800000008 成功" [ref=e102]:
+        - cell "8" [ref=e103]
+        - cell "2026-04-24 20:22:56" [ref=e104]
+        - cell "11" [ref=e105]
+        - cell "用户008" [ref=e106]
+        - cell "user008@example.com" [ref=e107]
+        - cell "13800000008" [ref=e108]
+        - cell "成功" [ref=e109]:
+          - generic [ref=e110]: 成功
+      - row "9 2026-04-24 20:23:04 12 用户009 user009@example.com 13800000009 成功" [ref=e112]:
+        - cell "9" [ref=e113]
+        - cell "2026-04-24 20:23:04" [ref=e114]
+        - cell "12" [ref=e115]
+        - cell "用户009" [ref=e116]
+        - cell "user009@example.com" [ref=e117]
+        - cell "13800000009" [ref=e118]
+        - cell "成功" [ref=e119]:
+          - generic [ref=e120]: 成功
+      - row "10 2026-04-24 20:23:12 13 用户010 user010@example.com 13800000010 成功" [ref=e122]:
+        - cell "10" [ref=e123]
+        - cell "2026-04-24 20:23:12" [ref=e124]
+        - cell "13" [ref=e125]
+        - cell "用户010" [ref=e126]
+        - cell "user010@example.com" [ref=e127]
+        - cell "13800000010" [ref=e128]
+        - cell "成功" [ref=e129]:
+          - generic [ref=e130]: 成功
+  - generic [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]: 原始 CloudWatch 日志（INFO 级别 · 新增用户成功）
+      - generic [ref=e135]: 共 10 条
+    - generic [ref=e136]:
+      - generic [ref=e137]: 2026-04-24T20:21:56Z
+      - generic [ref=e138]: INFO
+      - generic [ref=e139]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e140]: id=4
+        - text: ","
+        - emphasis [ref=e141]: username=用户001
+    - generic [ref=e142]:
+      - generic [ref=e143]: 2026-04-24T20:22:06Z
+      - generic [ref=e144]: INFO
+      - generic [ref=e145]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e146]: id=5
+        - text: ","
+        - emphasis [ref=e147]: username=用户002
+    - generic [ref=e148]:
+      - generic [ref=e149]: 2026-04-24T20:22:22Z
+      - generic [ref=e150]: INFO
+      - generic [ref=e151]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e152]: id=6
+        - text: ","
+        - emphasis [ref=e153]: username=用户003
+    - generic [ref=e154]:
+      - generic [ref=e155]: 2026-04-24T20:22:29Z
+      - generic [ref=e156]: INFO
+      - generic [ref=e157]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e158]: id=7
+        - text: ","
+        - emphasis [ref=e159]: username=用户004
+    - generic [ref=e160]:
+      - generic [ref=e161]: 2026-04-24T20:22:35Z
+      - generic [ref=e162]: INFO
+      - generic [ref=e163]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e164]: id=8
+        - text: ","
+        - emphasis [ref=e165]: username=用户005
+    - generic [ref=e166]:
+      - generic [ref=e167]: 2026-04-24T20:22:43Z
+      - generic [ref=e168]: INFO
+      - generic [ref=e169]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e170]: id=9
+        - text: ","
+        - emphasis [ref=e171]: username=用户006
+    - generic [ref=e172]:
+      - generic [ref=e173]: 2026-04-24T20:22:49Z
+      - generic [ref=e174]: INFO
+      - generic [ref=e175]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e176]: id=10
+        - text: ","
+        - emphasis [ref=e177]: username=用户007
+    - generic [ref=e178]:
+      - generic [ref=e179]: 2026-04-24T20:22:56Z
+      - generic [ref=e180]: INFO
+      - generic [ref=e181]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e182]: id=11
+        - text: ","
+        - emphasis [ref=e183]: username=用户008
+    - generic [ref=e184]:
+      - generic [ref=e185]: 2026-04-24T20:23:04Z
+      - generic [ref=e186]: INFO
+      - generic [ref=e187]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e188]: id=12
+        - text: ","
+        - emphasis [ref=e189]: username=用户009
+    - generic [ref=e190]:
+      - generic [ref=e191]: 2026-04-24T20:23:12Z
+      - generic [ref=e192]: INFO
+      - generic [ref=e193]:
+        - text: com.demo.crud.service.UserService — 新增用户成功，
+        - emphasis [ref=e194]: id=13
+        - text: ","
+        - emphasis [ref=e195]: username=用户010
+  - generic [ref=e196]: "Log Group: /ecs/springboot-ecs-demo · Region: ap-northeast-1 · Scanned 870 records · Query time: 2026-04-24 20:21–20:23 UTC"

@@ -1,0 +1,492 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e7]:
+      - 'img "账户颜色: 取消设置" [ref=e8]'
+      - navigation "全球" [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "AWS 控制台主页" [ref=e12] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e13] [cursor=pointer]:
+              - /url: "#c"
+            - button "Amazon Q" [ref=e16] [cursor=pointer]:
+              - img [ref=e20]
+            - button "服务" [ref=e26] [cursor=pointer]:
+              - img [ref=e27]
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - img "搜索" [ref=e42]:
+                - generic [ref=e43]:
+                  - img
+              - generic [ref=e44]:
+                - searchbox
+                - combobox "搜索" [ref=e45]
+              - button "询问 Amazon Q" [ref=e46]:
+                - img "询问 Amazon Q" [ref=e47]
+              - generic: "[选项+S]"
+            - status [ref=e49]
+          - generic [ref=e50]:
+            - link "CloudShell" [ref=e52] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e53] [cursor=pointer]:
+              - button "通知（无可用通知）" [ref=e57]:
+                - generic [ref=e58]:
+                  - img
+              - generic [ref=e60]:
+                - img
+            - list [ref=e63]:
+              - listitem [ref=e64]:
+                - button "帮助和支持" [ref=e66] [cursor=pointer]:
+                  - img "支持" [ref=e68]
+              - listitem [ref=e71]:
+                - button "设置" [ref=e73] [cursor=pointer]:
+                  - generic [ref=e76]:
+                    - img
+              - listitem [ref=e77]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e79] [cursor=pointer]:
+                  - generic [ref=e81]: 亚太地区 (东京)
+                  - generic [ref=e82]:
+                    - img
+              - listitem [ref=e83]:
+                - button "robinwu3293" [ref=e85] [cursor=pointer]:
+                  - generic [ref=e89]:
+                    - 'generic "账户颜色: 取消设置" [ref=e91]':
+                      - generic [ref=e92]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e93]:
+                        - img
+                    - generic [ref=e95]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e104]:
+    - generic [ref=e106]:
+      - button "打开侧面导航" [expanded] [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - img
+      - navigation "页面导览痕迹" [ref=e112]:
+        - list [ref=e113]:
+          - listitem [ref=e114]:
+            - generic [ref=e115]:
+              - link "Amazon Elastic Container Service" [ref=e116] [cursor=pointer]:
+                - /url: /ecs/v2/home?region=ap-northeast-1
+                - generic [ref=e117]: Amazon Elastic Container Service
+              - generic [ref=e119]:
+                - img
+          - listitem [ref=e120]:
+            - generic [ref=e121]:
+              - link "集群" [ref=e122] [cursor=pointer]:
+                - /url: /ecs/v2/clusters?region=ap-northeast-1
+                - generic [ref=e123]: 集群
+              - generic [ref=e125]:
+                - img
+          - listitem [ref=e126]:
+            - generic [ref=e127]:
+              - link "springboot-demo-cluster-0411" [ref=e128] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411?region=ap-northeast-1
+                - generic [ref=e129]: springboot-demo-cluster-0411
+              - generic [ref=e131]:
+                - img
+          - listitem [ref=e132]:
+            - link "服务" [disabled] [ref=e134]:
+              - generic [ref=e135]: 服务
+        - list [ref=e136]:
+          - listitem [ref=e137]:
+            - generic [ref=e138]:
+              - link [ref=e139] [cursor=pointer]:
+                - /url: /ecs/v2/home?region=ap-northeast-1
+                - generic [ref=e140]: Amazon Elastic Container Service
+              - generic [ref=e142]:
+                - img
+          - listitem [ref=e143]:
+            - generic [ref=e144]:
+              - link [ref=e145] [cursor=pointer]:
+                - /url: /ecs/v2/clusters?region=ap-northeast-1
+                - generic [ref=e146]: 集群
+              - generic [ref=e148]:
+                - img
+          - listitem [ref=e149]:
+            - generic [ref=e150]:
+              - link [ref=e151] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411?region=ap-northeast-1
+                - generic [ref=e152]: springboot-demo-cluster-0411
+              - generic [ref=e154]:
+                - img
+          - listitem [ref=e155]:
+            - generic [ref=e158]: 服务
+      - region "抽屉" [ref=e160]:
+        - toolbar "抽屉" [ref=e161]:
+          - button "打开帮助面板" [ref=e163] [cursor=pointer]:
+            - generic [ref=e164]:
+              - img
+    - navigation "侧面导航" [ref=e167]:
+      - button "关闭侧面导航" [ref=e169] [cursor=pointer]:
+        - generic [ref=e170]:
+          - img
+      - generic [ref=e171]:
+        - heading "Amazon Elastic Container Service" [level=2] [ref=e172]:
+          - link "Amazon Elastic Container Service" [ref=e173] [cursor=pointer]:
+            - /url: /ecs/v2/getStarted?region=ap-northeast-1
+            - generic [ref=e174]: Amazon Elastic Container Service
+        - generic [ref=e175]:
+          - list [ref=e176]:
+            - listitem [ref=e177]:
+              - link "Express Mode" [ref=e178] [cursor=pointer]:
+                - /url: /ecs/v2/express-mode?region=ap-northeast-1
+            - listitem [ref=e179]:
+              - link "集群" [ref=e180] [cursor=pointer]:
+                - /url: /ecs/v2/clusters?region=ap-northeast-1
+            - listitem [ref=e181]:
+              - link "命名空间" [ref=e182] [cursor=pointer]:
+                - /url: /ecs/v2/namespaces?region=ap-northeast-1
+            - listitem [ref=e183]:
+              - link "任务定义" [ref=e184] [cursor=pointer]:
+                - /url: /ecs/v2/task-definitions?region=ap-northeast-1
+            - listitem [ref=e185]:
+              - link "进程守护程序任务定义" [ref=e186] [cursor=pointer]:
+                - /url: /ecs/v2/daemon-task-definitions?region=ap-northeast-1
+              - button "显示守护程序任务定义功能信息" [ref=e190] [cursor=pointer]:
+                - generic [ref=e191]: 新版
+            - listitem [ref=e192]:
+              - link "账户设置" [ref=e193] [cursor=pointer]:
+                - /url: /ecs/v2/account-settings?region=ap-northeast-1
+          - separator [ref=e196]
+          - list [ref=e197]:
+            - listitem [ref=e198]:
+              - link "AWS Batch在新选项卡中打开" [ref=e199] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/batch/home?region=ap-northeast-1#firstRun
+                - text: AWS Batch
+                - img "在新选项卡中打开" [ref=e200]:
+                  - generic [ref=e201]:
+                    - img
+            - listitem [ref=e202]:
+              - link "Amazon ECR在新选项卡中打开" [ref=e203] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/ecr/get-started?region=ap-northeast-1
+                - text: Amazon ECR
+                - img "在新选项卡中打开" [ref=e204]:
+                  - generic [ref=e205]:
+                    - img
+            - listitem [ref=e206]:
+              - link "存储库在新选项卡中打开" [ref=e207] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/ecr/private-registry/repositories?region=ap-northeast-1
+                - text: 存储库
+                - img "在新选项卡中打开" [ref=e208]:
+                  - generic [ref=e209]:
+                    - img
+          - separator [ref=e212]
+          - list [ref=e213]:
+            - listitem [ref=e214]:
+              - link "在线学习讲习会在新选项卡中打开" [ref=e215] [cursor=pointer]:
+                - /url: https://aws-experience.com/amer/smb/events/series/Get-Hands-On-With-ECS?trk=c8aa33b9-c526-4d27-8a36-63de1c23c18d&sc_channel=el
+                - text: 在线学习讲习会
+                - img "在新选项卡中打开" [ref=e216]:
+                  - generic [ref=e217]:
+                    - img
+            - listitem [ref=e218]:
+              - link "文档在新选项卡中打开" [ref=e219] [cursor=pointer]:
+                - /url: https://docs.aws.amazon.com/ecs
+                - text: 文档
+                - img "在新选项卡中打开" [ref=e220]:
+                  - generic [ref=e221]:
+                    - img
+            - listitem [ref=e222]:
+              - link "发现产品在新选项卡中打开" [ref=e223] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/marketplace/home?region=ap-northeast-1#/search!mpSearch/search?filter%3AFULFILLMENT_OPTION_TYPE=CONTAINER&filter%3ACONTAINER_SUPPORTED_SERVICE=ECS&filter%3AREGION=ap-northeast-1
+                - text: 发现产品
+                - img "在新选项卡中打开" [ref=e224]:
+                  - generic [ref=e225]:
+                    - img
+            - listitem [ref=e226]:
+              - link "订阅在新选项卡中打开" [ref=e227] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/marketplace/home?region=ap-northeast-1#/subscriptions
+                - text: 订阅
+                - img "在新选项卡中打开" [ref=e228]:
+                  - generic [ref=e229]:
+                    - img
+      - button "告诉我们您的想法" [ref=e231]
+    - main [ref=e232]:
+      - generic:
+        - region "Amazon ECS 通知":
+          - generic:
+            - list "通知"
+      - generic [ref=e235]:
+        - generic [ref=e239]:
+          - heading "springboot-demo-cluster-0411" [level=1] [ref=e241]:
+            - generic [ref=e242]: springboot-demo-cluster-0411
+          - generic [ref=e244]:
+            - generic [ref=e246]:
+              - paragraph [ref=e249]:
+                - text: 上次更新时间
+                - time [ref=e250]: 2026年4月25日 10:08 (UTC+8:00)
+              - button "刷新集群详细信息" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]:
+                  - img
+            - button "集群操作" [ref=e260] [cursor=pointer]:
+              - text: 操作
+              - generic [ref=e261]:
+                - img
+            - group [ref=e266]:
+              - button "使用 Express Mode 创建" [ref=e268] [cursor=pointer]
+              - button [ref=e270] [cursor=pointer]:
+                - generic [ref=e271]:
+                  - img
+        - generic [ref=e273]:
+          - generic [ref=e276]:
+            - heading "集群概述" [level=2] [ref=e281]
+            - generic [ref=e284]:
+              - generic [ref=e288]:
+                - generic [ref=e289]:
+                  - term [ref=e290]:
+                    - generic [ref=e291]: ARN
+                  - definition [ref=e292]:
+                    - generic [ref=e296]:
+                      - button "复制集群 springboot-demo-cluster-0411 的 ARN" [ref=e300] [cursor=pointer]:
+                        - generic [ref=e301]:
+                          - img
+                      - text: arn:aws:ecs:ap-northeast-1:463470966392:cluster/springboot-demo-cluster-0411
+                - generic [ref=e302]:
+                  - term [ref=e303]:
+                    - generic [ref=e304]: 状态
+                  - definition [ref=e305]:
+                    - generic [ref=e307]:
+                      - generic [ref=e309]:
+                        - img
+                      - text: 活动
+                - generic [ref=e310]:
+                  - term [ref=e311]:
+                    - generic [ref=e312]: CloudWatch 监控
+                  - definition [ref=e313]:
+                    - generic [ref=e315]:
+                      - generic [ref=e317]:
+                        - img
+                      - text: 默认
+                - generic [ref=e318]:
+                  - term [ref=e319]:
+                    - generic [ref=e320]: 已注册的容器实例
+                  - definition [ref=e321]: "-"
+              - generic [ref=e323]:
+                - generic:
+                  - generic [ref=e325]:
+                    - heading "服务" [level=3] [ref=e330]
+                    - generic "集群服务" [ref=e334]:
+                      - generic [ref=e336]:
+                        - generic [ref=e337]:
+                          - term [ref=e338]:
+                            - generic [ref=e339]: 正在耗尽
+                          - definition [ref=e340]: "-"
+                        - generic [ref=e341]:
+                          - term [ref=e342]:
+                            - generic [ref=e343]: 活动
+                          - definition [ref=e344]: "1"
+                  - generic [ref=e346]:
+                    - heading "任务" [level=3] [ref=e351]
+                    - generic "集群任务" [ref=e355]:
+                      - generic [ref=e357]:
+                        - generic [ref=e358]:
+                          - term [ref=e359]:
+                            - generic [ref=e360]: 待处理
+                          - definition [ref=e361]: "-"
+                        - generic [ref=e362]:
+                          - term [ref=e363]:
+                            - generic [ref=e364]: 正在运行
+                          - definition [ref=e365]: "1"
+          - generic [ref=e367]:
+            - generic [ref=e369]:
+              - button "向左滚动" [disabled] [ref=e371]:
+                - generic [ref=e372]:
+                  - img
+              - tablist [ref=e373]:
+                - tab "服务" [selected] [ref=e375] [cursor=pointer]:
+                  - generic [ref=e377]: 服务
+                - tab "进程守护程序 新版" [ref=e379] [cursor=pointer]:
+                  - generic [ref=e382]:
+                    - generic [ref=e383]: 进程守护程序
+                    - generic [ref=e385]: 新版
+                - tab "任务" [ref=e387] [cursor=pointer]:
+                  - generic [ref=e389]: 任务
+                - tab "基础设施" [ref=e391] [cursor=pointer]:
+                  - generic [ref=e393]: 基础设施
+                - tab "指标" [ref=e395] [cursor=pointer]:
+                  - generic [ref=e397]: 指标
+                - tab "已计划的任务" [ref=e399] [cursor=pointer]:
+                  - generic [ref=e401]: 已计划的任务
+                - tab "配置" [ref=e403] [cursor=pointer]:
+                  - generic [ref=e405]: 配置
+                - tab "事件历史记录" [ref=e407] [cursor=pointer]:
+                  - generic [ref=e409]: 事件历史记录
+                - tab "标签" [ref=e411] [cursor=pointer]:
+                  - generic [ref=e413]: 标签
+              - button "向右滚动" [ref=e415] [cursor=pointer]:
+                - generic [ref=e416]:
+                  - img
+            - tabpanel "服务" [ref=e418]:
+              - generic [ref=e420]:
+                - generic [ref=e423]:
+                  - generic [ref=e425]:
+                    - generic [ref=e426]:
+                      - heading "服务 (0)" [level=2] [ref=e427]:
+                        - text: 服务
+                        - generic [ref=e428]: (0)
+                      - button "信息 服务" [ref=e431]: 信息
+                    - generic [ref=e433]:
+                      - generic [ref=e435]:
+                        - paragraph [ref=e438]:
+                          - text: 上次更新时间
+                          - time [ref=e439]: 2026年4月25日 10:08 (UTC+8:00)
+                        - button "刷新服务" [disabled] [ref=e442]
+                      - button "管理标签" [disabled] [ref=e447]
+                      - group "服务操作" [ref=e452]:
+                        - button "更新" [disabled] [ref=e454]
+                        - button "服务操作" [disabled] [ref=e456]:
+                          - generic [ref=e457]:
+                            - img
+                      - button "删除服务" [disabled] [ref=e459]
+                      - group "创建服务操作" [ref=e464]:
+                        - button "创建" [ref=e466] [cursor=pointer]
+                        - button "创建服务操作" [ref=e468] [cursor=pointer]:
+                          - generic [ref=e469]:
+                            - img
+                  - generic [ref=e470]:
+                    - generic [ref=e472]:
+                      - generic [ref=e477]:
+                        - generic:
+                          - generic:
+                            - img
+                        - searchbox "按值筛选服务" [disabled] [ref=e478]
+                      - generic [ref=e483]:
+                        - generic [ref=e484]: 筛选启动类型
+                        - button "筛选启动类型 任何启动类型" [ref=e486]:
+                          - generic [ref=e487]: 任何启动类型
+                          - generic [ref=e489]:
+                            - img
+                      - generic [ref=e494]:
+                        - generic [ref=e495]: 筛选调度策略
+                        - button "筛选调度策略 任何调度策略" [ref=e497]:
+                          - generic [ref=e498]: 任何调度策略
+                          - generic [ref=e500]:
+                            - img
+                      - generic [ref=e505]:
+                        - generic [ref=e506]: 筛选资源管理类型
+                        - button "筛选资源管理类型 任何资源管理类型" [ref=e508]:
+                          - generic [ref=e509]: 任何资源管理类型
+                          - generic [ref=e511]:
+                            - img
+                    - generic [ref=e512]:
+                      - list [ref=e514]:
+                        - listitem [ref=e515]:
+                          - button "上一页" [disabled] [ref=e516]:
+                            - generic [ref=e517]:
+                              - img
+                        - listitem [ref=e518]:
+                          - button "第 1 页" [disabled] [ref=e519]: "1"
+                        - listitem [ref=e520]:
+                          - button "下一页" [disabled] [ref=e521]:
+                            - generic [ref=e522]:
+                              - img
+                      - button "首选项" [ref=e526] [cursor=pointer]:
+                        - generic [ref=e527]:
+                          - img
+                - region "服务" [ref=e530]:
+                  - table "服务" [ref=e531]:
+                    - rowgroup [ref=e532]:
+                      - row "0 services 已选择 服务名称 ARN 状态 调度策略 启动类型 任务定义 部署和任务 上次部署 创建时间" [ref=e533]:
+                        - columnheader "0 services 已选择" [ref=e534]:
+                          - generic "0 services 已选择" [ref=e535]:
+                            - generic [ref=e538]:
+                              - img [ref=e539]
+                              - checkbox "0 services 已选择" [disabled] [ref=e541]
+                        - columnheader "服务名称" [ref=e542]:
+                          - button "服务名称" [ref=e543] [cursor=pointer]:
+                            - generic [ref=e544]: 服务名称
+                            - generic [ref=e546]:
+                              - img
+                          - generic [ref=e550]:
+                            - button "服务名称" [ref=e551]
+                            - slider
+                        - columnheader "ARN" [ref=e552]:
+                          - generic [ref=e554]: ARN
+                          - generic [ref=e558]:
+                            - button "ARN" [ref=e559]
+                            - slider
+                        - columnheader "状态" [ref=e560]:
+                          - button "状态" [ref=e561] [cursor=pointer]:
+                            - generic [ref=e562]: 状态
+                            - generic [ref=e564]:
+                              - img
+                          - generic [ref=e568]:
+                            - button "状态" [ref=e569]
+                            - slider
+                        - columnheader "调度策略" [ref=e570]:
+                          - button "调度策略" [ref=e571] [cursor=pointer]:
+                            - generic [ref=e572]: 调度策略
+                            - generic [ref=e574]:
+                              - img
+                          - generic [ref=e578]:
+                            - button "调度策略" [ref=e579]
+                            - slider
+                        - columnheader "启动类型" [ref=e580]:
+                          - button "启动类型" [ref=e581] [cursor=pointer]:
+                            - generic [ref=e582]: 启动类型
+                            - generic [ref=e584]:
+                              - img
+                          - generic [ref=e588]:
+                            - button "启动类型" [ref=e589]
+                            - slider
+                        - columnheader "任务定义" [ref=e590]:
+                          - button "任务定义" [ref=e591] [cursor=pointer]:
+                            - generic [ref=e592]: 任务定义
+                            - generic [ref=e594]:
+                              - img
+                          - generic [ref=e598]:
+                            - button "任务定义" [ref=e599]
+                            - slider
+                        - columnheader "部署和任务" [ref=e600]:
+                          - button "部署和任务" [ref=e601] [cursor=pointer]:
+                            - generic [ref=e602]: 部署和任务
+                            - generic [ref=e604]:
+                              - img
+                          - generic [ref=e608]:
+                            - button "部署和任务" [ref=e609]
+                            - slider
+                        - columnheader "上次部署" [ref=e610]:
+                          - button "上次部署" [ref=e611] [cursor=pointer]:
+                            - generic [ref=e612]: 上次部署
+                            - generic [ref=e614]:
+                              - img
+                          - generic [ref=e618]:
+                            - button "上次部署" [ref=e619]
+                            - slider
+                        - columnheader "创建时间" [ref=e620]:
+                          - button "创建时间" [ref=e621] [cursor=pointer]:
+                            - generic [ref=e622]: 创建时间
+                            - generic [ref=e624]:
+                              - img
+                          - generic [ref=e628]:
+                            - button "创建时间" [ref=e629]
+                            - slider
+                    - rowgroup [ref=e630]:
+                      - row "正在加载" [ref=e631]:
+                        - cell "正在加载" [ref=e632]:
+                          - generic [ref=e635]: 正在加载
+  - contentinfo [ref=e643]:
+    - generic [ref=e647]:
+      - generic [ref=e648]:
+        - button "CloudShell" [ref=e650] [cursor=pointer]:
+          - generic [ref=e651]:
+            - img
+          - generic [ref=e652]: CloudShell
+        - button "反馈" [ref=e653] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e655] [cursor=pointer]:
+          - img [ref=e657]
+          - generic [ref=e660]: 控制台移动应用程序
+      - generic [ref=e662]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e664]:
+        - listitem [ref=e665]:
+          - link "隐私" [ref=e666] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e667]:
+          - link "条款" [ref=e668] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e669]:
+          - button "Cookie 首选项" [ref=e670] [cursor=pointer]

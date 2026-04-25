@@ -1,0 +1,1 @@
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dhttp.proxyHost= -Dhttps.proxyHost= -DsocksProxyHost= -Djava.net.useSystemProxies=false"

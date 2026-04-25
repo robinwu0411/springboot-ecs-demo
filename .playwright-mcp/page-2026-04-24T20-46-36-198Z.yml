@@ -1,0 +1,597 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e14]:
+      - 'img "账户颜色: 取消设置" [ref=e15]'
+      - navigation "全球" [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - link "AWS 控制台主页" [ref=e19] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e20] [cursor=pointer]:
+              - /url: "#c"
+            - button "Amazon Q" [ref=e23] [cursor=pointer]:
+              - img [ref=e27]
+            - button "服务" [ref=e33] [cursor=pointer]:
+              - img [ref=e34]
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - img "搜索" [ref=e49]:
+                - generic [ref=e50]:
+                  - img
+              - generic [ref=e51]:
+                - searchbox
+                - combobox "搜索" [ref=e52]
+              - button "询问 Amazon Q" [ref=e53]:
+                - img "询问 Amazon Q" [ref=e54]
+              - generic: "[选项+S]"
+            - status [ref=e56]
+          - generic [ref=e57]:
+            - link "CloudShell" [ref=e59] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e60] [cursor=pointer]:
+              - button "通知（无可用通知）" [ref=e64]:
+                - generic [ref=e65]:
+                  - img
+              - generic [ref=e67]:
+                - img
+            - list [ref=e70]:
+              - listitem [ref=e71]:
+                - button "帮助和支持" [ref=e73] [cursor=pointer]:
+                  - img "支持" [ref=e75]
+              - listitem [ref=e78]:
+                - button "设置" [ref=e80] [cursor=pointer]:
+                  - generic [ref=e83]:
+                    - img
+              - listitem [ref=e84]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e86] [cursor=pointer]:
+                  - generic [ref=e88]: 亚太地区 (东京)
+                  - generic [ref=e89]:
+                    - img
+              - listitem [ref=e90]:
+                - button "robinwu3293" [ref=e92] [cursor=pointer]:
+                  - generic [ref=e96]:
+                    - 'generic "账户颜色: 取消设置" [ref=e98]':
+                      - generic [ref=e99]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e100]:
+                        - img
+                    - generic [ref=e102]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e108]:
+    - generic [ref=e110]:
+      - button "打开侧导航" [expanded] [ref=e112] [cursor=pointer]:
+        - generic [ref=e113]:
+          - img
+      - navigation "痕迹" [ref=e116]:
+        - list [ref=e117]:
+          - listitem [ref=e118]:
+            - generic [ref=e119]:
+              - link "CloudWatch" [ref=e120] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#
+                - generic [ref=e121]: CloudWatch
+              - generic [ref=e123]:
+                - img
+          - listitem [ref=e124]:
+            - generic [ref=e125]:
+              - link "日志管理" [ref=e126] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups
+                - generic [ref=e127]: 日志管理
+              - generic [ref=e129]:
+                - img
+          - listitem [ref=e130]:
+            - link "/ecs/springboot-ecs-demo" [disabled] [ref=e132]:
+              - generic [ref=e133]: /ecs/springboot-ecs-demo
+        - list [ref=e134]:
+          - listitem [ref=e135]:
+            - generic [ref=e136]:
+              - link [ref=e137] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#
+                - generic [ref=e138]: CloudWatch
+              - generic [ref=e140]:
+                - img
+          - listitem [ref=e141]:
+            - generic [ref=e142]:
+              - link [ref=e143] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups
+                - generic [ref=e144]: 日志管理
+              - generic [ref=e146]:
+                - img
+          - listitem [ref=e147]:
+            - generic [ref=e150]: /ecs/springboot-ecs-demo
+      - region "抽屉" [ref=e152]:
+        - toolbar "抽屉" [ref=e153]:
+          - button "打开帮助面板" [ref=e155] [cursor=pointer]:
+            - generic [ref=e156]:
+              - img
+          - button "Console-to-Code" [ref=e159] [cursor=pointer]:
+            - img [ref=e163]
+    - navigation "侧面导航面板" [ref=e171]:
+      - button "关闭导航切换" [ref=e173] [cursor=pointer]:
+        - generic [ref=e174]:
+          - img
+      - generic [ref=e175]:
+        - heading "CloudWatch" [level=2] [ref=e177]:
+          - link "CloudWatch" [ref=e178] [cursor=pointer]:
+            - /url: "#"
+        - button "收藏夹和最近访问" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: 收藏夹和最近访问
+          - generic [ref=e185]:
+            - img
+        - list [ref=e187]:
+          - listitem [ref=e188]:
+            - link "摄取" [ref=e191] [cursor=pointer]:
+              - /url: "#telemetry-config:"
+          - listitem [ref=e192]:
+            - link "控制面板" [ref=e196] [cursor=pointer]:
+              - /url: "#dashboards/"
+          - listitem [ref=e197]:
+            - generic [ref=e198]:
+              - link "警报" [ref=e200] [cursor=pointer]:
+                - /url: "#alarmsV2:"
+              - generic [ref=e203]:
+                - link "处于警报状态的警报数量0" [ref=e205] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'ALARM))~operation~'and))"
+                  - generic [ref=e207]:
+                    - img "处于警报状态的警报数量" [ref=e208]:
+                      - generic [ref=e209]:
+                        - img
+                    - strong [ref=e210]: "0"
+                - link "处于正常状态的警报数量0" [ref=e212] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'OK))~operation~'and))"
+                  - generic [ref=e214]:
+                    - img "处于正常状态的警报数量" [ref=e215]:
+                      - generic [ref=e216]:
+                        - img
+                    - strong [ref=e217]: "0"
+                - link "警报数据不足的警报数量0" [ref=e219] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'INSUFFICIENT_DATA))~operation~'and))"
+                  - generic [ref=e221]:
+                    - img "警报数据不足的警报数量" [ref=e222]:
+                      - generic [ref=e223]:
+                        - img
+                    - strong [ref=e224]: "0"
+          - listitem [ref=e225]:
+            - generic [ref=e228] [cursor=pointer]:
+              - button "AI 操作" [ref=e229]:
+                - generic [ref=e230]:
+                  - img
+              - button "AI 操作" [ref=e231]
+          - listitem [ref=e232]:
+            - generic [ref=e235] [cursor=pointer]:
+              - button "GenAI 可观测性" [ref=e236]:
+                - generic [ref=e237]:
+                  - img
+              - button "GenAI 可观测性" [ref=e238]
+          - listitem [ref=e239]:
+            - generic [ref=e242] [cursor=pointer]:
+              - button "Application Signals（APM）" [ref=e243]:
+                - generic [ref=e244]:
+                  - img
+              - button "Application Signals（APM）" [ref=e245]
+          - listitem [ref=e246]:
+            - generic [ref=e249] [cursor=pointer]:
+              - button "基础设施监控" [ref=e250]:
+                - generic [ref=e251]:
+                  - img
+              - button "基础设施监控" [ref=e252]
+          - listitem [ref=e253]:
+            - generic [ref=e255]:
+              - generic [ref=e256] [cursor=pointer]:
+                - button "日志" [expanded] [ref=e257]:
+                  - generic [ref=e258]:
+                    - img
+                - button "日志" [ref=e259]
+              - group "日志" [ref=e260]:
+                - list [ref=e261]:
+                  - listitem [ref=e262]:
+                    - link "日志管理" [ref=e265] [cursor=pointer]:
+                      - /url: "#logsV2:log-groups"
+                  - listitem [ref=e266]:
+                    - generic [ref=e267]:
+                      - link "日志分析" [ref=e269] [cursor=pointer]:
+                        - /url: "#log-analytics"
+                      - generic [ref=e271]: 预览
+                  - listitem [ref=e272]:
+                    - link "日志异常" [ref=e275] [cursor=pointer]:
+                      - /url: "#logsV2:logs-anomalies"
+                  - listitem [ref=e276]:
+                    - link "Live Tail" [ref=e279] [cursor=pointer]:
+                      - /url: "#logsV2:live-tail"
+                  - listitem [ref=e280]:
+                    - link "Logs Insights" [ref=e283] [cursor=pointer]:
+                      - /url: "#logsV2:logs-insights"
+                  - listitem [ref=e284]:
+                    - link "Contributor Insights" [ref=e287] [cursor=pointer]:
+                      - /url: "#contributor-insights:"
+          - listitem [ref=e288]:
+            - generic [ref=e291] [cursor=pointer]:
+              - button "指标" [ref=e292]:
+                - generic [ref=e293]:
+                  - img
+              - button "指标" [ref=e294]
+          - listitem [ref=e295]:
+            - generic [ref=e298] [cursor=pointer]:
+              - button "网络监控" [ref=e299]:
+                - generic [ref=e300]:
+                  - img
+              - button "网络监控" [ref=e301]
+          - listitem [ref=e302]:
+            - separator [ref=e303]
+          - listitem [ref=e304]:
+            - generic [ref=e307] [cursor=pointer]:
+              - button "设置" [ref=e308]:
+                - generic [ref=e309]:
+                  - img
+              - button "设置" [ref=e310]
+    - main [ref=e311]:
+      - generic:
+        - region:
+          - generic:
+            - list
+      - iframe [ref=e318]:
+        - main [ref=f11e5]:
+          - main [ref=f11e10]:
+            - generic:
+              - region "通知":
+                - generic:
+                  - list "通知"
+            - generic [ref=f11e16]:
+              - generic [ref=f11e19]:
+                - heading "/ecs/springboot-ecs-demo" [level=1] [ref=f11e21]
+                - generic [ref=f11e23]:
+                  - button "操作" [ref=f11e29] [cursor=pointer]:
+                    - text: 操作
+                    - generic [ref=f11e30]:
+                      - img
+                  - link "在 Logs Insights 中查看" [ref=f11e32] [cursor=pointer]:
+                    - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:logs-insights$3FqueryDetail$3D~(end~0~start~-3600~timeType~'RELATIVE~unit~'seconds~editorString~'~queryId~'~source~(~'*2fecs*2fspringboot-ecs-demo)~logClass~'STANDARD)
+                  - button "开始跟踪" [ref=f11e34] [cursor=pointer]
+                  - link "搜索日志组" [ref=f11e36] [cursor=pointer]:
+                    - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events
+              - generic [ref=f11e40]:
+                - generic [ref=f11e43]:
+                  - heading "日志组详细信息" [level=2] [ref=f11e49] [cursor=pointer]:
+                    - button "日志组详细信息" [expanded] [ref=f11e51]:
+                      - generic [ref=f11e53]:
+                        - img
+                      - text: 日志组详细信息
+                  - group "日志组详细信息" [ref=f11e56]:
+                    - generic [ref=f11e61]:
+                      - definition [ref=f11e63]:
+                        - generic [ref=f11e64]:
+                          - generic [ref=f11e65]:
+                            - term [ref=f11e66]:
+                              - generic [ref=f11e69]:
+                                - generic [ref=f11e70]: 日志类
+                                - button "信息" [ref=f11e74]
+                            - definition [ref=f11e75]:
+                              - generic [ref=f11e77]: 标准
+                          - generic [ref=f11e78]:
+                            - term [ref=f11e79]:
+                              - generic [ref=f11e81]: ARN
+                            - definition [ref=f11e82]:
+                              - generic [ref=f11e84]:
+                                - button "将字段名称 ARN 复制到剪贴板" [ref=f11e88] [cursor=pointer]:
+                                  - generic [ref=f11e89]:
+                                    - img
+                                - text: arn:aws:logs:ap-northeast-1:463470966392:log-group:/ecs/springboot-ecs-demo:*
+                          - generic [ref=f11e90]:
+                            - term [ref=f11e91]:
+                              - generic [ref=f11e93]: 创建时间
+                            - definition [ref=f11e94]:
+                              - time [ref=f11e97]: 10 小时前
+                          - generic [ref=f11e98]:
+                            - term [ref=f11e99]:
+                              - generic [ref=f11e101]: 保留
+                            - definition [ref=f11e102]:
+                              - generic [ref=f11e104]: 1 天
+                          - generic [ref=f11e105]:
+                            - term [ref=f11e106]:
+                              - generic [ref=f11e108]: 已存储的字节
+                            - definition [ref=f11e109]:
+                              - generic [ref=f11e111]: "-"
+                          - generic [ref=f11e112]:
+                            - term [ref=f11e113]:
+                              - generic [ref=f11e115]: 指标筛选条件
+                            - definition [ref=f11e116]:
+                              - generic [ref=f11e118]: "0"
+                      - definition [ref=f11e120]:
+                        - generic [ref=f11e121]:
+                          - generic [ref=f11e122]:
+                            - term [ref=f11e123]:
+                              - generic [ref=f11e125]: 订阅筛选条件
+                            - definition [ref=f11e126]:
+                              - generic [ref=f11e128]: "0"
+                          - generic [ref=f11e129]:
+                            - term [ref=f11e130]:
+                              - generic [ref=f11e132]: Contributor Insights 规则
+                            - definition [ref=f11e133]:
+                              - generic [ref=f11e135]: "-"
+                          - generic [ref=f11e136]:
+                            - term [ref=f11e137]:
+                              - generic [ref=f11e139]: KMS 密钥 ID
+                            - definition [ref=f11e140]:
+                              - generic [ref=f11e142]: "-"
+                          - generic [ref=f11e143]:
+                            - term [ref=f11e144]:
+                              - generic [ref=f11e146]: 删除保护
+                            - definition [ref=f11e147]:
+                              - generic [ref=f11e151]:
+                                - generic [ref=f11e153]:
+                                  - img
+                                - text: 关闭
+                          - generic [ref=f11e154]:
+                            - term [ref=f11e155]:
+                              - generic [ref=f11e157]: 数据保护
+                            - definition [ref=f11e158]:
+                              - generic [ref=f11e160]: "-"
+                          - generic [ref=f11e161]:
+                            - term [ref=f11e162]:
+                              - generic [ref=f11e164]: 敏感数据计数
+                            - definition [ref=f11e165]:
+                              - generic [ref=f11e168]: "-"
+                      - definition [ref=f11e170]:
+                        - generic [ref=f11e171]:
+                          - generic [ref=f11e172]:
+                            - term [ref=f11e173]:
+                              - generic [ref=f11e175]: 自定义字段索引
+                            - definition [ref=f11e176]:
+                              - link "配置字段索引" [ref=f11e181]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo$23field-indexes
+                                - text: 配置
+                          - generic [ref=f11e182]:
+                            - term [ref=f11e183]:
+                              - generic [ref=f11e185]: 转换器
+                            - definition [ref=f11e186]:
+                              - link "配置变压器" [ref=f11e190]:
+                                - /url: "#logsV2:log-groups/log-group/%2Fecs%2Fspringboot-ecs-demo/log-transformation/manage"
+                                - text: 配置
+                          - generic [ref=f11e191]:
+                            - term [ref=f11e192]:
+                              - generic [ref=f11e194]: 异常检测
+                            - definition [ref=f11e195]:
+                              - link "配置异常检测" [ref=f11e200]:
+                                - /url: "#logsV2:log-groups/log-group/%2Fecs%2Fspringboot-ecs-demo/anomaly-detection/create"
+                                - text: 配置
+                          - generic [ref=f11e201]:
+                            - term [ref=f11e202]:
+                              - generic [ref=f11e204]: 持有者令牌身份验证
+                            - definition [ref=f11e205]:
+                              - generic [ref=f11e209]:
+                                - generic [ref=f11e211]:
+                                  - img
+                                - text: 关闭
+                - generic [ref=f11e213]:
+                  - generic [ref=f11e215]:
+                    - button "View previous tabs" [disabled] [ref=f11e217]:
+                      - generic [ref=f11e218]:
+                        - img
+                    - tablist [ref=f11e219]:
+                      - tab "日志流" [selected] [ref=f11e221] [cursor=pointer]:
+                        - generic [ref=f11e223]: 日志流
+                      - tab "标签" [ref=f11e225] [cursor=pointer]:
+                        - generic [ref=f11e227]: 标签
+                      - tab "数据保护" [ref=f11e229] [cursor=pointer]:
+                        - generic [ref=f11e231]: 数据保护
+                      - tab "异常检测" [ref=f11e233] [cursor=pointer]:
+                        - generic [ref=f11e235]: 异常检测
+                      - tab "指标筛选条件" [ref=f11e237] [cursor=pointer]:
+                        - generic [ref=f11e239]: 指标筛选条件
+                      - tab "订阅筛选条件" [ref=f11e241] [cursor=pointer]:
+                        - generic [ref=f11e243]: 订阅筛选条件
+                      - tab "Contributor Insights" [ref=f11e245] [cursor=pointer]:
+                        - generic [ref=f11e247]: Contributor Insights
+                      - tab "字段索引" [ref=f11e249] [cursor=pointer]:
+                        - generic [ref=f11e251]: 字段索引
+                      - tab "转换器" [ref=f11e253] [cursor=pointer]:
+                        - generic [ref=f11e255]: 转换器
+                    - button "View next tabs" [ref=f11e257] [cursor=pointer]:
+                      - generic [ref=f11e258]:
+                        - img
+                  - tabpanel "日志流" [ref=f11e260]:
+                    - generic [ref=f11e263]:
+                      - generic [ref=f11e264]:
+                        - generic [ref=f11e266]:
+                          - generic [ref=f11e267]:
+                            - generic [ref=f11e268]:
+                              - heading "日志流 (8)" [level=2] [ref=f11e270]:
+                                - text: 日志流
+                                - generic [ref=f11e271]: (8)
+                              - generic [ref=f11e273]:
+                                - button "刷新" [ref=f11e275] [cursor=pointer]:
+                                  - generic [ref=f11e276]:
+                                    - img
+                                - button "删除" [disabled] [ref=f11e278]
+                                - button "创建日志流" [ref=f11e280] [cursor=pointer]
+                                - link "搜索所有日志流" [ref=f11e282] [cursor=pointer]:
+                                  - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events
+                            - paragraph [ref=f11e283]:
+                              - generic [ref=f11e284]: 默认情况下，我们只加载最新的日志流。
+                          - generic [ref=f11e285]:
+                            - generic [ref=f11e288]:
+                              - generic:
+                                - generic:
+                                  - img
+                              - searchbox "筛选日志流或尝试前缀搜索" [ref=f11e289]
+                            - generic [ref=f11e290]:
+                              - list "日志流表分页" [ref=f11e292]:
+                                - listitem [ref=f11e293]:
+                                  - button "上一页" [disabled] [ref=f11e294]:
+                                    - generic [ref=f11e295]:
+                                      - img
+                                - listitem [ref=f11e296]:
+                                  - button "所有页数的第 1 页" [ref=f11e297] [cursor=pointer]: "1"
+                                - listitem [ref=f11e298]:
+                                  - button "下一页" [disabled] [ref=f11e299]:
+                                    - generic [ref=f11e300]:
+                                      - img
+                              - button "首选项" [ref=f11e304] [cursor=pointer]:
+                                - generic [ref=f11e305]:
+                                  - img
+                            - generic [ref=f11e307]:
+                              - generic [ref=f11e308]:
+                                - img [ref=f11e309]
+                                - checkbox "exact match" [ref=f11e311]
+                              - generic [ref=f11e313]: 完全匹配
+                            - generic [ref=f11e314]:
+                              - generic [ref=f11e315]:
+                                - generic [ref=f11e316]:
+                                  - img [ref=f11e317]
+                                  - checkbox "显示过期流" [ref=f11e319]
+                                - generic [ref=f11e321]: 显示已过期
+                              - button "信息" [ref=f11e324] [cursor=pointer]:
+                                - generic [ref=f11e326]:
+                                  - generic [ref=f11e328]:
+                                    - img
+                                  - text: 信息
+                        - table [ref=f11e330]:
+                          - rowgroup [ref=f11e331]:
+                            - row [ref=f11e332]:
+                              - columnheader [ref=f11e333]:
+                                - generic [ref=f11e337]:
+                                  - img [ref=f11e338]
+                                  - checkbox [ref=f11e340]
+                              - columnheader [ref=f11e341]:
+                                - button [ref=f11e342] [cursor=pointer]:
+                                  - generic [ref=f11e343]: 日志流
+                                  - generic [ref=f11e345]:
+                                    - img
+                                - generic [ref=f11e349]:
+                                  - button [ref=f11e350]
+                                  - slider
+                              - columnheader [ref=f11e351]:
+                                - button [ref=f11e352] [cursor=pointer]:
+                                  - generic [ref=f11e353]: 上次事件时间
+                                  - generic [ref=f11e355]:
+                                    - img
+                                - generic [ref=f11e359]:
+                                  - button [ref=f11e360]
+                                  - slider
+                      - table "日志流" [ref=f11e364]:
+                        - rowgroup [ref=f11e365]:
+                          - row "日志流, not sorted 日志流 上次事件时间, sorting descending 上次事件时间" [ref=f11e366]:
+                            - columnheader [ref=f11e367]:
+                              - generic [ref=f11e371]:
+                                - img [ref=f11e372]
+                                - checkbox [ref=f11e374]
+                            - columnheader "日志流, not sorted 日志流" [ref=f11e375]:
+                              - button "日志流, not sorted" [ref=f11e376] [cursor=pointer]:
+                                - generic [ref=f11e377]: 日志流
+                                - generic [ref=f11e379]:
+                                  - img
+                              - generic [ref=f11e383]:
+                                - button "日志流" [ref=f11e384]
+                                - slider
+                            - columnheader "上次事件时间, sorting descending 上次事件时间" [ref=f11e385]:
+                              - button "上次事件时间, sorting descending" [ref=f11e386] [cursor=pointer]:
+                                - generic [ref=f11e387]: 上次事件时间
+                                - generic [ref=f11e389]:
+                                  - img
+                              - generic [ref=f11e393]:
+                                - button "上次事件时间" [ref=f11e394]
+                                - slider
+                        - rowgroup [ref=f11e395]:
+                          - row "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5 2026-04-24 20:23:12 (UTC)" [ref=f11e396]:
+                            - cell [ref=f11e397]:
+                              - generic [ref=f11e402]:
+                                - img [ref=f11e403]
+                                - checkbox [ref=f11e405]
+                            - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f11e406]:
+                              - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f11e409]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5
+                            - cell "2026-04-24 20:23:12 (UTC)" [ref=f11e410]:
+                              - generic [ref=f11e411]: 2026-04-24 20:23:12 (UTC)
+                          - row "ecs/springboot-ecs-demo/4cd26c34ba9742718ac9e5f8d0fc95d8 2026-04-24 19:16:50 (UTC)" [ref=f11e412]:
+                            - cell [ref=f11e413]:
+                              - generic [ref=f11e418]:
+                                - img [ref=f11e419]
+                                - checkbox [ref=f11e421]
+                            - cell "ecs/springboot-ecs-demo/4cd26c34ba9742718ac9e5f8d0fc95d8" [ref=f11e422]:
+                              - link "ecs/springboot-ecs-demo/4cd26c34ba9742718ac9e5f8d0fc95d8" [ref=f11e425]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252F4cd26c34ba9742718ac9e5f8d0fc95d8
+                            - cell "2026-04-24 19:16:50 (UTC)" [ref=f11e426]:
+                              - generic [ref=f11e427]: 2026-04-24 19:16:50 (UTC)
+                          - row "ecs/springboot-ecs-demo/1b13c904be7342a19f6a8d2104a2c77b 2026-04-24 19:04:48 (UTC)" [ref=f11e428]:
+                            - cell [ref=f11e429]:
+                              - generic [ref=f11e434]:
+                                - img [ref=f11e435]
+                                - checkbox [ref=f11e437]
+                            - cell "ecs/springboot-ecs-demo/1b13c904be7342a19f6a8d2104a2c77b" [ref=f11e438]:
+                              - link "ecs/springboot-ecs-demo/1b13c904be7342a19f6a8d2104a2c77b" [ref=f11e441]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252F1b13c904be7342a19f6a8d2104a2c77b
+                            - cell "2026-04-24 19:04:48 (UTC)" [ref=f11e442]:
+                              - generic [ref=f11e443]: 2026-04-24 19:04:48 (UTC)
+                          - row "ecs/springboot-ecs-demo/404e19e0c2b14725938bcd3840e33dab 2026-04-24 18:37:04 (UTC)" [ref=f11e444]:
+                            - cell [ref=f11e445]:
+                              - generic [ref=f11e450]:
+                                - img [ref=f11e451]
+                                - checkbox [ref=f11e453]
+                            - cell "ecs/springboot-ecs-demo/404e19e0c2b14725938bcd3840e33dab" [ref=f11e454]:
+                              - link "ecs/springboot-ecs-demo/404e19e0c2b14725938bcd3840e33dab" [ref=f11e457]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252F404e19e0c2b14725938bcd3840e33dab
+                            - cell "2026-04-24 18:37:04 (UTC)" [ref=f11e458]:
+                              - generic [ref=f11e459]: 2026-04-24 18:37:04 (UTC)
+                          - row "ecs/springboot-ecs-demo/64a3114ff8a145da859744bb01fd5a41 -" [ref=f11e460]:
+                            - cell [ref=f11e461]:
+                              - generic [ref=f11e466]:
+                                - img [ref=f11e467]
+                                - checkbox [ref=f11e469]
+                            - cell "ecs/springboot-ecs-demo/64a3114ff8a145da859744bb01fd5a41" [ref=f11e470]:
+                              - link "ecs/springboot-ecs-demo/64a3114ff8a145da859744bb01fd5a41" [ref=f11e473]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252F64a3114ff8a145da859744bb01fd5a41
+                            - cell "-" [ref=f11e474]:
+                              - generic [ref=f11e475]: "-"
+                          - row "ecs/springboot-ecs-demo/bb002dbba96a49f8a3a88aabcc2487aa -" [ref=f11e476]:
+                            - cell [ref=f11e477]:
+                              - generic [ref=f11e482]:
+                                - img [ref=f11e483]
+                                - checkbox [ref=f11e485]
+                            - cell "ecs/springboot-ecs-demo/bb002dbba96a49f8a3a88aabcc2487aa" [ref=f11e486]:
+                              - link "ecs/springboot-ecs-demo/bb002dbba96a49f8a3a88aabcc2487aa" [ref=f11e489]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fbb002dbba96a49f8a3a88aabcc2487aa
+                            - cell "-" [ref=f11e490]:
+                              - generic [ref=f11e491]: "-"
+                          - row "ecs/springboot-ecs-demo/f6da8907d6cd416bbe0daa06517e4642 -" [ref=f11e492]:
+                            - cell [ref=f11e493]:
+                              - generic [ref=f11e498]:
+                                - img [ref=f11e499]
+                                - checkbox [ref=f11e501]
+                            - cell "ecs/springboot-ecs-demo/f6da8907d6cd416bbe0daa06517e4642" [ref=f11e502]:
+                              - link "ecs/springboot-ecs-demo/f6da8907d6cd416bbe0daa06517e4642" [ref=f11e505]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Ff6da8907d6cd416bbe0daa06517e4642
+                            - cell "-" [ref=f11e506]:
+                              - generic [ref=f11e507]: "-"
+                          - row "ecs/springboot-ecs-demo/117763df580141ea8e765654f6725c89 -" [ref=f11e508]:
+                            - cell [ref=f11e509]:
+                              - generic [ref=f11e514]:
+                                - img [ref=f11e515]
+                                - checkbox [ref=f11e517]
+                            - cell "ecs/springboot-ecs-demo/117763df580141ea8e765654f6725c89" [ref=f11e518]:
+                              - link "ecs/springboot-ecs-demo/117763df580141ea8e765654f6725c89" [ref=f11e521]:
+                                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252F117763df580141ea8e765654f6725c89
+                            - cell "-" [ref=f11e522]:
+                              - generic [ref=f11e523]: "-"
+  - contentinfo [ref=e319]:
+    - generic [ref=e323]:
+      - generic [ref=e324]:
+        - button "CloudShell" [ref=e326] [cursor=pointer]:
+          - generic [ref=e327]:
+            - img
+          - generic [ref=e328]: CloudShell
+        - button "反馈" [ref=e329] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e331] [cursor=pointer]:
+          - img [ref=e333]
+          - generic [ref=e336]: 控制台移动应用程序
+      - generic [ref=e338]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e340]:
+        - listitem [ref=e341]:
+          - link "隐私" [ref=e342] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e343]:
+          - link "条款" [ref=e344] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e345]:
+          - button "Cookie 首选项" [ref=e346] [cursor=pointer]

@@ -1,0 +1,232 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e7]:
+      - 'img "账户颜色: 取消设置" [ref=e8]'
+      - navigation "全球" [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "AWS 控制台主页" [ref=e12] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e13] [cursor=pointer]:
+              - /url: "#c"
+            - button "Amazon Q" [ref=e110] [cursor=pointer]:
+              - img [ref=e114]
+            - button "服务" [ref=e16] [cursor=pointer]:
+              - img [ref=e17]
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - img "搜索" [ref=e32]:
+                - generic [ref=e33]:
+                  - img
+              - generic [ref=e34]:
+                - searchbox
+                - combobox "搜索" [ref=e35]
+              - button "询问 Amazon Q" [ref=e118]:
+                - img "询问 Amazon Q" [ref=e119]
+              - generic: "[选项+S]"
+            - status [ref=e36]
+          - generic [ref=e37]:
+            - link "CloudShell" [ref=e39] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e40] [cursor=pointer]:
+              - button "通知（无可用通知）" [ref=e122]:
+                - generic [ref=e123]:
+                  - img
+              - generic [ref=e44]:
+                - img
+            - list [ref=e47]:
+              - listitem [ref=e48]:
+                - button "帮助和支持" [ref=e50] [cursor=pointer]:
+                  - img "支持" [ref=e52]
+              - listitem [ref=e55]:
+                - button "设置" [ref=e57] [cursor=pointer]:
+                  - generic [ref=e60]:
+                    - img
+              - listitem [ref=e61]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e63] [cursor=pointer]:
+                  - generic [ref=e65]: 亚太地区 (东京)
+                  - generic [ref=e66]:
+                    - img
+              - listitem [ref=e67]:
+                - button "robinwu3293" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e73]:
+                    - 'generic "账户颜色: 取消设置" [ref=e75]':
+                      - generic [ref=e76]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e77]:
+                        - img
+                    - generic [ref=e79]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e129]:
+    - generic [ref=e131]:
+      - navigation [ref=e293]:
+        - button [active] [ref=e258] [cursor=pointer]:
+          - generic [ref=e134]:
+            - img
+      - navigation [ref=e261]:
+        - list [ref=e262]:
+          - listitem [ref=e263]:
+            - link "CloudWatch" [disabled] [ref=e265]:
+              - generic [ref=e266]: CloudWatch
+        - list [ref=e267]:
+          - listitem [ref=e268]:
+            - generic [ref=e271]: CloudWatch
+      - region [ref=e273]:
+        - toolbar [ref=e274]:
+          - button "更多信息" [ref=e276] [cursor=pointer]:
+            - generic [ref=e277]:
+              - img
+          - button "Console-to-Code" [ref=e280] [cursor=pointer]:
+            - img [ref=e284]
+    - main [ref=e249]:
+      - generic:
+        - region:
+          - generic:
+            - list
+      - iframe [ref=e292]:
+        - main [ref=f6e7]:
+          - generic:
+            - region
+          - generic [ref=f6e10]:
+            - generic [ref=f6e11]:
+              - generic [ref=f6e13]:
+                - generic [ref=f6e17]:
+                  - heading "Overview" [level=1] [ref=f6e18]
+                  - button "信息" [ref=f6e21]
+                - generic [ref=f6e23]:
+                  - radiogroup "日期时间范围" [ref=f6e26]:
+                    - button "3小时 (3 小时)" [pressed] [ref=f6e27]: 3小时
+                    - button "1天 (1 天)" [ref=f6e28]: 1天
+                    - button "自定义" [ref=f6e30] [cursor=pointer]:
+                      - generic [ref=f6e31]:
+                        - img
+                  - button "时区 UTC 时区" [ref=f6e36]:
+                    - generic [ref=f6e37]: UTC 时区
+                    - generic [ref=f6e39]:
+                      - img
+                - generic "刷新选项" [ref=f6e40]:
+                  - group "刷新速率" [ref=f6e44]:
+                    - button "刷新" [ref=f6e46] [cursor=pointer]:
+                      - generic [ref=f6e47]:
+                        - img
+                    - button "刷新速率" [ref=f6e49] [cursor=pointer]:
+                      - generic [ref=f6e50]:
+                        - img
+                - button "进入全屏" [ref=f6e51] [cursor=pointer]:
+                  - generic [ref=f6e52]:
+                    - img
+              - generic [ref=f6e53]:
+                - generic [ref=f6e54]:
+                  - generic "选择控制面板" [ref=f6e55]:
+                    - button "概览" [ref=f6e61]:
+                      - generic [ref=f6e62]: 概览
+                      - generic [ref=f6e64]:
+                        - img
+                  - generic [ref=f6e65]:
+                    - button "按资源组筛选 按资源组筛选" [ref=f6e70]:
+                      - generic [ref=f6e71]: 按资源组筛选
+                      - generic [ref=f6e73]:
+                        - img
+                    - button "信息" [ref=f6e75] [cursor=pointer]:
+                      - generic [ref=f6e77]:
+                        - generic [ref=f6e79]:
+                          - img
+                        - text: 信息
+                - button "操作" [ref=f6e85] [cursor=pointer]:
+                  - text: 操作
+                  - generic [ref=f6e86]:
+                    - img
+            - generic [ref=f6e88]:
+              - generic:
+                - generic [ref=f6e90]:
+                  - generic [ref=f6e92]:
+                    - heading "开始使用 CloudWatch" [level=3] [ref=f6e93]
+                    - link "查看入门页面" [ref=f6e96]:
+                      - /url: "#getting-started:expandedService=dashboards"
+                      - text: 查看入门页面
+                      - generic [ref=f6e99]:
+                        - img
+                  - paragraph [ref=f6e100]: 您没有任何警报、指标或默认控制面板。一旦您设置了它们，它们将显示在此处。
+                - generic [ref=f6e102]:
+                  - generic [ref=f6e103]:
+                    - generic [ref=f6e106]:
+                      - generic [ref=f6e109]:
+                        - heading "Configure the CloudWatch Agent" [level=3] [ref=f6e111]
+                        - link "Configure CloudWatch Agent" [ref=f6e113] [cursor=pointer]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#cloudwatch-agent
+                      - generic [ref=f6e115]:
+                        - generic:
+                          - img [ref=f6e117]
+                          - paragraph [ref=f6e158]: Configure the CloudWatch Agent to unlock enhanced monitoring capabilities for your EC2 instances. Through our streamlined configuration flow powered by workload detection, you can easily set up customised metrics collection that matches your specific workloads. Allowing you to gain deeper insights into your infrastructure's unique requirements.
+                    - list [ref=f6e166]:
+                      - listitem [ref=f6e167]:
+                        - generic [ref=f6e177]:
+                          - paragraph [ref=f6e179]: 您需为各项指标设置警报，以在指标超过指定阈值时接收通知。
+                          - link "创建警报" [ref=f6e181]:
+                            - /url: "#alarm:"
+                            - text: 创建警报
+                            - generic [ref=f6e184]:
+                              - img
+                      - listitem [ref=f6e186]:
+                        - generic [ref=f6e196]:
+                          - paragraph [ref=f6e198]: 创建并将任何 CloudWatch 控制面板命名为 CloudWatch-Default，以将它显示在此处。
+                          - link "创建默认控制面板" [ref=f6e200]:
+                            - /url: "#dashboards:"
+                            - text: 创建默认控制面板
+                            - generic [ref=f6e203]:
+                              - img
+                      - listitem [ref=f6e205]:
+                        - generic [ref=f6e215]:
+                          - paragraph [ref=f6e217]: 监控使用您现有的系统、应用程序和自定义日志文件。
+                          - link "查看日志" [ref=f6e219]:
+                            - /url: "#logs:"
+                            - text: 查看日志
+                            - generic [ref=f6e222]:
+                              - img
+                      - listitem [ref=f6e224]:
+                        - generic [ref=f6e234]:
+                          - paragraph [ref=f6e236]: 编写规则以指明需要关注的事件以及自动化您的应用程序应执行的操作。
+                          - link "查看事件" [ref=f6e238]:
+                            - /url: "#events:"
+                            - text: 查看事件
+                            - generic [ref=f6e241]:
+                              - img
+                  - list [ref=f6e252]:
+                    - listitem [ref=f6e253]:
+                      - generic [ref=f6e263]:
+                        - generic [ref=f6e264]:
+                          - generic [ref=f6e265]:
+                            - generic [ref=f6e266]:
+                              - heading "开始使用 Application Insights" [level=3] [ref=f6e267]
+                              - button "信息 开始使用 Application Insights" [ref=f6e270]: 信息
+                            - link "配置 Application Insights" [ref=f6e274] [cursor=pointer]:
+                              - /url: /cloudwatch/home?region=ap-northeast-1#settings:AppInsightsSettings/addAccountTypeApplication?getStarted=true
+                          - paragraph [ref=f6e275]: 为企业应用程序、数据库和工作负载设置监控和控制面板，以检测和解决问题。
+                        - button "工作原理" [ref=f6e277] [cursor=pointer]:
+                          - generic [ref=f6e279]:
+                            - img
+                          - text: 工作原理
+  - contentinfo [ref=e80]:
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - button "CloudShell" [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]:
+            - img
+          - generic [ref=e89]: CloudShell
+        - button "反馈" [ref=e90] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e92] [cursor=pointer]:
+          - img [ref=e94]
+          - generic [ref=e97]: 控制台移动应用程序
+      - generic [ref=e99]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e101]:
+        - listitem [ref=e102]:
+          - link "隐私" [ref=e103] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e104]:
+          - link "条款" [ref=e105] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e106]:
+          - button "Cookie 首选项" [ref=e107] [cursor=pointer]

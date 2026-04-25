@@ -1,0 +1,197 @@
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - img [ref=e8]
+    - generic [ref=e43]:
+      - textbox [ref=e44]: /v3/api-docs
+      - button "Explore" [ref=e45] [cursor=pointer]
+  - generic [ref=e46]:
+    - generic:
+      - img
+    - generic [ref=e47]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "SpringBoot ECS Demo API 1.0.0 OAS 3.0" [level=2] [ref=e53]:
+            - text: SpringBoot ECS Demo API
+            - generic [ref=e54]:
+              - generic [ref=e56]: 1.0.0
+              - generic [ref=e58]: OAS 3.0
+          - link "/v3/api-docs" [ref=e59] [cursor=pointer]:
+            - /url: /v3/api-docs
+            - generic [ref=e60]: /v3/api-docs
+        - paragraph [ref=e63]: Spring Boot 3.2 + MyBatis + MySQL CRUD 接口文档
+      - generic [ref=e67]:
+        - text: Servers
+        - combobox [ref=e70]:
+          - option "http://54.250.14.16:8080 - Generated server url" [selected]
+      - generic [ref=e75]:
+        - heading "用户管理 用户 CRUD 接口 Collapse operation" [level=3] [ref=e76] [cursor=pointer]:
+          - link "用户管理" [ref=e77]:
+            - /url: "#/用户管理"
+          - paragraph [ref=e80]: 用户 CRUD 接口
+          - button "Collapse operation" [expanded] [ref=e81]:
+            - img [ref=e82]
+        - generic [ref=e85]:
+          - generic [ref=e88] [cursor=pointer]:
+            - 'button "GET /api/users/{id} 根据ID查询用户" [ref=e89]':
+              - generic [ref=e90]: GET
+              - generic [ref=e91]:
+                - 'link "/api/users/{id}" [ref=e93]':
+                  - /url: "#/用户管理/getById"
+                  - generic [ref=e94]:
+                    - text: /api
+                    - text: /users
+                    - text: "/{id}"
+                - generic [ref=e95]: 根据ID查询用户
+            - generic "Copy to clipboard"
+            - 'button "get /api/users/{id}" [ref=e98]':
+              - img [ref=e99]
+          - generic [ref=e103] [cursor=pointer]:
+            - 'button "PUT /api/users/{id} 更新用户" [ref=e104]':
+              - generic [ref=e105]: PUT
+              - generic [ref=e106]:
+                - 'link "/api/users/{id}" [ref=e108]':
+                  - /url: "#/用户管理/update"
+                  - generic [ref=e109]:
+                    - text: /api
+                    - text: /users
+                    - text: "/{id}"
+                - generic [ref=e110]: 更新用户
+            - generic "Copy to clipboard"
+            - 'button "put /api/users/{id}" [ref=e113]':
+              - img [ref=e114]
+          - generic [ref=e118] [cursor=pointer]:
+            - 'button "DELETE /api/users/{id} 删除用户" [ref=e119]':
+              - generic [ref=e120]: DELETE
+              - generic [ref=e121]:
+                - 'link "/api/users/{id}" [ref=e123]':
+                  - /url: "#/用户管理/delete"
+                  - generic [ref=e124]:
+                    - text: /api
+                    - text: /users
+                    - text: "/{id}"
+                - generic [ref=e125]: 删除用户
+            - generic "Copy to clipboard"
+            - 'button "delete /api/users/{id}" [ref=e128]':
+              - img [ref=e129]
+          - generic [ref=e133] [cursor=pointer]:
+            - button "GET /api/users 查询用户列表" [ref=e134]:
+              - generic [ref=e135]: GET
+              - generic [ref=e136]:
+                - link "/api/users" [ref=e138]:
+                  - /url: "#/用户管理/list"
+                  - generic [ref=e139]:
+                    - text: /api
+                    - text: /users
+                - generic [ref=e140]: 查询用户列表
+            - generic "Copy to clipboard"
+            - button "get /api/users" [ref=e143]:
+              - img [ref=e144]
+          - generic [ref=e147]:
+            - generic [ref=e148] [cursor=pointer]:
+              - button "POST /api/users 创建用户" [expanded] [ref=e149]:
+                - generic [ref=e150]: POST
+                - generic [ref=e151]:
+                  - link "/api/users" [ref=e153]:
+                    - /url: "#/用户管理/create"
+                    - generic [ref=e154]:
+                      - text: /api
+                      - text: /users
+                  - generic [ref=e155]: 创建用户
+              - generic "Copy to clipboard"
+              - button "post /api/users" [expanded] [ref=e158]:
+                - img [ref=e194]
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - generic [ref=e199]:
+                  - heading "Parameters" [level=4] [ref=e202] [cursor=pointer]
+                  - generic [ref=e203]:
+                    - button "Cancel" [ref=e259] [cursor=pointer]
+                    - button "Reset" [ref=e264] [cursor=pointer]
+                - paragraph [ref=e207]: No parameters
+                - generic [ref=e208]:
+                  - generic [ref=e209]:
+                    - heading "Request bodyrequired" [level=4] [ref=e210]
+                    - combobox "Request content type" [ref=e213]:
+                      - option "application/json" [selected]
+                  - textbox [ref=e262]: "{ \"username\": \"用户009\", \"email\": \"user009@example.com\", \"phone\": \"13800000009\" }"
+              - generic [ref=e224]:
+                - button "Execute" [ref=e263] [cursor=pointer]
+                - button "Clear" [ref=e265] [cursor=pointer]
+              - generic [ref=e225]:
+                - heading "Responses" [level=4] [ref=e227]
+                - generic [ref=e228]:
+                  - generic [ref=e266]:
+                    - generic [ref=e267]:
+                      - generic [ref=e268]:
+                        - heading "Curl" [level=4] [ref=e269]
+                        - button [ref=e271] [cursor=pointer]
+                        - code [ref=e274]: "curl -X 'POST' \\ 'http://54.250.14.16:8080/api/users' \\ -H 'accept: */*' \\ -H 'Content-Type: application/json' \\ -d '{ \"username\": \"用户009\", \"email\": \"user009@example.com\", \"phone\": \"13800000009\" }'"
+                      - generic [ref=e276]:
+                        - heading "Request URL" [level=4] [ref=e277]
+                        - generic [ref=e278]: http://54.250.14.16:8080/api/users
+                      - heading "Server response" [level=4] [ref=e279]
+                      - table [ref=e280]:
+                        - rowgroup [ref=e281]:
+                          - row "Code Details" [ref=e282]:
+                            - cell "Code" [ref=e283]
+                            - cell "Details" [ref=e284]
+                        - rowgroup [ref=e285]:
+                          - 'row "200 Response body Download { \"code\": 200, \"message\": \"success\", \"data\": { \"id\": 12, \"username\": \"用户009\", \"email\": \"user009@example.com\", \"phone\": \"13800000009\", \"createdAt\": null, \"updatedAt\": null } } Response headers connection: keep-alive content-type: application/json date: Fri,24 Apr 2026 20:23:04 GMT keep-alive: timeout=4 proxy-connection: keep-alive transfer-encoding: chunked" [ref=e323]':
+                            - cell "200" [ref=e287]
+                            - 'cell "Response body Download { \"code\": 200, \"message\": \"success\", \"data\": { \"id\": 12, \"username\": \"用户009\", \"email\": \"user009@example.com\", \"phone\": \"13800000009\", \"createdAt\": null, \"updatedAt\": null } } Response headers connection: keep-alive content-type: application/json date: Fri,24 Apr 2026 20:23:04 GMT keep-alive: timeout=4 proxy-connection: keep-alive transfer-encoding: chunked" [ref=e324]':
+                              - generic [ref=e289]:
+                                - heading "Response body" [level=5] [ref=e290]
+                                - generic [ref=e291]:
+                                  - button [ref=e293] [cursor=pointer]
+                                  - button "Download" [ref=e294] [cursor=pointer]
+                                  - code [ref=e296]: "{ \"code\": 200, \"message\": \"success\", \"data\": { \"id\": 12, \"username\": \"用户009\", \"email\": \"user009@example.com\", \"phone\": \"13800000009\", \"createdAt\": null, \"updatedAt\": null } }"
+                              - generic [ref=e297]:
+                                - heading "Response headers" [level=5] [ref=e298]
+                                - generic [ref=e299]:
+                                  - generic [ref=e300]: "connection: keep-alive"
+                                  - generic [ref=e301]: "content-type: application/json"
+                                  - generic [ref=e302]: "date: Fri,24 Apr 2026 20:23:04 GMT"
+                                  - generic [ref=e303]: "keep-alive: timeout=4"
+                                  - generic [ref=e304]: "proxy-connection: keep-alive"
+                                  - generic [ref=e305]: "transfer-encoding: chunked"
+                    - heading "Responses" [level=4] [ref=e306]
+                  - region [ref=e229]:
+                    - rowgroup [ref=e230]:
+                      - row "Code Description Links" [ref=e231]:
+                        - cell "Code" [ref=e232]
+                        - cell "Description" [ref=e233]
+                        - cell "Links" [ref=e234]
+                    - rowgroup [ref=e235]:
+                      - row "200 OK Media type */* Controls Accept header. Example Value No links" [ref=e236]:
+                        - cell "200" [ref=e237]
+                        - cell "OK Media type */* Controls Accept header. Example Value" [ref=e238]:
+                          - paragraph [ref=e241]: OK
+                          - generic [ref=e243]:
+                            - generic [ref=e244]: Media type
+                            - combobox "Media Type" [ref=e246]:
+                              - option "*/*" [selected]
+                            - generic [ref=e247]:
+                              - text: Controls
+                              - code [ref=e248]: Accept
+                              - text: header.
+                          - generic [ref=e249]:
+                            - tablist [ref=e250]:
+                              - tab "Example Value" [selected] [ref=e251] [cursor=pointer]
+                              - tab "Schema" [ref=e252] [cursor=pointer]
+                            - tabpanel "Example Value" [ref=e253]:
+                              - code [ref=e257]: "{ \"code\": 0, \"message\": \"string\", \"data\": { \"id\": 1, \"username\": \"张三\", \"email\": \"zhangsan@example.com\", \"phone\": \"13800138000\", \"createdAt\": \"2026-04-24T20:23:04.536Z\", \"updatedAt\": \"2026-04-24T20:23:04.536Z\" } }"
+                        - cell "No links" [ref=e258]
+      - generic [ref=e163]:
+        - heading "Schemas" [level=4] [ref=e164] [cursor=pointer]:
+          - button "Schemas" [expanded] [ref=e165]:
+            - generic [ref=e166]: Schemas
+            - img [ref=e167]
+        - generic [ref=e169]:
+          - button "User" [ref=e172] [cursor=pointer]:
+            - generic [ref=e174]: User
+          - button "ResultUser" [ref=e178] [cursor=pointer]:
+            - generic [ref=e180]: ResultUser
+          - button "ResultMapStringObject" [ref=e184] [cursor=pointer]:
+            - generic [ref=e186]: ResultMapStringObject
+          - button "ResultVoid" [ref=e190] [cursor=pointer]:
+            - generic [ref=e192]: ResultVoid

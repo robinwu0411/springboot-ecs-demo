@@ -1,0 +1,222 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - navigation "全球" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - link "AWS 控制台主页" [ref=e11] [cursor=pointer]:
+            - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+            - img
+          - link "跳转至主要内容" [ref=e12] [cursor=pointer]:
+            - /url: "#c"
+          - button "服务" [ref=e15] [cursor=pointer]:
+            - img [ref=e16]
+        - generic [ref=e27]:
+          - link "CloudShell" [ref=e29] [cursor=pointer]:
+            - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+            - img
+          - generic "通知" [ref=e30] [cursor=pointer]:
+            - generic [ref=e32]:
+              - img
+          - list [ref=e35]:
+            - listitem [ref=e36]:
+              - button "帮助和支持" [ref=e38] [cursor=pointer]:
+                - img "支持" [ref=e40]
+            - listitem [ref=e43]:
+              - combobox "Regions (亚太地区 (东京))" [ref=e45] [cursor=pointer]:
+                - generic [ref=e47]: 亚太地区 (东京)
+                - generic [ref=e48]:
+                  - img
+            - listitem [ref=e49]:
+              - button "robinwu3293" [ref=e51] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - generic [ref=e58]:
+                    - img
+                  - generic [ref=e60]: robinwu3293
+  - generic [ref=e69]:
+    - generic [ref=e71]:
+      - button "打开侧面导航" [expanded] [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]:
+          - img
+      - navigation "页面导览痕迹" [ref=e77]:
+        - list [ref=e78]:
+          - listitem [ref=e79]:
+            - generic [ref=e80]:
+              - link "Amazon Elastic Container Service" [ref=e81] [cursor=pointer]:
+                - /url: /ecs/v2/home?region=ap-northeast-1
+                - generic [ref=e82]: Amazon Elastic Container Service
+              - generic [ref=e84]:
+                - img
+          - listitem [ref=e85]:
+            - button "显示路径" [ref=e90] [cursor=pointer]: ...
+            - generic [ref=e92]:
+              - img
+          - listitem [ref=e93]:
+            - generic [ref=e94]:
+              - link "服务" [ref=e95] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411/services?region=ap-northeast-1
+                - generic [ref=e96]: 服务
+              - generic [ref=e98]:
+                - img
+          - listitem [ref=e99]:
+            - generic [ref=e100]:
+              - link "springboot-task-service-a9l5598u" [ref=e101] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411/services/springboot-task-service-a9l5598u?region=ap-northeast-1
+                - generic [ref=e102]: springboot-task-service-a9l5598u
+              - generic [ref=e104]:
+                - img
+          - listitem [ref=e105]:
+            - link "任务" [disabled] [ref=e107]:
+              - generic [ref=e108]: 任务
+        - list [ref=e109]:
+          - listitem [ref=e110]:
+            - generic [ref=e111]:
+              - link [ref=e112] [cursor=pointer]:
+                - /url: /ecs/v2/home?region=ap-northeast-1
+                - generic [ref=e113]: Amazon Elastic Container Service
+              - generic [ref=e115]:
+                - img
+          - listitem [ref=e116]:
+            - generic [ref=e117]:
+              - link [ref=e118] [cursor=pointer]:
+                - /url: /ecs/v2/clusters?region=ap-northeast-1
+                - generic [ref=e119]: 集群
+              - generic [ref=e121]:
+                - img
+          - listitem [ref=e122]:
+            - generic [ref=e123]:
+              - link [ref=e124] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411?region=ap-northeast-1
+                - generic [ref=e125]: springboot-demo-cluster-0411
+              - generic [ref=e127]:
+                - img
+          - listitem [ref=e128]:
+            - generic [ref=e129]:
+              - link [ref=e130] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411/services?region=ap-northeast-1
+                - generic [ref=e131]: 服务
+              - generic [ref=e133]:
+                - img
+          - listitem [ref=e134]:
+            - generic [ref=e135]:
+              - link [ref=e136] [cursor=pointer]:
+                - /url: /ecs/v2/clusters/springboot-demo-cluster-0411/services/springboot-task-service-a9l5598u?region=ap-northeast-1
+                - generic [ref=e137]: springboot-task-service-a9l5598u
+              - generic [ref=e139]:
+                - img
+          - listitem [ref=e140]:
+            - generic [ref=e143]: 任务
+      - region "抽屉" [ref=e145]:
+        - toolbar "抽屉" [ref=e146]:
+          - button "打开帮助面板" [ref=e148] [cursor=pointer]:
+            - generic [ref=e149]:
+              - img
+    - navigation "侧面导航" [ref=e152]:
+      - button "关闭侧面导航" [ref=e154] [cursor=pointer]:
+        - generic [ref=e155]:
+          - img
+      - generic [ref=e156]:
+        - heading "Amazon Elastic Container Service" [level=2] [ref=e157]:
+          - link "Amazon Elastic Container Service" [ref=e158] [cursor=pointer]:
+            - /url: /ecs/v2/getStarted?region=ap-northeast-1
+            - generic [ref=e159]: Amazon Elastic Container Service
+        - generic [ref=e160]:
+          - list [ref=e161]:
+            - listitem [ref=e162]:
+              - link "Express Mode" [ref=e163] [cursor=pointer]:
+                - /url: /ecs/v2/express-mode?region=ap-northeast-1
+            - listitem [ref=e164]:
+              - link "集群" [ref=e165] [cursor=pointer]:
+                - /url: /ecs/v2/clusters?region=ap-northeast-1
+            - listitem [ref=e166]:
+              - link "命名空间" [ref=e167] [cursor=pointer]:
+                - /url: /ecs/v2/namespaces?region=ap-northeast-1
+            - listitem [ref=e168]:
+              - link "任务定义" [ref=e169] [cursor=pointer]:
+                - /url: /ecs/v2/task-definitions?region=ap-northeast-1
+            - listitem [ref=e170]:
+              - link "进程守护程序任务定义" [ref=e171] [cursor=pointer]:
+                - /url: /ecs/v2/daemon-task-definitions?region=ap-northeast-1
+              - button "显示守护程序任务定义功能信息" [ref=e175] [cursor=pointer]:
+                - generic [ref=e176]: 新版
+            - listitem [ref=e177]:
+              - link "账户设置" [ref=e178] [cursor=pointer]:
+                - /url: /ecs/v2/account-settings?region=ap-northeast-1
+          - separator [ref=e181]
+          - list [ref=e182]:
+            - listitem [ref=e183]:
+              - link "AWS Batch在新选项卡中打开" [ref=e184] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/batch/home?region=ap-northeast-1#firstRun
+                - text: AWS Batch
+                - img "在新选项卡中打开" [ref=e185]:
+                  - generic [ref=e186]:
+                    - img
+            - listitem [ref=e187]:
+              - link "Amazon ECR在新选项卡中打开" [ref=e188] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/ecr/get-started?region=ap-northeast-1
+                - text: Amazon ECR
+                - img "在新选项卡中打开" [ref=e189]:
+                  - generic [ref=e190]:
+                    - img
+            - listitem [ref=e191]:
+              - link "存储库在新选项卡中打开" [ref=e192] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/ecr/private-registry/repositories?region=ap-northeast-1
+                - text: 存储库
+                - img "在新选项卡中打开" [ref=e193]:
+                  - generic [ref=e194]:
+                    - img
+          - separator [ref=e197]
+          - list [ref=e198]:
+            - listitem [ref=e199]:
+              - link "在线学习讲习会在新选项卡中打开" [ref=e200] [cursor=pointer]:
+                - /url: https://aws-experience.com/amer/smb/events/series/Get-Hands-On-With-ECS?trk=c8aa33b9-c526-4d27-8a36-63de1c23c18d&sc_channel=el
+                - text: 在线学习讲习会
+                - img "在新选项卡中打开" [ref=e201]:
+                  - generic [ref=e202]:
+                    - img
+            - listitem [ref=e203]:
+              - link "文档在新选项卡中打开" [ref=e204] [cursor=pointer]:
+                - /url: https://docs.aws.amazon.com/ecs
+                - text: 文档
+                - img "在新选项卡中打开" [ref=e205]:
+                  - generic [ref=e206]:
+                    - img
+            - listitem [ref=e207]:
+              - link "发现产品在新选项卡中打开" [ref=e208] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/marketplace/home?region=ap-northeast-1#/search!mpSearch/search?filter%3AFULFILLMENT_OPTION_TYPE=CONTAINER&filter%3ACONTAINER_SUPPORTED_SERVICE=ECS&filter%3AREGION=ap-northeast-1
+                - text: 发现产品
+                - img "在新选项卡中打开" [ref=e209]:
+                  - generic [ref=e210]:
+                    - img
+            - listitem [ref=e211]:
+              - link "订阅在新选项卡中打开" [ref=e212] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/marketplace/home?region=ap-northeast-1#/subscriptions
+                - text: 订阅
+                - img "在新选项卡中打开" [ref=e213]:
+                  - generic [ref=e214]:
+                    - img
+      - button "告诉我们您的想法" [ref=e216]
+    - main [ref=e217]:
+      - generic:
+        - region "Amazon ECS 通知":
+          - generic:
+            - list "通知"
+      - generic "正在加载" [ref=e220]
+  - contentinfo [ref=e224]:
+    - generic [ref=e228]:
+      - generic [ref=e229]:
+        - button "控制台移动应用程序" [ref=e231] [cursor=pointer]:
+          - img [ref=e233]
+          - generic [ref=e236]: 控制台移动应用程序
+        - link "语言" [ref=e238] [cursor=pointer]:
+          - /url: https://ap-northeast-1.console.aws.amazon.com/settings/home?region=ap-northeast-1#/localization/edit
+          - generic [ref=e239]: 语言
+      - generic [ref=e241]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e243]:
+        - listitem [ref=e244]:
+          - link "隐私" [ref=e245] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e246]:
+          - link "条款" [ref=e247] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e248]:
+          - button "Cookie 首选项" [ref=e249] [cursor=pointer]

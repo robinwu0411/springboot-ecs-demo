@@ -2,6 +2,7 @@ package com.demo.crud.controller;
 
 import com.demo.crud.model.Result;
 import com.demo.crud.model.User;
+import com.demo.crud.model.UserRequest;
 import com.demo.crud.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -35,15 +36,15 @@ public class UserController {
 
     @PostMapping
     @Operation(summary = "创建用户")
-    public Result<User> create(@Valid @RequestBody User user) {
-        return Result.success(userService.create(user));
+    public Result<User> create(@Valid @RequestBody UserRequest request) {
+        return Result.success(userService.create(request));
     }
 
     @PutMapping("/{id}")
     @Operation(summary = "更新用户")
     public Result<User> update(@Parameter(description = "用户ID") @PathVariable Long id,
-                               @Valid @RequestBody User user) {
-        return Result.success(userService.update(id, user));
+                               @Valid @RequestBody UserRequest request) {
+        return Result.success(userService.update(id, request));
     }
 
     @DeleteMapping("/{id}")

@@ -1,0 +1,445 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e14]:
+      - 'img "账户颜色: 取消设置" [ref=e15]'
+      - navigation "全球" [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - link "AWS 控制台主页" [ref=e19] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e20] [cursor=pointer]:
+              - /url: "#c"
+            - button "Amazon Q" [ref=e23] [cursor=pointer]:
+              - img [ref=e27]
+            - button "服务" [ref=e33] [cursor=pointer]:
+              - img [ref=e34]
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - img "搜索" [ref=e49]:
+                - generic [ref=e50]:
+                  - img
+              - generic [ref=e51]:
+                - searchbox
+                - combobox "搜索" [ref=e52]
+              - button "询问 Amazon Q" [ref=e53]:
+                - img "询问 Amazon Q" [ref=e54]
+                - generic [ref=e397]: 询问 Amazon Q
+              - generic: "[选项+S]"
+            - status [ref=e56]
+          - generic [ref=e57]:
+            - link "CloudShell" [ref=e59] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e60] [cursor=pointer]:
+              - button "通知（无可用通知）" [ref=e64]:
+                - generic [ref=e65]:
+                  - img
+              - generic [ref=e67]:
+                - img
+            - list [ref=e70]:
+              - listitem [ref=e71]:
+                - button "帮助和支持" [ref=e73] [cursor=pointer]:
+                  - img "支持" [ref=e75]
+              - listitem [ref=e78]:
+                - button "设置" [ref=e80] [cursor=pointer]:
+                  - generic [ref=e83]:
+                    - img
+              - listitem [ref=e84]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e86] [cursor=pointer]:
+                  - generic [ref=e88]: 亚太地区 (东京)
+                  - generic [ref=e89]:
+                    - img
+              - listitem [ref=e90]:
+                - button "robinwu3293" [ref=e92] [cursor=pointer]:
+                  - generic [ref=e96]:
+                    - 'generic "账户颜色: 取消设置" [ref=e98]':
+                      - generic [ref=e99]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e100]:
+                        - img
+                    - generic [ref=e102]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e108]:
+    - generic [ref=e110]:
+      - button "打开侧导航" [expanded] [ref=e398] [cursor=pointer]:
+        - generic [ref=e113]:
+          - img
+      - navigation "痕迹" [ref=e399]:
+        - list [ref=e351]:
+          - listitem [ref=e352]:
+            - generic [ref=e353]:
+              - link "CloudWatch" [ref=e354] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#
+                - generic [ref=e355]: CloudWatch
+              - generic [ref=e357]:
+                - img
+          - listitem [ref=e358]:
+            - generic [ref=e359]:
+              - link "日志管理" [ref=e400] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups
+                - generic [ref=e401]: 日志管理
+              - generic [ref=e403]:
+                - img
+          - listitem [ref=e404]:
+            - generic [ref=e405]:
+              - link "/ecs/springboot-ecs-demo" [ref=e406] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo
+                - generic [ref=e407]: /ecs/springboot-ecs-demo
+              - generic [ref=e409]:
+                - img
+          - listitem [ref=e410]:
+            - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [disabled] [ref=e412]:
+              - generic [ref=e413]: ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5
+        - list [ref=e362]:
+          - listitem [ref=e363]:
+            - generic [ref=e364]:
+              - link [ref=e365] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#
+                - generic [ref=e366]: CloudWatch
+              - generic [ref=e368]:
+                - img
+          - listitem [ref=e369]:
+            - generic [ref=e370]:
+              - link [ref=e414] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups
+                - generic [ref=e415]: 日志管理
+              - generic [ref=e417]:
+                - img
+          - listitem [ref=e418]:
+            - generic [ref=e419]:
+              - link [ref=e420] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo
+                - generic [ref=e421]: /ecs/springboot-ecs-demo
+              - generic [ref=e423]:
+                - img
+          - listitem [ref=e424]:
+            - generic [ref=e427]: ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5
+      - region "抽屉" [ref=e374]:
+        - toolbar "抽屉" [ref=e375]:
+          - button "Console-to-Code" [ref=e377] [cursor=pointer]:
+            - img [ref=e381]
+    - navigation "侧面导航面板" [ref=e171]:
+      - button "关闭导航切换" [ref=e173] [cursor=pointer]:
+        - generic [ref=e174]:
+          - img
+      - generic [ref=e175]:
+        - heading "CloudWatch" [level=2] [ref=e177]:
+          - link "CloudWatch" [ref=e178] [cursor=pointer]:
+            - /url: "#"
+        - button "收藏夹和最近访问" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: 收藏夹和最近访问
+          - generic [ref=e185]:
+            - img
+        - list [ref=e187]:
+          - listitem [ref=e188]:
+            - link "摄取" [ref=e191] [cursor=pointer]:
+              - /url: "#telemetry-config:"
+          - listitem [ref=e192]:
+            - link "控制面板" [ref=e196] [cursor=pointer]:
+              - /url: "#dashboards/"
+          - listitem [ref=e197]:
+            - generic [ref=e198]:
+              - link "警报" [ref=e200] [cursor=pointer]:
+                - /url: "#alarmsV2:"
+              - generic [ref=e203]:
+                - link "处于警报状态的警报数量0" [ref=e205] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'ALARM))~operation~'and))"
+                  - generic [ref=e207]:
+                    - img "处于警报状态的警报数量" [ref=e208]:
+                      - generic [ref=e209]:
+                        - img
+                    - strong [ref=e210]: "0"
+                - link "处于正常状态的警报数量0" [ref=e212] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'OK))~operation~'and))"
+                  - generic [ref=e214]:
+                    - img "处于正常状态的警报数量" [ref=e215]:
+                      - generic [ref=e216]:
+                        - img
+                    - strong [ref=e217]: "0"
+                - link "警报数据不足的警报数量0" [ref=e219] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'INSUFFICIENT_DATA))~operation~'and))"
+                  - generic [ref=e221]:
+                    - img "警报数据不足的警报数量" [ref=e222]:
+                      - generic [ref=e223]:
+                        - img
+                    - strong [ref=e224]: "0"
+          - listitem [ref=e225]:
+            - generic [ref=e228] [cursor=pointer]:
+              - button "AI 操作" [ref=e229]:
+                - generic [ref=e230]:
+                  - img
+              - button "AI 操作" [ref=e231]
+          - listitem [ref=e232]:
+            - generic [ref=e235] [cursor=pointer]:
+              - button "GenAI 可观测性" [ref=e236]:
+                - generic [ref=e237]:
+                  - img
+              - button "GenAI 可观测性" [ref=e238]
+          - listitem [ref=e239]:
+            - generic [ref=e242] [cursor=pointer]:
+              - button "Application Signals（APM）" [ref=e243]:
+                - generic [ref=e244]:
+                  - img
+              - button "Application Signals（APM）" [ref=e245]
+          - listitem [ref=e246]:
+            - generic [ref=e249] [cursor=pointer]:
+              - button "基础设施监控" [ref=e250]:
+                - generic [ref=e251]:
+                  - img
+              - button "基础设施监控" [ref=e252]
+          - listitem [ref=e253]:
+            - generic [ref=e255]:
+              - generic [ref=e256] [cursor=pointer]:
+                - button "日志" [expanded] [ref=e257]:
+                  - generic [ref=e258]:
+                    - img
+                - button "日志" [ref=e259]
+              - group "日志" [ref=e260]:
+                - list [ref=e261]:
+                  - listitem [ref=e262]:
+                    - link "日志管理" [ref=e265] [cursor=pointer]:
+                      - /url: "#logsV2:log-groups"
+                  - listitem [ref=e266]:
+                    - generic [ref=e267]:
+                      - link "日志分析" [ref=e269] [cursor=pointer]:
+                        - /url: "#log-analytics"
+                      - generic [ref=e271]: 预览
+                  - listitem [ref=e272]:
+                    - link "日志异常" [ref=e275] [cursor=pointer]:
+                      - /url: "#logsV2:logs-anomalies"
+                  - listitem [ref=e276]:
+                    - link "Live Tail" [ref=e279] [cursor=pointer]:
+                      - /url: "#logsV2:live-tail"
+                  - listitem [ref=e280]:
+                    - link "Logs Insights" [ref=e283] [cursor=pointer]:
+                      - /url: "#logsV2:logs-insights"
+                  - listitem [ref=e284]:
+                    - link "Contributor Insights" [ref=e287] [cursor=pointer]:
+                      - /url: "#contributor-insights:"
+          - listitem [ref=e288]:
+            - generic [ref=e291] [cursor=pointer]:
+              - button "指标" [ref=e292]:
+                - generic [ref=e293]:
+                  - img
+              - button "指标" [ref=e294]
+          - listitem [ref=e295]:
+            - generic [ref=e298] [cursor=pointer]:
+              - button "网络监控" [ref=e299]:
+                - generic [ref=e300]:
+                  - img
+              - button "网络监控" [ref=e301]
+          - listitem [ref=e302]:
+            - separator [ref=e303]
+          - listitem [ref=e304]:
+            - generic [ref=e307] [cursor=pointer]:
+              - button "设置" [ref=e308]:
+                - generic [ref=e309]:
+                  - img
+              - button "设置" [ref=e310]
+    - main [ref=e311]:
+      - generic:
+        - region:
+          - generic:
+            - list
+      - iframe [active] [ref=e396]:
+        - generic [ref=f13e1]:
+          - main [ref=f13e9]:
+            - main [ref=f13e14]:
+              - generic:
+                - region "通知":
+                  - generic:
+                    - list "通知"
+              - generic [ref=f13e24]:
+                - generic [ref=f13e25]:
+                  - generic [ref=f13e28]:
+                    - generic [ref=f13e30]:
+                      - generic [ref=f13e31]:
+                        - heading "日志事件" [level=2] [ref=f13e33]
+                        - generic [ref=f13e37]:
+                          - button "刷新" [ref=f13e39] [cursor=pointer]:
+                            - generic [ref=f13e40]:
+                              - img
+                          - button "操作" [ref=f13e46] [cursor=pointer]:
+                            - text: 操作
+                            - generic [ref=f13e47]:
+                              - img
+                          - button "开始跟踪" [ref=f13e49] [cursor=pointer]
+                          - button "创建指标筛选条件" [ref=f13e51] [cursor=pointer]
+                      - paragraph [ref=f13e52]:
+                        - generic [ref=f13e53]:
+                          - text: 您可以使用下面的筛选条件栏搜索和匹配日志事件中的术语、短语或值。
+                          - link "详细了解筛选条件模式 在新选项卡中打开" [ref=f13e54]:
+                            - /url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html#matching-terms-events
+                            - text: 详细了解筛选条件模式
+                            - img "在新选项卡中打开" [ref=f13e56]:
+                              - generic [ref=f13e57]:
+                                - img
+                    - generic [ref=f13e58]:
+                      - generic [ref=f13e60]:
+                        - generic [ref=f13e62]:
+                          - img [ref=f13e63]
+                          - searchbox "筛选事件 - 按 Enter 键搜索" [active] [ref=f13e65]: 新增用户成功
+                          - button "清除" [ref=f13e3188] [cursor=pointer]:
+                            - img [ref=f13e3190]
+                        - generic [ref=f13e68]:
+                          - radiogroup "日期时间范围" [ref=f13e71]:
+                            - button "1分钟 (1 分钟)" [ref=f13e72]: 1分钟
+                            - button "1小时 (1 小时)" [ref=f13e73]: 1小时
+                            - button "自定义" [ref=f13e75] [cursor=pointer]:
+                              - generic [ref=f13e76]:
+                                - img
+                          - button "时区 UTC 时区" [ref=f13e81]:
+                            - generic [ref=f13e82]: UTC 时区
+                            - generic [ref=f13e84]:
+                              - img
+                        - button "显示" [ref=f13e89] [cursor=pointer]:
+                          - text: 显示
+                          - generic [ref=f13e90]:
+                            - img
+                      - button "首选项" [ref=f13e95] [cursor=pointer]:
+                        - generic [ref=f13e96]:
+                          - img
+                  - table [ref=f13e98]:
+                    - rowgroup [ref=f13e99]:
+                      - row [ref=f13e100]:
+                        - columnheader [ref=f13e101]:
+                          - checkbox [ref=f13e106] [cursor=pointer]
+                        - columnheader [ref=f13e107]:
+                          - generic [ref=f13e109]: 时间戳
+                          - generic [ref=f13e113]:
+                            - button [ref=f13e114]
+                            - slider
+                        - columnheader [ref=f13e115]:
+                          - generic [ref=f13e117]: 消息
+                          - generic [ref=f13e121]:
+                            - button [ref=f13e122]
+                            - slider
+                - table "日志事件" [ref=f13e126]:
+                  - rowgroup [ref=f13e127]:
+                    - row "展开所有行 时间戳 消息" [ref=f13e128]:
+                      - columnheader "展开所有行" [ref=f13e129]:
+                        - generic "展开所有行" [ref=f13e130]:
+                          - checkbox "展开所有行" [ref=f13e134] [cursor=pointer]
+                      - columnheader "时间戳" [ref=f13e135]:
+                        - generic [ref=f13e137]: 时间戳
+                        - generic [ref=f13e141]:
+                          - button "时间戳" [ref=f13e142]
+                          - slider
+                      - columnheader "消息" [ref=f13e143]:
+                        - generic [ref=f13e145]: 消息
+                        - generic [ref=f13e149]:
+                          - button "消息" [ref=f13e150]
+                          - slider
+                  - rowgroup [ref=f13e151]:
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time) 2026-04-24T20:21:45.325Z 2026-04-24T20:21:45.324Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=3, username=李四" [ref=f13e3192]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time)" [ref=f13e3193]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time)" [ref=f13e3194]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time)" [ref=f13e3198] [cursor=pointer]
+                      - cell "2026-04-24T20:21:45.325Z" [ref=f13e3199]:
+                        - generic [ref=f13e3202] [cursor=pointer]: 2026-04-24T20:21:45.325Z
+                      - 'cell "2026-04-24T20:21:45.324Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=3, username=李四" [ref=f13e3203]':
+                        - generic [ref=f13e3206] [cursor=pointer]: "2026-04-24T20:21:45.324Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=3, username=李四"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time) 2026-04-24T20:22:08.432Z 2026-04-24T20:22:08.431Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=4, username=用户001" [ref=f13e3207]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time)" [ref=f13e3208]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time)" [ref=f13e3209]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time)" [ref=f13e3213] [cursor=pointer]
+                      - cell "2026-04-24T20:22:08.432Z" [ref=f13e3214]:
+                        - generic [ref=f13e3217] [cursor=pointer]: 2026-04-24T20:22:08.432Z
+                      - 'cell "2026-04-24T20:22:08.431Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=4, username=用户001" [ref=f13e3218]':
+                        - generic [ref=f13e3221] [cursor=pointer]: "2026-04-24T20:22:08.431Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=4, username=用户001"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time) 2026-04-24T20:22:15.849Z 2026-04-24T20:22:15.849Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=5, username=用户002" [ref=f13e3222]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time)" [ref=f13e3223]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time)" [ref=f13e3224]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time)" [ref=f13e3228] [cursor=pointer]
+                      - cell "2026-04-24T20:22:15.849Z" [ref=f13e3229]:
+                        - generic [ref=f13e3232] [cursor=pointer]: 2026-04-24T20:22:15.849Z
+                      - 'cell "2026-04-24T20:22:15.849Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=5, username=用户002" [ref=f13e3233]':
+                        - generic [ref=f13e3236] [cursor=pointer]: "2026-04-24T20:22:15.849Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=5, username=用户002"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time) 2026-04-24T20:22:22.665Z 2026-04-24T20:22:22.662Z INFO 1 --- [nio-8080-exec-9] com.demo.crud.service.UserService : 新增用户成功，id=6, username=用户003" [ref=f13e3237]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time)" [ref=f13e3238]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time)" [ref=f13e3239]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time)" [ref=f13e3243] [cursor=pointer]
+                      - cell "2026-04-24T20:22:22.665Z" [ref=f13e3244]:
+                        - generic [ref=f13e3247] [cursor=pointer]: 2026-04-24T20:22:22.665Z
+                      - 'cell "2026-04-24T20:22:22.662Z INFO 1 --- [nio-8080-exec-9] com.demo.crud.service.UserService : 新增用户成功，id=6, username=用户003" [ref=f13e3248]':
+                        - generic [ref=f13e3251] [cursor=pointer]: "2026-04-24T20:22:22.662Z INFO 1 --- [nio-8080-exec-9] com.demo.crud.service.UserService : 新增用户成功，id=6, username=用户003"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time) 2026-04-24T20:22:29.334Z 2026-04-24T20:22:29.333Z INFO 1 --- [nio-8080-exec-4] com.demo.crud.service.UserService : 新增用户成功，id=7, username=用户004" [ref=f13e3252]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time)" [ref=f13e3253]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time)" [ref=f13e3254]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time)" [ref=f13e3258] [cursor=pointer]
+                      - cell "2026-04-24T20:22:29.334Z" [ref=f13e3259]:
+                        - generic [ref=f13e3262] [cursor=pointer]: 2026-04-24T20:22:29.334Z
+                      - 'cell "2026-04-24T20:22:29.333Z INFO 1 --- [nio-8080-exec-4] com.demo.crud.service.UserService : 新增用户成功，id=7, username=用户004" [ref=f13e3263]':
+                        - generic [ref=f13e3266] [cursor=pointer]: "2026-04-24T20:22:29.333Z INFO 1 --- [nio-8080-exec-4] com.demo.crud.service.UserService : 新增用户成功，id=7, username=用户004"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time) 2026-04-24T20:22:35.897Z 2026-04-24T20:22:35.897Z INFO 1 --- [nio-8080-exec-5] com.demo.crud.service.UserService : 新增用户成功，id=8, username=用户005" [ref=f13e3267]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time)" [ref=f13e3268]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time)" [ref=f13e3269]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time)" [ref=f13e3273] [cursor=pointer]
+                      - cell "2026-04-24T20:22:35.897Z" [ref=f13e3274]:
+                        - generic [ref=f13e3277] [cursor=pointer]: 2026-04-24T20:22:35.897Z
+                      - 'cell "2026-04-24T20:22:35.897Z INFO 1 --- [nio-8080-exec-5] com.demo.crud.service.UserService : 新增用户成功，id=8, username=用户005" [ref=f13e3278]':
+                        - generic [ref=f13e3281] [cursor=pointer]: "2026-04-24T20:22:35.897Z INFO 1 --- [nio-8080-exec-5] com.demo.crud.service.UserService : 新增用户成功，id=8, username=用户005"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time) 2026-04-24T20:22:43.099Z 2026-04-24T20:22:43.099Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=9, username=用户006" [ref=f13e3282]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time)" [ref=f13e3283]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time)" [ref=f13e3284]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time)" [ref=f13e3288] [cursor=pointer]
+                      - cell "2026-04-24T20:22:43.099Z" [ref=f13e3289]:
+                        - generic [ref=f13e3292] [cursor=pointer]: 2026-04-24T20:22:43.099Z
+                      - 'cell "2026-04-24T20:22:43.099Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=9, username=用户006" [ref=f13e3293]':
+                        - generic [ref=f13e3296] [cursor=pointer]: "2026-04-24T20:22:43.099Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=9, username=用户006"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time) 2026-04-24T20:22:49.797Z 2026-04-24T20:22:49.797Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=10, username=用户007" [ref=f13e3297]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time)" [ref=f13e3298]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time)" [ref=f13e3299]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time)" [ref=f13e3303] [cursor=pointer]
+                      - cell "2026-04-24T20:22:49.797Z" [ref=f13e3304]:
+                        - generic [ref=f13e3307] [cursor=pointer]: 2026-04-24T20:22:49.797Z
+                      - 'cell "2026-04-24T20:22:49.797Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=10, username=用户007" [ref=f13e3308]':
+                        - generic [ref=f13e3311] [cursor=pointer]: "2026-04-24T20:22:49.797Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=10, username=用户007"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time) 2026-04-24T20:22:56.626Z 2026-04-24T20:22:56.626Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=11, username=用户008" [ref=f13e3312]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time)" [ref=f13e3313]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time)" [ref=f13e3314]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time)" [ref=f13e3318] [cursor=pointer]
+                      - cell "2026-04-24T20:22:56.626Z" [ref=f13e3319]:
+                        - generic [ref=f13e3322] [cursor=pointer]: 2026-04-24T20:22:56.626Z
+                      - 'cell "2026-04-24T20:22:56.626Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=11, username=用户008" [ref=f13e3323]':
+                        - generic [ref=f13e3326] [cursor=pointer]: "2026-04-24T20:22:56.626Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=11, username=用户008"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time) 2026-04-24T20:23:04.577Z 2026-04-24T20:23:04.577Z INFO 1 --- [nio-8080-exec-3] com.demo.crud.service.UserService : 新增用户成功，id=12, username=用户009" [ref=f13e3327]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time)" [ref=f13e3328]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time)" [ref=f13e3329]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time)" [ref=f13e3333] [cursor=pointer]
+                      - cell "2026-04-24T20:23:04.577Z" [ref=f13e3334]:
+                        - generic [ref=f13e3337] [cursor=pointer]: 2026-04-24T20:23:04.577Z
+                      - 'cell "2026-04-24T20:23:04.577Z INFO 1 --- [nio-8080-exec-3] com.demo.crud.service.UserService : 新增用户成功，id=12, username=用户009" [ref=f13e3338]':
+                        - generic [ref=f13e3341] [cursor=pointer]: "2026-04-24T20:23:04.577Z INFO 1 --- [nio-8080-exec-3] com.demo.crud.service.UserService : 新增用户成功，id=12, username=用户009"
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time) 2026-04-24T20:23:12.792Z 2026-04-24T20:23:12.791Z INFO 1 --- [nio-8080-exec-8] com.demo.crud.service.UserService : 新增用户成功，id=13, username=用户010" [ref=f13e3342]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time)" [ref=f13e3343]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time)" [ref=f13e3344]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time)" [ref=f13e3348] [cursor=pointer]
+                      - cell "2026-04-24T20:23:12.792Z" [ref=f13e3349]:
+                        - generic [ref=f13e3352] [cursor=pointer]: 2026-04-24T20:23:12.792Z
+                      - 'cell "2026-04-24T20:23:12.791Z INFO 1 --- [nio-8080-exec-8] com.demo.crud.service.UserService : 新增用户成功，id=13, username=用户010" [ref=f13e3353]':
+                        - generic [ref=f13e3356] [cursor=pointer]: "2026-04-24T20:23:12.791Z INFO 1 --- [nio-8080-exec-8] com.demo.crud.service.UserService : 新增用户成功，id=13, username=用户010"
+          - generic [ref=f13e3357]: 11 个事件已加载
+  - contentinfo [ref=e319]:
+    - generic [ref=e323]:
+      - generic [ref=e324]:
+        - button "CloudShell" [ref=e326] [cursor=pointer]:
+          - generic [ref=e327]:
+            - img
+          - generic [ref=e328]: CloudShell
+        - button "反馈" [ref=e329] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e331] [cursor=pointer]:
+          - img [ref=e333]
+          - generic [ref=e336]: 控制台移动应用程序
+      - generic [ref=e338]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e340]:
+        - listitem [ref=e341]:
+          - link "隐私" [ref=e342] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e343]:
+          - link "条款" [ref=e344] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e345]:
+          - button "Cookie 首选项" [ref=e346] [cursor=pointer]

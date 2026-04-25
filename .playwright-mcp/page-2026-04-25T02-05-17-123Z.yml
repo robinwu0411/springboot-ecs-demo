@@ -1,0 +1,372 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e7]:
+      - 'img "账户颜色: 取消设置" [ref=e8]'
+      - navigation "全球" [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "AWS 控制台主页" [ref=e12] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e13] [cursor=pointer]:
+              - /url: "#c"
+            - button "服务" [ref=e16] [cursor=pointer]:
+              - img [ref=e17]
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - img "搜索" [ref=e32]:
+                - generic [ref=e33]:
+                  - img
+              - generic [ref=e34]:
+                - searchbox
+                - combobox "搜索" [ref=e35]
+              - generic: "[选项+S]"
+            - status [ref=e36]
+          - generic [ref=e37]:
+            - link "CloudShell" [ref=e39] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e40] [cursor=pointer]:
+              - generic [ref=e42]: .
+              - generic [ref=e44]:
+                - img
+            - list [ref=e47]:
+              - listitem [ref=e48]:
+                - button "帮助和支持" [ref=e50] [cursor=pointer]:
+                  - img "支持" [ref=e52]
+              - listitem [ref=e55]:
+                - button "设置" [ref=e57] [cursor=pointer]:
+                  - generic [ref=e60]:
+                    - img
+              - listitem [ref=e61]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e63] [cursor=pointer]:
+                  - generic [ref=e65]: 亚太地区 (东京)
+                  - generic [ref=e66]:
+                    - img
+              - listitem [ref=e67]:
+                - button "robinwu3293" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e73]:
+                    - 'generic "账户颜色: 取消设置" [ref=e75]':
+                      - generic [ref=e76]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e77]:
+                        - img
+                    - generic [ref=e79]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e85]:
+    - generic [ref=e87]:
+      - navigation "侧导航" [ref=e88]:
+        - button "打开侧导航" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]:
+            - img
+      - region "抽屉" [ref=e93]:
+        - toolbar "抽屉" [ref=e94]:
+          - button "打开帮助面板" [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]:
+              - img
+    - main [ref=e98]:
+      - generic:
+        - region "通知":
+          - generic:
+            - list "Notifications"
+      - generic [ref=e104]:
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - heading "控制台主页" [level=1] [ref=e109]
+              - button "信息 控制台主页" [ref=e112]: 信息
+            - generic [ref=e114]:
+              - button "重置为默认布局" [ref=e116] [cursor=pointer]
+              - button "添加小组件" [ref=e118] [cursor=pointer]:
+                - generic [ref=e119]:
+                  - img
+                - text: 添加小组件
+          - paragraph
+        - generic [ref=e121]:
+          - generic [ref=e125]:
+            - generic [ref=e288]:
+              - generic [ref=e290]:
+                - generic [ref=e292]:
+                  - application "拖动 最近访问 的手柄" [ref=e297]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e302]:
+                    - heading "最近访问" [level=2] [ref=e303]
+                    - button "信息 最近访问" [ref=e306]: 信息
+                  - button "最近访问 的更多操作" [ref=e312] [cursor=pointer]:
+                    - generic [ref=e313]:
+                      - img
+                - generic "正在加载控制面板小组件数据" [ref=e316]
+                - link "查看所有服务" [ref=e322]:
+                  - /url: /console/services?region=ap-northeast-1
+              - application "调整 最近访问 手柄的大小" [ref=e327]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e328]: 拖动 最近访问 的手柄
+              - generic [ref=e329]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e330]: 调整 最近访问 手柄的大小
+              - generic [ref=e331]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e334]:
+              - generic [ref=e336]:
+                - generic [ref=e338]:
+                  - application "拖动 应用程序 的手柄" [ref=e343]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e346]:
+                    - generic [ref=e348]:
+                      - heading "应用程序" [level=2] [ref=e349]
+                      - button "信息 应用程序" [ref=e352]: 信息
+                    - paragraph [ref=e353]: "区域: Asia Pacific (Tokyo)"
+                  - button "应用程序 的更多操作" [ref=e359] [cursor=pointer]:
+                    - generic [ref=e360]:
+                      - img
+                - generic "正在加载控制面板小组件数据" [ref=e363]
+              - application "调整 应用程序 手柄的大小" [ref=e371]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e372]: 拖动 应用程序 的手柄
+              - generic [ref=e373]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e374]: 调整 应用程序 手柄的大小
+              - generic [ref=e375]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e378]:
+              - generic [ref=e380]:
+                - generic [ref=e382]:
+                  - application "拖动 欢迎来到 AWS 的手柄" [ref=e387]:
+                    - generic:
+                      - generic:
+                        - img
+                  - heading "欢迎来到 AWS" [level=2] [ref=e393]
+                  - button "欢迎来到 AWS 的更多操作" [ref=e401] [cursor=pointer]:
+                    - generic [ref=e402]:
+                      - img
+                - generic "正在加载控制面板小组件数据" [ref=e405]
+              - application "调整 欢迎来到 AWS 手柄的大小" [ref=e413]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e414]: 拖动 欢迎来到 AWS 的手柄
+              - generic [ref=e415]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e416]: 调整 欢迎来到 AWS 手柄的大小
+              - generic [ref=e417]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e420]:
+              - generic [ref=e422]:
+                - generic [ref=e424]:
+                  - application "拖动 AWS Health 的手柄" [ref=e429]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e434]:
+                    - heading "AWS Health" [level=2] [ref=e435]
+                    - button "信息 AWS Health" [ref=e438]: 信息
+                  - button "AWS Health 的更多操作" [ref=e444] [cursor=pointer]:
+                    - generic [ref=e445]:
+                      - img
+                - generic "正在加载控制面板小组件数据" [ref=e448]
+                - link "前往 AWS Health" [ref=e454]:
+                  - /url: https://health.console.aws.amazon.com/health/home?region=ap-northeast-1
+              - application "调整 AWS Health 手柄的大小" [ref=e459]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e460]: 拖动 AWS Health 的手柄
+              - generic [ref=e461]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e462]: 调整 AWS Health 手柄的大小
+              - generic [ref=e463]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e466]:
+              - generic [ref=e468]:
+                - generic [ref=e470]:
+                  - application "拖动 成本和使用情况 的手柄" [ref=e475]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e480]:
+                    - heading "成本和使用情况" [level=2] [ref=e481]
+                    - button "信息 成本和使用情况" [ref=e484]: 信息
+                  - button "成本和使用情况 的更多操作" [ref=e490] [cursor=pointer]:
+                    - generic [ref=e491]:
+                      - img
+                - generic "正在加载控制面板小组件数据" [ref=e494]
+              - application "调整 成本和使用情况 手柄的大小" [ref=e502]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e503]: 拖动 成本和使用情况 的手柄
+              - generic [ref=e504]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e505]: 调整 成本和使用情况 手柄的大小
+              - generic [ref=e506]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e509]:
+              - generic [ref=e511]:
+                - generic [ref=e513]:
+                  - application "拖动 解决方案 的手柄" [ref=e518]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e521]:
+                    - generic [ref=e523]:
+                      - heading "解决方案" [level=2] [ref=e524]
+                      - button "信息 解决方案" [ref=e527]: 信息
+                    - paragraph [ref=e528]: 经过审核的 AWS 解决方案，适用于常见的商业和技术应用场景。
+                  - button "解决方案 的更多操作" [ref=e534] [cursor=pointer]:
+                    - generic [ref=e535]:
+                      - img
+                - link "前往 AWS 解决方案库" [ref=e540]:
+                  - /url: https://aws.amazon.com/solutions/
+                  - text: 前往 AWS 解决方案库
+                  - generic [ref=e543]:
+                    - img
+              - application "调整 解决方案 手柄的大小" [ref=e548]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e549]: 拖动 解决方案 的手柄
+              - generic [ref=e550]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e551]: 调整 解决方案 手柄的大小
+              - generic [ref=e552]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e555]:
+              - generic [ref=e559]:
+                - application "拖动 探索 AWS 的手柄" [ref=e564]:
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e569]:
+                  - heading "探索 AWS" [level=2] [ref=e570]
+                  - button "信息 探索 AWS" [ref=e573]: 信息
+                - button "探索 AWS 的更多操作" [ref=e579] [cursor=pointer]:
+                  - generic [ref=e580]:
+                    - img
+              - application "调整 探索 AWS 手柄的大小" [ref=e587]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e588]: 拖动 探索 AWS 的手柄
+              - generic [ref=e589]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e590]: 调整 探索 AWS 手柄的大小
+              - generic [ref=e591]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e594]:
+              - generic [ref=e596]:
+                - generic [ref=e598]:
+                  - application "拖动 Security 的手柄" [ref=e603]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e606]:
+                    - generic [ref=e608]:
+                      - heading "Security" [level=2] [ref=e609]
+                      - button "信息 Security" [ref=e612]: 信息
+                    - paragraph [ref=e613]: "区域: Asia Pacific (Tokyo)"
+                  - button "Security 的更多操作" [ref=e619] [cursor=pointer]:
+                    - generic [ref=e620]:
+                      - img
+                - link "转到 Security Hub" [ref=e625]:
+                  - /url: /securityhub/home?region=ap-northeast-1
+              - application "调整 Security 手柄的大小" [ref=e630]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e631]: 拖动 Security 的手柄
+              - generic [ref=e632]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e633]: 调整 Security 手柄的大小
+              - generic [ref=e634]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e637]:
+              - generic [ref=e639]:
+                - generic [ref=e641]:
+                  - application "拖动 最新公告 的手柄" [ref=e646]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e651]:
+                    - heading "最新公告" [level=2] [ref=e652]
+                    - button "信息 最新公告" [ref=e655]: 信息
+                  - button "最新公告 的更多操作" [ref=e661] [cursor=pointer]:
+                    - generic [ref=e662]:
+                      - img
+                - link "查看所有公告" [ref=e667]:
+                  - /url: https://aws.amazon.com/new/#feed
+                  - text: 查看所有公告
+                  - generic [ref=e670]:
+                    - img
+              - application "调整 最新公告 手柄的大小" [ref=e675]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e676]: 拖动 最新公告 的手柄
+              - generic [ref=e677]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e678]: 调整 最新公告 手柄的大小
+              - generic [ref=e679]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e682]:
+              - generic [ref=e684]:
+                - generic [ref=e686]:
+                  - application "拖动 最近的 AWS 博客文章 的手柄" [ref=e691]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e696]:
+                    - heading "最近的 AWS 博客文章" [level=2] [ref=e697]
+                    - button "信息 最近的 AWS 博客文章" [ref=e700]: 信息
+                  - button "最近的 AWS 博客文章 的更多操作" [ref=e706] [cursor=pointer]:
+                    - generic [ref=e707]:
+                      - img
+                - link "查看所有博客文章" [ref=e712]:
+                  - /url: https://aws.amazon.com/blogs
+                  - text: 查看所有博客文章
+                  - generic [ref=e715]:
+                    - img
+              - application "调整 最近的 AWS 博客文章 手柄的大小" [ref=e720]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e721]: 拖动 最近的 AWS 博客文章 的手柄
+              - generic [ref=e722]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e723]: 调整 最近的 AWS 博客文章 手柄的大小
+              - generic [ref=e724]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+            - generic [ref=e727]:
+              - generic [ref=e729]:
+                - generic [ref=e731]:
+                  - application "拖动 Trusted Advisor 的手柄" [ref=e736]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic [ref=e741]:
+                    - heading "Trusted Advisor" [level=2] [ref=e742]
+                    - button "信息 Trusted Advisor" [ref=e745]: 信息
+                  - button "Trusted Advisor 的更多操作" [ref=e751] [cursor=pointer]:
+                    - generic [ref=e752]:
+                      - img
+                - link "转到 Trusted Advisor" [ref=e757]:
+                  - /url: https://console.aws.amazon.com/trustedadvisor/home?region=ap-northeast-1
+              - application "调整 Trusted Advisor 手柄的大小" [ref=e762]:
+                - generic:
+                  - generic:
+                    - img
+              - generic [ref=e763]: 拖动 Trusted Advisor 的手柄
+              - generic [ref=e764]: 使用空格键或 Enter 键来激活拖动，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+              - generic [ref=e765]: 调整 Trusted Advisor 手柄的大小
+              - generic [ref=e766]: 使用空格键或 Enter 键来激活调整大小，使用箭头键来移动，使用空格键或 Enter 键进行提交，或使用 Escape 键来放弃。
+          - generic [ref=e768]:
+            - button "想要有更多的小组件？那就告诉我们吧！" [ref=e769]
+            - button "添加小组件" [ref=e772] [cursor=pointer]:
+              - generic [ref=e773]:
+                - img
+              - text: 添加小组件
+  - contentinfo [ref=e774]:
+    - generic [ref=e778]:
+      - generic [ref=e779]:
+        - button "反馈" [ref=e780] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e782] [cursor=pointer]:
+          - img [ref=e784]
+          - generic [ref=e787]: 控制台移动应用程序
+      - generic [ref=e789]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e791]:
+        - listitem [ref=e792]:
+          - link "隐私" [ref=e793] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e794]:
+          - link "条款" [ref=e795] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e796]:
+          - button "Cookie 首选项" [ref=e797] [cursor=pointer]

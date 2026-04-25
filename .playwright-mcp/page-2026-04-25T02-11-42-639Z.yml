@@ -1,0 +1,129 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "数据库用户统计" [level=1] [ref=e3]
+    - paragraph [ref=e4]: 数据来源：ECS Fargate 生产环境 · AWS RDS MySQL
+  - generic [ref=e5]: 接口：GET http://54.250.14.16:8080/api/users?page=1&size=100 · 查询时间：2026-04-25 10:09 UTC+8
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: 数据库总用户数
+      - generic [ref=e9]: "13"
+    - generic [ref=e10]:
+      - generic [ref=e11]: 批量创建（用户001-010）
+      - generic [ref=e12]: "10"
+    - generic [ref=e13]:
+      - generic [ref=e14]: 早期创建用户
+      - generic [ref=e15]: "3"
+  - table [ref=e16]:
+    - rowgroup [ref=e17]:
+      - row "ID 用户名 邮箱 手机号 创建时间" [ref=e18]:
+        - columnheader "ID" [ref=e19]
+        - columnheader "用户名" [ref=e20]
+        - columnheader "邮箱" [ref=e21]
+        - columnheader "手机号" [ref=e22]
+        - columnheader "创建时间" [ref=e23]
+    - rowgroup [ref=e24]:
+      - row "1 alice 早期 alice@example.com 13800138001 2026-04-24 19:12:13" [ref=e25]:
+        - cell "1" [ref=e26]
+        - cell "alice 早期" [ref=e27]:
+          - text: alice
+          - generic [ref=e28]: 早期
+        - cell "alice@example.com" [ref=e29]
+        - cell "13800138001" [ref=e30]
+        - cell "2026-04-24 19:12:13" [ref=e31]
+      - row "2 bob 早期 bob@example.com 13800138002 2026-04-24 19:12:13" [ref=e32]:
+        - cell "2" [ref=e33]
+        - cell "bob 早期" [ref=e34]:
+          - text: bob
+          - generic [ref=e35]: 早期
+        - cell "bob@example.com" [ref=e36]
+        - cell "13800138002" [ref=e37]
+        - cell "2026-04-24 19:12:13" [ref=e38]
+      - row "3 李四 早期 lisi@example.com 13900139000 2026-04-24 20:21:45" [ref=e39]:
+        - cell "3" [ref=e40]
+        - cell "李四 早期" [ref=e41]:
+          - text: 李四
+          - generic [ref=e42]: 早期
+        - cell "lisi@example.com" [ref=e43]
+        - cell "13900139000" [ref=e44]
+        - cell "2026-04-24 20:21:45" [ref=e45]
+      - row "4 用户001 批量 user001@example.com 13800000001 2026-04-24 20:22:08" [ref=e46]:
+        - cell "4" [ref=e47]
+        - cell "用户001 批量" [ref=e48]:
+          - text: 用户001
+          - generic [ref=e49]: 批量
+        - cell "user001@example.com" [ref=e50]
+        - cell "13800000001" [ref=e51]
+        - cell "2026-04-24 20:22:08" [ref=e52]
+      - row "5 用户002 批量 user002@example.com 13800000002 2026-04-24 20:22:15" [ref=e53]:
+        - cell "5" [ref=e54]
+        - cell "用户002 批量" [ref=e55]:
+          - text: 用户002
+          - generic [ref=e56]: 批量
+        - cell "user002@example.com" [ref=e57]
+        - cell "13800000002" [ref=e58]
+        - cell "2026-04-24 20:22:15" [ref=e59]
+      - row "6 用户003 批量 user003@example.com 13800000003 2026-04-24 20:22:22" [ref=e60]:
+        - cell "6" [ref=e61]
+        - cell "用户003 批量" [ref=e62]:
+          - text: 用户003
+          - generic [ref=e63]: 批量
+        - cell "user003@example.com" [ref=e64]
+        - cell "13800000003" [ref=e65]
+        - cell "2026-04-24 20:22:22" [ref=e66]
+      - row "7 用户004 批量 user004@example.com 13800000004 2026-04-24 20:22:29" [ref=e67]:
+        - cell "7" [ref=e68]
+        - cell "用户004 批量" [ref=e69]:
+          - text: 用户004
+          - generic [ref=e70]: 批量
+        - cell "user004@example.com" [ref=e71]
+        - cell "13800000004" [ref=e72]
+        - cell "2026-04-24 20:22:29" [ref=e73]
+      - row "8 用户005 批量 user005@example.com 13800000005 2026-04-24 20:22:35" [ref=e74]:
+        - cell "8" [ref=e75]
+        - cell "用户005 批量" [ref=e76]:
+          - text: 用户005
+          - generic [ref=e77]: 批量
+        - cell "user005@example.com" [ref=e78]
+        - cell "13800000005" [ref=e79]
+        - cell "2026-04-24 20:22:35" [ref=e80]
+      - row "9 用户006 批量 user006@example.com 13800000006 2026-04-24 20:22:43" [ref=e81]:
+        - cell "9" [ref=e82]
+        - cell "用户006 批量" [ref=e83]:
+          - text: 用户006
+          - generic [ref=e84]: 批量
+        - cell "user006@example.com" [ref=e85]
+        - cell "13800000006" [ref=e86]
+        - cell "2026-04-24 20:22:43" [ref=e87]
+      - row "10 用户007 批量 user007@example.com 13800000007 2026-04-24 20:22:49" [ref=e88]:
+        - cell "10" [ref=e89]
+        - cell "用户007 批量" [ref=e90]:
+          - text: 用户007
+          - generic [ref=e91]: 批量
+        - cell "user007@example.com" [ref=e92]
+        - cell "13800000007" [ref=e93]
+        - cell "2026-04-24 20:22:49" [ref=e94]
+      - row "11 用户008 批量 user008@example.com 13800000008 2026-04-24 20:22:56" [ref=e95]:
+        - cell "11" [ref=e96]
+        - cell "用户008 批量" [ref=e97]:
+          - text: 用户008
+          - generic [ref=e98]: 批量
+        - cell "user008@example.com" [ref=e99]
+        - cell "13800000008" [ref=e100]
+        - cell "2026-04-24 20:22:56" [ref=e101]
+      - row "12 用户009 批量 user009@example.com 13800000009 2026-04-24 20:23:04" [ref=e102]:
+        - cell "12" [ref=e103]
+        - cell "用户009 批量" [ref=e104]:
+          - text: 用户009
+          - generic [ref=e105]: 批量
+        - cell "user009@example.com" [ref=e106]
+        - cell "13800000009" [ref=e107]
+        - cell "2026-04-24 20:23:04" [ref=e108]
+      - row "13 用户010 批量 user010@example.com 13800000010 2026-04-24 20:23:12" [ref=e109]:
+        - cell "13" [ref=e110]
+        - cell "用户010 批量" [ref=e111]:
+          - text: 用户010
+          - generic [ref=e112]: 批量
+        - cell "user010@example.com" [ref=e113]
+        - cell "13800000010" [ref=e114]
+        - cell "2026-04-24 20:23:12" [ref=e115]
+  - generic [ref=e116]: "数据库：AWS RDS MySQL 8.0 · 集群：springboot-demo-cluster-0411 · Region: ap-northeast-1"

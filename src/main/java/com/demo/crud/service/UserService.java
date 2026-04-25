@@ -3,6 +3,7 @@ package com.demo.crud.service;
 import com.demo.crud.exception.BusinessException;
 import com.demo.crud.mapper.UserMapper;
 import com.demo.crud.model.User;
+import com.demo.crud.model.UserRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class UserService {
 
     private final UserMapper userMapper;
 
+    @Transactional(readOnly = true)
     public Map<String, Object> findAll(int page, int size) {
         int offset = (page - 1) * size;
         List<User> users = userMapper.findAll(offset, size);
@@ -39,21 +41,29 @@ public class UserService {
     }
 
     @Transactional
-    public User create(User user) {
-        if (userMapper.findByUsername(user.getUsername()) != null)
-            throw new BusinessException(400, "用户名已存在：" + user.getUsername());
+    public User create(UserRequest request) {
+        User user = User.builder()
+                .username(request.getUsername())
+                .email(request.getEmail())
+                .phone(request.getPhone())
+                .build();
         userMapper.insert(user);
         log.info("新增用户成功，id={}, username={}", user.getId(), user.getUsername());
         return user;
     }
 
     @Transactional
-    public User update(Long id, User user) {
+    public User update(Long id, UserRequest request) {
         findById(id);
-        user.setId(id);
+        User user = User.builder()
+                .id(id)
+                .username(request.getUsername())
+                .email(request.getEmail())
+                .phone(request.getPhone())
+                .build();
         userMapper.update(user);
         log.info("更新用户成功，id={}", id);
-        return userMapper.findById(id);
+        return user;
     }
 
     @Transactional

@@ -1,0 +1,366 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e7]:
+      - 'img "账户颜色: 取消设置" [ref=e8]'
+      - navigation "全球" [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - link "AWS 控制台主页" [ref=e12] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e13] [cursor=pointer]:
+              - /url: "#c"
+            - button "Amazon Q" [ref=e110] [cursor=pointer]:
+              - img [ref=e114]
+            - button "服务" [ref=e16] [cursor=pointer]:
+              - img [ref=e17]
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - img "搜索" [ref=e32]:
+                - generic [ref=e33]:
+                  - img
+              - generic [ref=e34]:
+                - searchbox
+                - combobox "搜索" [ref=e35]
+              - button "询问 Amazon Q" [ref=e118]:
+                - img "询问 Amazon Q" [ref=e119]
+              - generic: "[选项+S]"
+            - status [ref=e36]
+          - generic [ref=e37]:
+            - link "CloudShell" [ref=e39] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e40] [cursor=pointer]:
+              - button "通知（无可用通知）" [ref=e122]:
+                - generic [ref=e123]:
+                  - img
+              - generic [ref=e44]:
+                - img
+            - list [ref=e47]:
+              - listitem [ref=e48]:
+                - button "帮助和支持" [ref=e50] [cursor=pointer]:
+                  - img "支持" [ref=e52]
+              - listitem [ref=e55]:
+                - button "设置" [ref=e57] [cursor=pointer]:
+                  - generic [ref=e60]:
+                    - img
+              - listitem [ref=e61]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e63] [cursor=pointer]:
+                  - generic [ref=e65]: 亚太地区 (东京)
+                  - generic [ref=e66]:
+                    - img
+              - listitem [ref=e67]:
+                - button "robinwu3293" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e73]:
+                    - 'generic "账户颜色: 取消设置" [ref=e75]':
+                      - generic [ref=e76]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e77]:
+                        - img
+                    - generic [ref=e79]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e129]:
+    - generic [ref=e131]:
+      - navigation "侧导航" [ref=e303]:
+        - button "打开侧导航" [ref=e304] [cursor=pointer]:
+          - generic [ref=e134]:
+            - img
+      - navigation "痕迹" [ref=e401]:
+        - list [ref=e402]:
+          - listitem [ref=e403]:
+            - generic [ref=e404]:
+              - link "CloudWatch" [ref=e405] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#
+                - generic [ref=e406]: CloudWatch
+              - generic [ref=e408]:
+                - img
+          - listitem [ref=e409]:
+            - generic [ref=e410]:
+              - link "日志管理" [ref=e411] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups
+                - generic [ref=e412]: 日志管理
+              - generic [ref=e414]:
+                - img
+          - listitem [ref=e415]:
+            - generic [ref=e416]:
+              - link "/ecs/springboot-ecs-demo" [ref=e417] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo
+                - generic [ref=e418]: /ecs/springboot-ecs-demo
+              - generic [ref=e420]:
+                - img
+          - listitem [ref=e421]:
+            - link "All events" [disabled] [ref=e423]:
+              - generic [ref=e424]: All events
+        - list [ref=e425]:
+          - listitem [ref=e426]:
+            - generic [ref=e427]:
+              - link [ref=e428] [cursor=pointer]:
+                - /url: https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#
+                - generic [ref=e429]: CloudWatch
+              - generic [ref=e431]:
+                - img
+          - listitem [ref=e432]:
+            - generic [ref=e433]:
+              - link [ref=e434] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups
+                - generic [ref=e435]: 日志管理
+              - generic [ref=e437]:
+                - img
+          - listitem [ref=e438]:
+            - generic [ref=e439]:
+              - link [ref=e440] [cursor=pointer]:
+                - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo
+                - generic [ref=e441]: /ecs/springboot-ecs-demo
+              - generic [ref=e443]:
+                - img
+          - listitem [ref=e444]:
+            - generic [ref=e447]: All events
+    - main [ref=e249]:
+      - generic:
+        - region:
+          - generic:
+            - list
+      - iframe [active] [ref=e302]:
+        - generic [ref=f7e1]:
+          - main [ref=f7e9]:
+            - main [ref=f7e962]:
+              - generic:
+                - region "通知":
+                  - generic:
+                    - list "通知"
+              - generic [ref=f7e973]:
+                - generic [ref=f7e974]:
+                  - generic [ref=f7e976]:
+                    - generic [ref=f7e978]:
+                      - generic [ref=f7e979]:
+                        - heading "日志事件" [level=2] [ref=f7e981]
+                        - generic [ref=f7e985]:
+                          - button "刷新" [ref=f7e987] [cursor=pointer]:
+                            - generic [ref=f7e988]:
+                              - img
+                          - button "操作" [ref=f7e994] [cursor=pointer]:
+                            - text: 操作
+                            - generic [ref=f7e995]:
+                              - img
+                          - button "开始跟踪" [ref=f7e997] [cursor=pointer]
+                          - button "创建指标筛选条件" [ref=f7e999] [cursor=pointer]
+                      - paragraph [ref=f7e1000]:
+                        - generic [ref=f7e1001]:
+                          - text: 您可以使用下面的筛选条件栏搜索和匹配日志事件中的术语、短语或值。
+                          - link "详细了解筛选条件模式 在新选项卡中打开" [ref=f7e1002]:
+                            - /url: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html#matching-terms-events
+                            - text: 详细了解筛选条件模式
+                            - img "在新选项卡中打开" [ref=f7e1004]:
+                              - generic [ref=f7e1005]:
+                                - img
+                    - generic [ref=f7e1006]:
+                      - generic [ref=f7e1008]:
+                        - generic [ref=f7e1010]:
+                          - img [ref=f7e1011]
+                          - searchbox "筛选事件 - 按 Enter 键搜索" [active] [ref=f7e1013]: 新增用户成功
+                          - button "清除" [ref=f7e4936] [cursor=pointer]:
+                            - img [ref=f7e4938]
+                        - generic [ref=f7e1016]:
+                          - radiogroup "日期时间范围" [ref=f7e1019]:
+                            - button "1分钟 (1 分钟)" [ref=f7e1020]: 1分钟
+                            - button "1小时 (1 小时)" [ref=f7e1021]: 1小时
+                            - button "自定义" [ref=f7e1023] [cursor=pointer]:
+                              - generic [ref=f7e1024]:
+                                - img
+                          - button "时区 UTC 时区" [ref=f7e1029]:
+                            - generic [ref=f7e1030]: UTC 时区
+                            - generic [ref=f7e1032]:
+                              - img
+                        - button "显示" [ref=f7e1037] [cursor=pointer]:
+                          - text: 显示
+                          - generic [ref=f7e1038]:
+                            - img
+                      - button "首选项" [ref=f7e1043] [cursor=pointer]:
+                        - generic [ref=f7e1044]:
+                          - img
+                  - table [ref=f7e1046]:
+                    - rowgroup [ref=f7e1047]:
+                      - row [ref=f7e1048]:
+                        - columnheader [ref=f7e1049]:
+                          - checkbox [ref=f7e1054] [cursor=pointer]
+                        - columnheader [ref=f7e1055]:
+                          - generic [ref=f7e1057]: 时间戳
+                          - generic [ref=f7e1061]:
+                            - button [ref=f7e1062]
+                            - slider
+                        - columnheader [ref=f7e1063]:
+                          - generic [ref=f7e1065]: 消息
+                          - generic [ref=f7e1069]:
+                            - button [ref=f7e1070]
+                            - slider
+                        - columnheader [ref=f7e1071]:
+                          - generic [ref=f7e1073]: 日志流名称
+                          - generic [ref=f7e1077]:
+                            - button [ref=f7e1078]
+                            - slider
+                - table "日志事件" [ref=f7e1082]:
+                  - rowgroup [ref=f7e1083]:
+                    - row "展开所有行 时间戳 消息 日志流名称" [ref=f7e1084]:
+                      - columnheader "展开所有行" [ref=f7e1085]:
+                        - generic "展开所有行" [ref=f7e1086]:
+                          - checkbox "展开所有行" [ref=f7e1090] [cursor=pointer]
+                      - columnheader "时间戳" [ref=f7e1091]:
+                        - generic [ref=f7e1093]: 时间戳
+                        - generic [ref=f7e1097]:
+                          - button "时间戳" [ref=f7e1098]
+                          - slider
+                      - columnheader "消息" [ref=f7e1099]:
+                        - generic [ref=f7e1101]: 消息
+                        - generic [ref=f7e1105]:
+                          - button "消息" [ref=f7e1106]
+                          - slider
+                      - columnheader "日志流名称" [ref=f7e1107]:
+                        - generic [ref=f7e1109]: 日志流名称
+                        - generic [ref=f7e1113]:
+                          - button "日志流名称" [ref=f7e1114]
+                          - slider
+                  - rowgroup [ref=f7e1115]:
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time) 2026-04-24T20:21:45.325Z 2026-04-24T20:21:45.324Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=3, username=李四 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4950]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time)" [ref=f7e4951]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time)" [ref=f7e4952]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:21:45 GMT+0800 (China Standard Time)" [ref=f7e4956] [cursor=pointer]
+                      - cell "2026-04-24T20:21:45.325Z" [ref=f7e4957]:
+                        - generic [ref=f7e4960] [cursor=pointer]: 2026-04-24T20:21:45.325Z
+                      - 'cell "2026-04-24T20:21:45.324Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=3, username=李四" [ref=f7e4961]':
+                        - generic [ref=f7e4964] [cursor=pointer]: "2026-04-24T20:21:45.324Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=3, username=李四"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4965]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4968]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062105225$26refEventId$3D39629809212817214258529965234578905811363396240501112838
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time) 2026-04-24T20:22:08.432Z 2026-04-24T20:22:08.431Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=4, username=用户001 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4969]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time)" [ref=f7e4970]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time)" [ref=f7e4971]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:08 GMT+0800 (China Standard Time)" [ref=f7e4975] [cursor=pointer]
+                      - cell "2026-04-24T20:22:08.432Z" [ref=f7e4976]:
+                        - generic [ref=f7e4979] [cursor=pointer]: 2026-04-24T20:22:08.432Z
+                      - 'cell "2026-04-24T20:22:08.431Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=4, username=用户001" [ref=f7e4980]':
+                        - generic [ref=f7e4983] [cursor=pointer]: "2026-04-24T20:22:08.431Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=4, username=用户001"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4984]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4987]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062128332$26refEventId$3D39629809728120533560977074190213623766004769889541488646
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time) 2026-04-24T20:22:15.849Z 2026-04-24T20:22:15.849Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=5, username=用户002 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e4988]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time)" [ref=f7e4989]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time)" [ref=f7e4990]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:15 GMT+0800 (China Standard Time)" [ref=f7e4994] [cursor=pointer]
+                      - cell "2026-04-24T20:22:15.849Z" [ref=f7e4995]:
+                        - generic [ref=f7e4998] [cursor=pointer]: 2026-04-24T20:22:15.849Z
+                      - 'cell "2026-04-24T20:22:15.849Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=5, username=用户002" [ref=f7e4999]':
+                        - generic [ref=f7e5002] [cursor=pointer]: "2026-04-24T20:22:15.849Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=5, username=用户002"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5003]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5006]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062135749$26refEventId$3D39629809893525160698478706043086392920364249964834652166
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time) 2026-04-24T20:22:22.665Z 2026-04-24T20:22:22.662Z INFO 1 --- [nio-8080-exec-9] com.demo.crud.service.UserService : 新增用户成功，id=6, username=用户003 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5007]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time)" [ref=f7e5008]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time)" [ref=f7e5009]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:22 GMT+0800 (China Standard Time)" [ref=f7e5013] [cursor=pointer]
+                      - cell "2026-04-24T20:22:22.665Z" [ref=f7e5014]:
+                        - generic [ref=f7e5017] [cursor=pointer]: 2026-04-24T20:22:22.665Z
+                      - 'cell "2026-04-24T20:22:22.662Z INFO 1 --- [nio-8080-exec-9] com.demo.crud.service.UserService : 新增用户成功，id=6, username=用户003" [ref=f7e5018]':
+                        - generic [ref=f7e5021] [cursor=pointer]: "2026-04-24T20:22:22.662Z INFO 1 --- [nio-8080-exec-9] com.demo.crud.service.UserService : 新增用户成功，id=6, username=用户003"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5022]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5025]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062142565$26refEventId$3D39629810045527039971663433381817894684331170666645618694
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time) 2026-04-24T20:22:29.334Z 2026-04-24T20:22:29.333Z INFO 1 --- [nio-8080-exec-4] com.demo.crud.service.UserService : 新增用户成功，id=7, username=用户004 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5026]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time)" [ref=f7e5027]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time)" [ref=f7e5028]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:29 GMT+0800 (China Standard Time)" [ref=f7e5032] [cursor=pointer]
+                      - cell "2026-04-24T20:22:29.334Z" [ref=f7e5033]:
+                        - generic [ref=f7e5036] [cursor=pointer]: 2026-04-24T20:22:29.334Z
+                      - 'cell "2026-04-24T20:22:29.333Z INFO 1 --- [nio-8080-exec-4] com.demo.crud.service.UserService : 新增用户成功，id=7, username=用户004" [ref=f7e5037]':
+                        - generic [ref=f7e5040] [cursor=pointer]: "2026-04-24T20:22:29.333Z INFO 1 --- [nio-8080-exec-4] com.demo.crud.service.UserService : 新增用户成功，id=7, username=用户004"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5041]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5044]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062149234$26refEventId$3D39629810194250709700664159118764237467889673710247936006
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time) 2026-04-24T20:22:35.897Z 2026-04-24T20:22:35.897Z INFO 1 --- [nio-8080-exec-5] com.demo.crud.service.UserService : 新增用户成功，id=8, username=用户005 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5045]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time)" [ref=f7e5046]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time)" [ref=f7e5047]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:35 GMT+0800 (China Standard Time)" [ref=f7e5051] [cursor=pointer]
+                      - cell "2026-04-24T20:22:35.897Z" [ref=f7e5052]:
+                        - generic [ref=f7e5055] [cursor=pointer]: 2026-04-24T20:22:35.897Z
+                      - 'cell "2026-04-24T20:22:35.897Z INFO 1 --- [nio-8080-exec-5] com.demo.crud.service.UserService : 新增用户成功，id=8, username=用户005" [ref=f7e5056]':
+                        - generic [ref=f7e5059] [cursor=pointer]: "2026-04-24T20:22:35.897Z INFO 1 --- [nio-8080-exec-5] com.demo.crud.service.UserService : 新增用户成功，id=8, username=用户005"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5060]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5063]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062155797$26refEventId$3D39629810340610500438620638808778880756712960252718350342
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time) 2026-04-24T20:22:43.099Z 2026-04-24T20:22:43.099Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=9, username=用户006 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5064]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time)" [ref=f7e5065]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time)" [ref=f7e5066]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:43 GMT+0800 (China Standard Time)" [ref=f7e5070] [cursor=pointer]
+                      - cell "2026-04-24T20:22:43.099Z" [ref=f7e5071]:
+                        - generic [ref=f7e5074] [cursor=pointer]: 2026-04-24T20:22:43.099Z
+                      - 'cell "2026-04-24T20:22:43.099Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=9, username=用户006" [ref=f7e5075]':
+                        - generic [ref=f7e5078] [cursor=pointer]: "2026-04-24T20:22:43.099Z INFO 1 --- [nio-8080-exec-1] com.demo.crud.service.UserService : 新增用户成功，id=9, username=用户006"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5079]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5082]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062162999$26refEventId$3D39629810501220467358438186680134932293915337648621355014
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time) 2026-04-24T20:22:49.797Z 2026-04-24T20:22:49.797Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=10, username=用户007 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5083]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time)" [ref=f7e5084]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time)" [ref=f7e5085]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:49 GMT+0800 (China Standard Time)" [ref=f7e5089] [cursor=pointer]
+                      - cell "2026-04-24T20:22:49.797Z" [ref=f7e5090]:
+                        - generic [ref=f7e5093] [cursor=pointer]: 2026-04-24T20:22:49.797Z
+                      - 'cell "2026-04-24T20:22:49.797Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=10, username=用户007" [ref=f7e5094]':
+                        - generic [ref=f7e5097] [cursor=pointer]: "2026-04-24T20:22:49.797Z INFO 1 --- [nio-8080-exec-6] com.demo.crud.service.UserService : 新增用户成功，id=10, username=用户007"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5098]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5101]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062169697$26refEventId$3D39629810650590858698196300494247579269681610397268377606
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time) 2026-04-24T20:22:56.626Z 2026-04-24T20:22:56.626Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=11, username=用户008 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5102]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time)" [ref=f7e5103]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time)" [ref=f7e5104]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:22:56 GMT+0800 (China Standard Time)" [ref=f7e5108] [cursor=pointer]
+                      - cell "2026-04-24T20:22:56.626Z" [ref=f7e5109]:
+                        - generic [ref=f7e5112] [cursor=pointer]: 2026-04-24T20:22:56.626Z
+                      - 'cell "2026-04-24T20:22:56.626Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=11, username=用户008" [ref=f7e5113]':
+                        - generic [ref=f7e5116] [cursor=pointer]: "2026-04-24T20:22:56.626Z INFO 1 --- [nio-8080-exec-7] com.demo.crud.service.UserService : 新增用户成功，id=11, username=用户008"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5117]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5120]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062176526$26refEventId$3D39629810802882647658961925933822588616919686805954625542
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time) 2026-04-24T20:23:04.577Z 2026-04-24T20:23:04.577Z INFO 1 --- [nio-8080-exec-3] com.demo.crud.service.UserService : 新增用户成功，id=12, username=用户009 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5121]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time)" [ref=f7e5122]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time)" [ref=f7e5123]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:23:04 GMT+0800 (China Standard Time)" [ref=f7e5127] [cursor=pointer]
+                      - cell "2026-04-24T20:23:04.577Z" [ref=f7e5128]:
+                        - generic [ref=f7e5131] [cursor=pointer]: 2026-04-24T20:23:04.577Z
+                      - 'cell "2026-04-24T20:23:04.577Z INFO 1 --- [nio-8080-exec-3] com.demo.crud.service.UserService : 新增用户成功，id=12, username=用户009" [ref=f7e5132]':
+                        - generic [ref=f7e5135] [cursor=pointer]: "2026-04-24T20:23:04.577Z INFO 1 --- [nio-8080-exec-3] com.demo.crud.service.UserService : 新增用户成功，id=12, username=用户009"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5136]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5139]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062184477$26refEventId$3D39629810980195872732478910544285259062016736878722482182
+                    - 'row "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time) 2026-04-24T20:23:12.792Z 2026-04-24T20:23:12.791Z INFO 1 --- [nio-8080-exec-8] com.demo.crud.service.UserService : 新增用户成功，id=13, username=用户010 ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5140]':
+                      - cell "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time)" [ref=f7e5141]:
+                        - generic "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time)" [ref=f7e5142]:
+                          - checkbox "展开日志事件 Sat Apr 25 2026 04:23:12 GMT+0800 (China Standard Time)" [ref=f7e5146] [cursor=pointer]
+                      - cell "2026-04-24T20:23:12.792Z" [ref=f7e5147]:
+                        - generic [ref=f7e5150] [cursor=pointer]: 2026-04-24T20:23:12.792Z
+                      - 'cell "2026-04-24T20:23:12.791Z INFO 1 --- [nio-8080-exec-8] com.demo.crud.service.UserService : 新增用户成功，id=13, username=用户010" [ref=f7e5151]':
+                        - generic [ref=f7e5154] [cursor=pointer]: "2026-04-24T20:23:12.791Z INFO 1 --- [nio-8080-exec-8] com.demo.crud.service.UserService : 新增用户成功，id=13, username=用户010"
+                      - cell "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5155]:
+                        - link "ecs/springboot-ecs-demo/cebca099d2594fefa07776cb649b6eb5" [ref=f7e5158]:
+                          - /url: /cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Fecs$252Fspringboot-ecs-demo/log-events/ecs$252Fspringboot-ecs-demo$252Fcebca099d2594fefa07776cb649b6eb5$3Fstart$3D1777062192692$26refEventId$3D39629811163396494538407979658021569746042014938345242630
+          - generic [ref=f7e5159]: 11 个事件已加载
+  - contentinfo [ref=e80]:
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - button "CloudShell" [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]:
+            - img
+          - generic [ref=e89]: CloudShell
+        - button "反馈" [ref=e90] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e92] [cursor=pointer]:
+          - img [ref=e94]
+          - generic [ref=e97]: 控制台移动应用程序
+      - generic [ref=e99]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e101]:
+        - listitem [ref=e102]:
+          - link "隐私" [ref=e103] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e104]:
+          - link "条款" [ref=e105] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e106]:
+          - button "Cookie 首选项" [ref=e107] [cursor=pointer]

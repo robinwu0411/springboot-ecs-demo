@@ -1,0 +1,218 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e14]:
+      - 'img "账户颜色: 取消设置" [ref=e15]'
+      - navigation "全球" [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - link "AWS 控制台主页" [ref=e19] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/console/home?region=ap-northeast-1
+              - img
+            - link "跳转至主要内容" [ref=e20] [cursor=pointer]:
+              - /url: "#c"
+            - button "Amazon Q" [ref=e23] [cursor=pointer]:
+              - img [ref=e27]
+            - button "服务" [ref=e33] [cursor=pointer]:
+              - img [ref=e34]
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - img "搜索" [ref=e49]:
+                - generic [ref=e50]:
+                  - img
+              - generic [ref=e51]:
+                - searchbox
+                - combobox "搜索" [ref=e52]
+              - button "询问 Amazon Q" [ref=e53]:
+                - img "询问 Amazon Q" [ref=e54]
+              - generic: "[选项+S]"
+            - status [ref=e56]
+          - generic [ref=e57]:
+            - link "CloudShell" [ref=e59] [cursor=pointer]:
+              - /url: https://ap-northeast-1.console.aws.amazon.com/cloudshell/home?region=ap-northeast-1
+              - img
+            - generic "通知" [ref=e60] [cursor=pointer]:
+              - button "通知（无可用通知）" [ref=e64]:
+                - generic [ref=e65]:
+                  - img
+              - generic [ref=e67]:
+                - img
+            - list [ref=e70]:
+              - listitem [ref=e71]:
+                - button "帮助和支持" [ref=e73] [cursor=pointer]:
+                  - img "支持" [ref=e75]
+              - listitem [ref=e78]:
+                - button "设置" [ref=e80] [cursor=pointer]:
+                  - generic [ref=e83]:
+                    - img
+              - listitem [ref=e84]:
+                - combobox "Regions (亚太地区 (东京))" [ref=e86] [cursor=pointer]:
+                  - generic [ref=e88]: 亚太地区 (东京)
+                  - generic [ref=e89]:
+                    - img
+              - listitem [ref=e90]:
+                - button "robinwu3293" [ref=e92] [cursor=pointer]:
+                  - generic [ref=e96]:
+                    - 'generic "账户颜色: 取消设置" [ref=e98]':
+                      - generic [ref=e99]: robinwu3293 (4634-7096-6392)
+                      - generic [ref=e100]:
+                        - img
+                    - generic [ref=e102]: robinwu3293
+      - generic:
+        - generic:
+          - list
+  - generic [ref=e108]:
+    - generic [ref=e110]:
+      - button "切换导航" [expanded] [ref=e347] [cursor=pointer]:
+        - generic [ref=e113]:
+          - img
+      - navigation "Breadcrumbs" [ref=e350]:
+        - list [ref=e351]:
+          - listitem [ref=e352]:
+            - generic [ref=e353]:
+              - link "CloudWatch" [ref=e354] [cursor=pointer]:
+                - /url: "#breadcrumb-0"
+                - generic [ref=e355]: CloudWatch
+              - generic [ref=e357]:
+                - img
+          - listitem [ref=e358]:
+            - link "警报" [disabled] [ref=e360]:
+              - generic [ref=e361]: 警报
+        - list [ref=e362]:
+          - listitem [ref=e363]:
+            - generic [ref=e364]:
+              - link [ref=e365] [cursor=pointer]:
+                - /url: "#breadcrumb-0"
+                - generic [ref=e366]: CloudWatch
+              - generic [ref=e368]:
+                - img
+          - listitem [ref=e369]:
+            - generic [ref=e372]: 警报
+      - region "抽屉" [ref=e374]:
+        - toolbar "抽屉" [ref=e375]:
+          - button "Console-to-Code" [ref=e377] [cursor=pointer]:
+            - img [ref=e381]
+    - navigation "侧面导航面板" [ref=e171]:
+      - button "关闭导航切换" [ref=e173] [cursor=pointer]:
+        - generic [ref=e174]:
+          - img
+      - generic [ref=e175]:
+        - heading "CloudWatch" [level=2] [ref=e177]:
+          - link "CloudWatch" [ref=e178] [cursor=pointer]:
+            - /url: "#"
+        - button "收藏夹和最近访问" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: 收藏夹和最近访问
+          - generic [ref=e185]:
+            - img
+        - list [ref=e187]:
+          - listitem [ref=e188]:
+            - link "摄取" [ref=e191] [cursor=pointer]:
+              - /url: "#telemetry-config:"
+          - listitem [ref=e192]:
+            - link "控制面板" [ref=e196] [cursor=pointer]:
+              - /url: "#dashboards/"
+          - listitem [ref=e197]:
+            - generic [ref=e198]:
+              - link "警报" [ref=e200] [cursor=pointer]:
+                - /url: "#alarmsV2:"
+              - generic [ref=e203]:
+                - link "处于警报状态的警报数量0" [ref=e205] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'ALARM))~operation~'and))"
+                  - generic [ref=e207]:
+                    - img "处于警报状态的警报数量" [ref=e208]:
+                      - generic [ref=e209]:
+                        - img
+                    - strong [ref=e210]: "0"
+                - link "处于正常状态的警报数量0" [ref=e212] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'OK))~operation~'and))"
+                  - generic [ref=e214]:
+                    - img "处于正常状态的警报数量" [ref=e215]:
+                      - generic [ref=e216]:
+                        - img
+                    - strong [ref=e217]: "0"
+                - link "警报数据不足的警报数量0" [active] [ref=e219] [cursor=pointer]:
+                  - /url: "#alarmsV2:?~(alarmListFilter~(tokens~(~(propertyKey~'alarmState~operator~'*3d~value~'INSUFFICIENT_DATA))~operation~'and))"
+                  - generic [ref=e221]:
+                    - img "警报数据不足的警报数量" [ref=e222]:
+                      - generic [ref=e223]:
+                        - img
+                    - strong [ref=e224]: "0"
+          - listitem [ref=e225]:
+            - generic [ref=e228] [cursor=pointer]:
+              - button "AI 操作" [ref=e229]:
+                - generic [ref=e230]:
+                  - img
+              - button "AI 操作" [ref=e231]
+          - listitem [ref=e232]:
+            - generic [ref=e235] [cursor=pointer]:
+              - button "GenAI 可观测性" [ref=e236]:
+                - generic [ref=e237]:
+                  - img
+              - button "GenAI 可观测性" [ref=e238]
+          - listitem [ref=e239]:
+            - generic [ref=e242] [cursor=pointer]:
+              - button "Application Signals（APM）" [ref=e243]:
+                - generic [ref=e244]:
+                  - img
+              - button "Application Signals（APM）" [ref=e245]
+          - listitem [ref=e246]:
+            - generic [ref=e249] [cursor=pointer]:
+              - button "基础设施监控" [ref=e250]:
+                - generic [ref=e251]:
+                  - img
+              - button "基础设施监控" [ref=e252]
+          - listitem [ref=e253]:
+            - generic [ref=e256] [cursor=pointer]:
+              - button "日志" [ref=e257]:
+                - generic [ref=e258]:
+                  - img
+              - button "日志" [ref=e259]
+          - listitem [ref=e288]:
+            - generic [ref=e291] [cursor=pointer]:
+              - button "指标" [ref=e292]:
+                - generic [ref=e293]:
+                  - img
+              - button "指标" [ref=e294]
+          - listitem [ref=e295]:
+            - generic [ref=e298] [cursor=pointer]:
+              - button "网络监控" [ref=e299]:
+                - generic [ref=e300]:
+                  - img
+              - button "网络监控" [ref=e301]
+          - listitem [ref=e302]:
+            - separator [ref=e303]
+          - listitem [ref=e304]:
+            - generic [ref=e307] [cursor=pointer]:
+              - button "设置" [ref=e308]:
+                - generic [ref=e309]:
+                  - img
+              - button "设置" [ref=e310]
+    - main [ref=e311]:
+      - generic:
+        - region:
+          - generic:
+            - list
+      - iframe [ref=e396]:
+        - generic [ref=f13e4]:
+          - generic [ref=f13e5]: 
+          - generic [ref=f13e6]: Loading CloudWatch Logs...
+  - contentinfo [ref=e319]:
+    - generic [ref=e323]:
+      - generic [ref=e324]:
+        - button "CloudShell" [ref=e326] [cursor=pointer]:
+          - generic [ref=e327]:
+            - img
+          - generic [ref=e328]: CloudShell
+        - button "反馈" [ref=e329] [cursor=pointer]
+        - button "控制台移动应用程序" [ref=e331] [cursor=pointer]:
+          - img [ref=e333]
+          - generic [ref=e336]: 控制台移动应用程序
+      - generic [ref=e338]: © 2026, Amazon Web Services, Inc. 或其关联公司。
+      - list [ref=e340]:
+        - listitem [ref=e341]:
+          - link "隐私" [ref=e342] [cursor=pointer]:
+            - /url: https://aws.amazon.com/privacy/
+        - listitem [ref=e343]:
+          - link "条款" [ref=e344] [cursor=pointer]:
+            - /url: https://aws.amazon.com/terms/
+        - listitem [ref=e345]:
+          - button "Cookie 首选项" [ref=e346] [cursor=pointer]

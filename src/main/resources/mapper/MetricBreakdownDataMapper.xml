@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.crud.mapper.MetricBreakdownDataMapper">
+
+    <select id="findByMetricYearMonthType" resultType="MetricBreakdownData">
+        SELECT id, metric_id, `year`, `month`, dimension_type, dimension_value,
+               product_title, actual, jbp_goal
+        FROM metric_breakdown_data
+        WHERE metric_id = #{metricId}
+          AND `year` = #{year}
+          AND `month` = #{month}
+          AND dimension_type = #{dimensionType}
+    </select>
+
+    <select id="findByMetricYearMonthRangeType" resultType="MetricBreakdownData">
+        SELECT id, metric_id, `year`, `month`, dimension_type, dimension_value,
+               product_title, actual, jbp_goal
+        FROM metric_breakdown_data
+        WHERE metric_id = #{metricId}
+          AND `year` = #{year}
+          AND `month` &gt;= #{monthFrom}
+          AND `month` &lt;= #{monthTo}
+          AND dimension_type = #{dimensionType}
+    </select>
+
+</mapper>
