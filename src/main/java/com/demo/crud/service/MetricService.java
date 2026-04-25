@@ -48,7 +48,9 @@ public class MetricService {
 
             // Use new method that supports category filtering
             List<MetricMonthlyData> currentDataList = (categories == null || categories.isEmpty())
-                ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth))
+                ? (monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth) != null
+                    ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth))
+                    : List.of())
                 : monthlyDataMapper.findByMetricYearMonthAndCategories(id, currentYear, currentMonth, categories);
             MetricMonthlyData current = sumCategoryData(currentDataList);
 
@@ -56,12 +58,16 @@ public class MetricService {
             int prevYear = currentMonth == 1 ? currentYear - 1 : currentYear;
             int prevMonth = currentMonth == 1 ? 12 : currentMonth - 1;
             List<MetricMonthlyData> prevDataList = (categories == null || categories.isEmpty())
-                ? List.of(monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth))
+                ? (monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth) != null
+                    ? List.of(monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth))
+                    : List.of())
                 : monthlyDataMapper.findByMetricYearMonthAndCategories(id, prevYear, prevMonth, categories);
             MetricMonthlyData prev = sumCategoryData(prevDataList);
 
             List<MetricMonthlyData> lastYearList = (categories == null || categories.isEmpty())
-                ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth))
+                ? (monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth) != null
+                    ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth))
+                    : List.of())
                 : monthlyDataMapper.findByMetricYearMonthAndCategories(id, currentYear - 1, currentMonth, categories);
             MetricMonthlyData lastYear = sumCategoryData(lastYearList);
 
