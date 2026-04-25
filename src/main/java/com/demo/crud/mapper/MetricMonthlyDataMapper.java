@@ -8,4 +8,10 @@ public interface MetricMonthlyDataMapper {
     List<MetricMonthlyData> findByMetricAndYear(@Param("metricId") int metricId, @Param("year") int year);
     MetricMonthlyData findByMetricYearMonth(@Param("metricId") int metricId, @Param("year") int year, @Param("month") int month);
     Integer findLatestMonth(@Param("year") int year);
+    List<MetricMonthlyData> findByMetricYearMonthAndCategories(
+            @Param("metricId") int metricId,
+            @Param("year") int year,
+            @Param("month") int month,
+            @Param("categories") List<String> categories
+    );
 }

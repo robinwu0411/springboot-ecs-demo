@@ -100,4 +100,25 @@ class MetricMonthlyDataMapperTest {
         data.setCategory("Test Category");
         assertThat(data.getCategory()).isEqualTo("Test Category");
     }
+
+    @Test
+    @DisplayName("findByMetricYearMonthAndCategories: 根据指标年月和类别筛选数据")
+    void findByMetricYearMonthAndCategories() {
+        List<MetricMonthlyData> result = mapper.findByMetricYearMonthAndCategories(1, 2025, 4, List.of("TestCat"));
+        assertThat(result).isNotNull();
+    }
+
+    @Test
+    @DisplayName("findByMetricYearMonthAndCategories: 不存在的类别返回空列表")
+    void findByMetricYearMonthAndCategories_returnsEmptyForNonExistentCategory() {
+        List<MetricMonthlyData> result = mapper.findByMetricYearMonthAndCategories(1, 2025, 4, List.of("NonExistentCategory"));
+        assertThat(result).isEmpty();
+    }
+
+    @Test
+    @DisplayName("findByMetricYearMonthAndCategories: 多个类别匹配")
+    void findByMetricYearMonthAndCategories_multipleCategories() {
+        List<MetricMonthlyData> result = mapper.findByMetricYearMonthAndCategories(1, 2025, 4, List.of("Category1", "Category2"));
+        assertThat(result).isNotNull();
+    }
 }

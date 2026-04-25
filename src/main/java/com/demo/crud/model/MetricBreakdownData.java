@@ -11,6 +11,7 @@ public class MetricBreakdownData {
     private Integer month;
     private String dimensionType;    // category | subcategory | brand | asin
     private String dimensionValue;
+    private String category;
     private String productTitle;
     private BigDecimal actual;
     private BigDecimal jbpGoal;

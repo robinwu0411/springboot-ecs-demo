@@ -18,7 +18,8 @@ CREATE TABLE metric_monthly_data (
     `year`     INT NOT NULL,
     `month`    INT NOT NULL,
     actual     DECIMAL(18,2),
-    jbp_goal   DECIMAL(18,2)
+    jbp_goal   DECIMAL(18,2),
+    category   VARCHAR(100)
 );
 
 CREATE TABLE metric_breakdown_data (
@@ -41,41 +42,41 @@ INSERT INTO metrics (id, metric_key, metric_name, metric_type, sort_order, bad_d
 (4, 'new_customer_count', 'New customer count', 'integer',   4, 'down'),
 (5, 'net_ordered_gms',    'Net Ordered GMS',    'financial', 5, 'down');
 
--- Seed: metric_id=1 (revenue) 2024 all 12 months
-INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal) VALUES
-(1, 2024,  1, 10000000, 11000000),
-(1, 2024,  2, 11000000, 11000000),
-(1, 2024,  3, 12000000, 11500000),
-(1, 2024,  4, 11500000, 11500000),
-(1, 2024,  5, 10800000, 11000000),
-(1, 2024,  6, 11200000, 11000000),
-(1, 2024,  7, 11800000, 11500000),
-(1, 2024,  8, 12000000, 12000000),
-(1, 2024,  9, 11500000, 11500000),
-(1, 2024, 10, 11800000, 11500000),
-(1, 2024, 11, 12500000, 12000000),
-(1, 2024, 12, 13000000, 12500000);
+-- Seed: metric_id=1 (revenue) 2024 all 12 months with categories
+INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal, category) VALUES
+(1, 2024,  1, 10000000, 11000000, 'Category1'),
+(1, 2024,  2, 11000000, 11000000, 'Category2'),
+(1, 2024,  3, 12000000, 11500000, 'Category1'),
+(1, 2024,  4, 11500000, 11500000, 'Category2'),
+(1, 2024,  5, 10800000, 11000000, 'Category1'),
+(1, 2024,  6, 11200000, 11000000, 'Category2'),
+(1, 2024,  7, 11800000, 11500000, 'Category1'),
+(1, 2024,  8, 12000000, 12000000, 'Category2'),
+(1, 2024,  9, 11500000, 11500000, 'Category1'),
+(1, 2024, 10, 11800000, 11500000, 'Category2'),
+(1, 2024, 11, 12500000, 12000000, 'Category1'),
+(1, 2024, 12, 13000000, 12500000, 'Category2');
 
--- Seed: metric_id=1 2025 months 1-4
-INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal) VALUES
-(1, 2025, 1, 11000000, 11500000),
-(1, 2025, 2, 12000000, 12000000),
-(1, 2025, 3, 13000000, 12500000),
-(1, 2025, 4, 12918000, 10240000);
+-- Seed: metric_id=1 2025 months 1-4 with categories
+INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal, category) VALUES
+(1, 2025, 1, 11000000, 11500000, 'TestCat'),
+(1, 2025, 2, 12000000, 12000000, 'Category1'),
+(1, 2025, 3, 13000000, 12500000, 'Category2'),
+(1, 2025, 4, 12918000, 10240000, 'TestCat');
 
 -- Seed: metric_id=3 (deal_ops) 2024 months 1-4
-INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal) VALUES
-(3, 2024, 1, 1200000, 1400000),
-(3, 2024, 2, 1350000, 1450000),
-(3, 2024, 3, 1100000, 1350000),
-(3, 2024, 4,  980000, 1240000);
+INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal, category) VALUES
+(3, 2024, 1, 1200000, 1400000, 'Category1'),
+(3, 2024, 2, 1350000, 1450000, 'Category2'),
+(3, 2024, 3, 1100000, 1350000, 'Category1'),
+(3, 2024, 4,  980000, 1240000, 'Category2');
 
 -- Seed: metric_id=3 2025 months 1-4
-INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal) VALUES
-(3, 2025, 1, 1300000, 1400000),
-(3, 2025, 2, 1420000, 1450000),
-(3, 2025, 3, 1250000, 1350000),
-(3, 2025, 4, 1180000, 1240000);
+INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal, category) VALUES
+(3, 2025, 1, 1300000, 1400000, 'Category1'),
+(3, 2025, 2, 1420000, 1450000, 'Category2'),
+(3, 2025, 3, 1250000, 1350000, 'Category1'),
+(3, 2025, 4, 1180000, 1240000, 'Category2');
 
 -- Seed: breakdown category metric_id=1, 2025-04
 INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
