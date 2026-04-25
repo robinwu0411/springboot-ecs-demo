@@ -34,4 +34,16 @@
         </if>
     </select>
 
+  <select id="findByMetricYearAndCategories" resultType="MetricMonthlyData">
+        SELECT id, metric_id, `year`, `month`, actual, jbp_goal, category
+        FROM metric_monthly_data
+        WHERE metric_id = #{metricId} AND `year` = #{year}
+        <if test="categories != null and categories.size() > 0">
+            AND category IN
+            <foreach collection="categories" item="cat" open="(" separator="," close=")">
+                #{cat}
+            </foreach>
+        </if>
+    </select>
+
 </mapper>

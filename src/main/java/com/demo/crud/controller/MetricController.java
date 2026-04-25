@@ -5,6 +5,7 @@ import com.demo.crud.model.dto.DimensionBreakdownResponse;
 import com.demo.crud.model.dto.OverviewResponse;
 import com.demo.crud.model.dto.TrendBreakdownResponse;
 import com.demo.crud.service.MetricService;
+import java.util.List;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -23,8 +24,9 @@ public class MetricController {
     @Operation(summary = "总览页数据", description = "返回所有指标的当期、MoM、YoY、YTD数据")
     public Result<OverviewResponse> overview(
             @Parameter(description = "年份，默认当年") @RequestParam(required = false) Integer year,
-            @Parameter(description = "月份，默认最新有数据月份") @RequestParam(required = false) Integer month) {
-        return Result.success(metricService.getOverview(year, month));
+            @Parameter(description = "月份，默认最新有数据月份") @RequestParam(required = false) Integer month,
+            @Parameter(description = "类别过滤，为空不过滤") @RequestParam(required = false) List<String> categories) {
+        return Result.success(metricService.getOverview(year, month, categories));
     }
 
     @GetMapping("/breakdown")

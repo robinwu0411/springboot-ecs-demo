@@ -14,4 +14,9 @@ public interface MetricMonthlyDataMapper {
             @Param("month") int month,
             @Param("categories") List<String> categories
     );
+    List<MetricMonthlyData> findByMetricYearAndCategories(
+            @Param("metricId") int metricId,
+            @Param("year") int year,
+            @Param("categories") List<String> categories
+    );
 }

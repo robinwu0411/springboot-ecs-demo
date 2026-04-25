@@ -20,7 +20,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.within;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
@@ -60,7 +62,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricAndYear(anyInt(), anyInt())).thenReturn(List.of());
         when(monthlyDataMapper.findByMetricYearMonth(anyInt(), anyInt(), anyInt())).thenReturn(null);
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         assertThat(resp.getMetrics()).hasSize(5);
     }
@@ -72,7 +74,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricAndYear(anyInt(), anyInt())).thenReturn(List.of());
         when(monthlyDataMapper.findByMetricYearMonth(anyInt(), anyInt(), anyInt())).thenReturn(null);
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         assertThat(resp.getPeriod()).isEqualTo("April 2025");
         assertThat(resp.getYear()).isEqualTo(2025);
@@ -89,7 +91,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricAndYear(1, 2025)).thenReturn(List.of(apr2025));
         when(monthlyDataMapper.findByMetricAndYear(1, 2024)).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         // (12918000 - 10240000) / 10240000 * 100 = 26.15...
         Double vsJbp = resp.getMetrics().get(0).getCurrent().getVsJbpGoalPct();
@@ -106,7 +108,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricYearMonth(1, 2025, 4)).thenReturn(zeroGoal);
         when(monthlyDataMapper.findByMetricAndYear(anyInt(), anyInt())).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         assertThat(resp.getMetrics().get(0).getCurrent().getVsJbpGoalPct()).isNull();
     }
@@ -121,7 +123,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricAndYear(1, 2025)).thenReturn(List.of(mar2025, apr2025));
         when(monthlyDataMapper.findByMetricAndYear(1, 2024)).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         // mom = 12918000 - 13000000 = -82000
         // momPct = -82000 / 13000000 * 100 = -0.63...
@@ -138,7 +140,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricYearMonth(1, 2024, 4)).thenReturn(null);
         when(monthlyDataMapper.findByMetricAndYear(anyInt(), anyInt())).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         assertThat(resp.getMetrics().get(0).getCurrent().getMom()).isNull();
         assertThat(resp.getMetrics().get(0).getCurrent().getMomPct()).isNull();
@@ -154,7 +156,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricAndYear(1, 2025)).thenReturn(List.of(apr2025));
         when(monthlyDataMapper.findByMetricAndYear(1, 2024)).thenReturn(List.of(apr2024));
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         // yoy = 12918000 - 11500000 = 1418000
         // yoyPct = 1418000 / 11500000 * 100 = 12.33...
@@ -170,7 +172,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricYearMonth(1, 2025, 4)).thenReturn(apr2025);
         when(monthlyDataMapper.findByMetricAndYear(anyInt(), anyInt())).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         assertThat(resp.getMetrics().get(0).getCurrent().getYoy()).isNull();
     }
@@ -187,7 +189,7 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricAndYear(1, 2025)).thenReturn(List.of(jan, feb, mar, apr2025));
         when(monthlyDataMapper.findByMetricAndYear(1, 2024)).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(2025, 4);
+        OverviewResponse resp = metricService.getOverview(2025, 4, null);
 
         // YTD = 11M + 12M + 13M + 12.918M = 48918000
         assertThat(resp.getMetrics().get(0).getYtd().getActual()).isCloseTo(48918000.0, within(1.0));
@@ -201,11 +203,18 @@ class MetricServiceTest {
         when(monthlyDataMapper.findByMetricYearMonth(anyInt(), anyInt(), anyInt())).thenReturn(null);
         when(monthlyDataMapper.findByMetricAndYear(anyInt(), anyInt())).thenReturn(List.of());
 
-        OverviewResponse resp = metricService.getOverview(null, null);
+        OverviewResponse resp = metricService.getOverview(null, null, null);
 
         assertThat(resp).isNotNull();
         assertThat(resp.getYear()).isNotNull();
         assertThat(resp.getMonth()).isNotNull();
+    }
+
+    @Test
+    @DisplayName("getOverview: 支持 categories 参数过滤")
+    void testGetOverviewWithCategories() {
+        OverviewResponse result = metricService.getOverview(2025, 4, List.of("TestCat"));
+        assertNotNull(result);
     }
 
     // ===================== getTrendBreakdown =====================

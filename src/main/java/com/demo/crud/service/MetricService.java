@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
@@ -30,7 +31,7 @@ public class MetricService {
     private final MetricMonthlyDataMapper monthlyDataMapper;
     private final MetricBreakdownDataMapper breakdownDataMapper;
 
-    public OverviewResponse getOverview(Integer year, Integer month) {
+    public OverviewResponse getOverview(Integer year, Integer month, List<String> categories) {
         int currentYear = (year != null) ? year : LocalDate.now().getYear();
         int currentMonth;
         if (month != null) {
@@ -45,15 +46,31 @@ public class MetricService {
         for (Metric metric : metrics) {
             int id = metric.getId();
 
-            MetricMonthlyData current = monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth);
+            // Use new method that supports category filtering
+            List<MetricMonthlyData> currentDataList = (categories == null || categories.isEmpty())
+                ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth))
+                : monthlyDataMapper.findByMetricYearMonthAndCategories(id, currentYear, currentMonth, categories);
+            MetricMonthlyData current = sumCategoryData(currentDataList);
 
+            // Similarly for prev, lastYear, thisYearData, lastYearData
             int prevYear = currentMonth == 1 ? currentYear - 1 : currentYear;
             int prevMonth = currentMonth == 1 ? 12 : currentMonth - 1;
-            MetricMonthlyData prev = monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth);
-            MetricMonthlyData lastYear = monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth);
+            List<MetricMonthlyData> prevDataList = (categories == null || categories.isEmpty())
+                ? List.of(monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth))
+                : monthlyDataMapper.findByMetricYearMonthAndCategories(id, prevYear, prevMonth, categories);
+            MetricMonthlyData prev = sumCategoryData(prevDataList);
 
-            List<MetricMonthlyData> thisYearData = monthlyDataMapper.findByMetricAndYear(id, currentYear);
-            List<MetricMonthlyData> lastYearData = monthlyDataMapper.findByMetricAndYear(id, currentYear - 1);
+            List<MetricMonthlyData> lastYearList = (categories == null || categories.isEmpty())
+                ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth))
+                : monthlyDataMapper.findByMetricYearMonthAndCategories(id, currentYear - 1, currentMonth, categories);
+            MetricMonthlyData lastYear = sumCategoryData(lastYearList);
+
+            List<MetricMonthlyData> thisYearDataList = (categories == null || categories.isEmpty())
+                ? monthlyDataMapper.findByMetricAndYear(id, currentYear)
+                : monthlyDataMapper.findByMetricYearAndCategories(id, currentYear, categories);
+            List<MetricMonthlyData> lastYearDataList = (categories == null || categories.isEmpty())
+                ? monthlyDataMapper.findByMetricAndYear(id, currentYear - 1)
+                : monthlyDataMapper.findByMetricYearAndCategories(id, currentYear - 1, categories);
 
             OverviewMetricDto dto = new OverviewMetricDto();
             dto.setMetricId(id);
@@ -62,7 +79,7 @@ public class MetricService {
             dto.setMetricType(metric.getMetricType());
             dto.setBadDirection(metric.getBadDirection());
             dto.setCurrent(buildCurrentPeriodDto(current, prev, lastYear));
-            dto.setYtd(buildYtdPeriodDto(thisYearData, lastYearData, currentMonth));
+            dto.setYtd(buildYtdPeriodDto(thisYearDataList, lastYearDataList, currentMonth));
             dtos.add(dto);
         }
 
@@ -368,5 +385,31 @@ public class MetricService {
 
     private String formatPeriod(int year, int month) {
         return MONTH_NAMES.get(month - 1) + " " + year;
+    }
+
+    private MetricMonthlyData sumCategoryData(List<MetricMonthlyData> dataList) {
+        if (dataList == null || dataList.isEmpty()) {
+            return null;
+        }
+        // Filter out null values (can happen when wrapping single result)
+        List<MetricMonthlyData> filteredList = dataList.stream()
+            .filter(Objects::nonNull)
+            .toList();
+
+        if (filteredList.isEmpty()) {
+            return null;
+        }
+
+        MetricMonthlyData result = new MetricMonthlyData();
+        BigDecimal sumActual = filteredList.stream()
+            .map(d -> d.getActual() != null ? d.getActual() : BigDecimal.ZERO)
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+        BigDecimal sumGoal = filteredList.stream()
+            .map(d -> d.getJbpGoal() != null ? d.getJbpGoal() : BigDecimal.ZERO)
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        result.setActual(sumActual);
+        result.setJbpGoal(sumGoal);
+        return result;
     }
 }
