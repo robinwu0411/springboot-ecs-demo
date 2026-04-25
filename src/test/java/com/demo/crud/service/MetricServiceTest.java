@@ -310,7 +310,7 @@ class MetricServiceTest {
         when(breakdownDataMapper.findByMetricYearMonthRangeType(eq(1), eq(2025), eq(1), eq(4), eq("category")))
                 .thenReturn(categoryRows(2025, 4));
 
-        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "category", 2025, 4);
+        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "category", 2025, 4, null);
 
         assertThat(resp.getRows()).isNotEmpty();
         assertThat(resp.getRows().get(0).getIsTotal()).isTrue();
@@ -327,7 +327,7 @@ class MetricServiceTest {
         when(breakdownDataMapper.findByMetricYearMonthType(1, 2025, 4, "category")).thenReturn(rows);
         when(breakdownDataMapper.findByMetricYearMonthRangeType(anyInt(), anyInt(), anyInt(), anyInt(), anyString())).thenReturn(rows);
 
-        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "category", 2025, 4);
+        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "category", 2025, 4, null);
 
         assertThat(resp.getRows().get(0).getCurrent().getActual()).isCloseTo(12918000.0, within(1.0));
     }
@@ -345,7 +345,7 @@ class MetricServiceTest {
         when(breakdownDataMapper.findByMetricYearMonthType(1, 2025, 4, "asin")).thenReturn(List.of(asinRow));
         when(breakdownDataMapper.findByMetricYearMonthRangeType(anyInt(), anyInt(), anyInt(), anyInt(), anyString())).thenReturn(List.of(asinRow));
 
-        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "asin", 2025, 4);
+        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "asin", 2025, 4, null);
 
         assertThat(resp.getRows()).hasSizeGreaterThan(1); // All + 1 asin
         assertThat(resp.getRows().get(1).getProductTitle()).isEqualTo("AutoVision 4K Dashcam Pro");
@@ -358,10 +358,17 @@ class MetricServiceTest {
         when(breakdownDataMapper.findByMetricYearMonthType(anyInt(), anyInt(), anyInt(), anyString())).thenReturn(List.of());
         when(breakdownDataMapper.findByMetricYearMonthRangeType(anyInt(), anyInt(), anyInt(), anyInt(), anyString())).thenReturn(List.of());
 
-        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "category", 2025, 4);
+        DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(1, "category", 2025, 4, null);
 
         assertThat(resp.getPeriod()).isEqualTo("April 2025");
         assertThat(resp.getType()).isEqualTo("category");
+    }
+
+    @Test
+    @DisplayName("getDimensionBreakdown: 支持 categories 参数过滤")
+    void testGetDimensionBreakdownWithCategories() {
+        DimensionBreakdownResponse result = metricService.getDimensionBreakdown(1, "category", 2025, 4, List.of("TestCat"));
+        assertNotNull(result);
     }
 
     // ===================== helpers =====================

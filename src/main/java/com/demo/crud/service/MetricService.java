@@ -169,16 +169,31 @@ public class MetricService {
         return resp;
     }
 
-    public DimensionBreakdownResponse getDimensionBreakdown(Integer metricId, String type, Integer year, Integer month) {
+    public DimensionBreakdownResponse getDimensionBreakdown(
+            Integer metricId,
+            String type,
+            Integer year,
+            Integer month,
+            List<String> categories
+    ) {
         Metric metric = metricMapper.findById(metricId);
 
-        List<MetricBreakdownData> currentRows = breakdownDataMapper.findByMetricYearMonthType(metricId, year, month, type);
+        // Use new method with category filtering
+        List<MetricBreakdownData> currentRows = (categories == null || categories.isEmpty())
+            ? breakdownDataMapper.findByMetricYearMonthType(metricId, year, month, type)
+            : breakdownDataMapper.findByMetricYearMonthTypeAndCategories(metricId, year, month, type, categories);
 
         int prevYear = month == 1 ? year - 1 : year;
         int prevMonth = month == 1 ? 12 : month - 1;
-        List<MetricBreakdownData> prevRows = breakdownDataMapper.findByMetricYearMonthType(metricId, prevYear, prevMonth, type);
-        List<MetricBreakdownData> lyRows = breakdownDataMapper.findByMetricYearMonthType(metricId, year - 1, month, type);
-        List<MetricBreakdownData> ytdRows = breakdownDataMapper.findByMetricYearMonthRangeType(metricId, year, 1, month, type);
+        List<MetricBreakdownData> prevRows = (categories == null || categories.isEmpty())
+            ? breakdownDataMapper.findByMetricYearMonthType(metricId, prevYear, prevMonth, type)
+            : breakdownDataMapper.findByMetricYearMonthTypeAndCategories(metricId, prevYear, prevMonth, type, categories);
+        List<MetricBreakdownData> lyRows = (categories == null || categories.isEmpty())
+            ? breakdownDataMapper.findByMetricYearMonthType(metricId, year - 1, month, type)
+            : breakdownDataMapper.findByMetricYearMonthTypeAndCategories(metricId, year - 1, month, type, categories);
+        List<MetricBreakdownData> ytdRows = (categories == null || categories.isEmpty())
+            ? breakdownDataMapper.findByMetricYearMonthRangeType(metricId, year, 1, month, type)
+            : breakdownDataMapper.findByMetricYearMonthRangeTypeAndCategories(metricId, year, 1, month, type, categories); // Need to add this method
 
         double currentTotal = sumActual(currentRows);
         double prevTotal = sumActual(prevRows);

@@ -36,12 +36,13 @@ public class MetricController {
             @Parameter(description = "视图类型：trend/category/subcategory/brand/asin") @RequestParam(defaultValue = "trend") String type,
             @Parameter(description = "聚合维度，月度=monthly") @RequestParam(defaultValue = "monthly") String viewBy,
             @Parameter(description = "年份") @RequestParam(required = false) Integer year,
-            @Parameter(description = "月份") @RequestParam(required = false) Integer month) {
+            @Parameter(description = "月份") @RequestParam(required = false) Integer month,
+            @Parameter(description = "类别过滤，为空不过滤") @RequestParam(required = false) List<String> categories) {
         if ("trend".equals(type)) {
             TrendBreakdownResponse resp = metricService.getTrendBreakdown(metricId, viewBy, year, month);
             return Result.success(resp);
         } else {
-            DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(metricId, type, year, month);
+            DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(metricId, type, year, month, categories);
             return Result.success(resp);
         }
     }
