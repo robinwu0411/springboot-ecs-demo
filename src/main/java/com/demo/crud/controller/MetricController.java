@@ -5,6 +5,7 @@ import com.demo.crud.model.dto.DimensionBreakdownResponse;
 import com.demo.crud.model.dto.OverviewResponse;
 import com.demo.crud.model.dto.TrendBreakdownResponse;
 import com.demo.crud.service.MetricService;
+import java.util.Arrays;
 import java.util.List;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -21,12 +22,17 @@ public class MetricController {
     private final MetricService metricService;
 
     @GetMapping("/overview")
-    @Operation(summary = "总览页数据", description = "返回所有指标的当期、MoM、YoY、YTD数据")
+    @Operation(summary = "总览页数据", description = "返回所有指标的当期、MoM、YoY、YTD数据，支持按类别筛选")
     public Result<OverviewResponse> overview(
-            @Parameter(description = "年份，默认当年") @RequestParam(required = false) Integer year,
-            @Parameter(description = "月份，默认最新有数据月份") @RequestParam(required = false) Integer month,
-            @Parameter(description = "类别过滤，为空不过滤") @RequestParam(required = false) List<String> categories) {
-        return Result.success(metricService.getOverview(year, month, categories));
+            @Parameter(description = "年份，必填") @RequestParam(required = true) Integer year,
+            @Parameter(description = "月份，必填") @RequestParam(required = true) Integer month,
+            @Parameter(description = "类别筛选，逗号分隔") @RequestParam(required = false) String categories) {
+
+        List<String> categoryList = (categories != null && !categories.isEmpty())
+            ? Arrays.asList(categories.split(","))
+            : null;
+
+        return Result.success(metricService.getOverview(year, month, categoryList));
     }
 
     @GetMapping("/breakdown")
