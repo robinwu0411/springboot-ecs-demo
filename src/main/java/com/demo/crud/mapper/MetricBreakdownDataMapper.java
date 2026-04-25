@@ -17,4 +17,11 @@ public interface MetricBreakdownDataMapper {
             @Param("monthFrom") int monthFrom,
             @Param("monthTo") int monthTo,
             @Param("dimensionType") String dimensionType);
+
+    List<MetricBreakdownData> findByMetricYearMonthTypeAndCategories(
+            @Param("metricId") Integer metricId,
+            @Param("year") Integer year,
+            @Param("month") Integer month,
+            @Param("dimensionType") String dimensionType,
+            @Param("categories") List<String> categories);
 }

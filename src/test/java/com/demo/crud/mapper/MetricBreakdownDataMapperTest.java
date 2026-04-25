@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -91,5 +92,13 @@ class MetricBreakdownDataMapperTest {
         MetricBreakdownData data = new MetricBreakdownData();
         data.setCategory("Test Category");
         assertThat(data.getCategory()).isEqualTo("Test Category");
+    }
+
+    @Test
+    @DisplayName("findByMetricYearMonthTypeAndCategories: category filtering")
+    void findByMetricYearMonthTypeAndCategories() {
+        List<MetricBreakdownData> result = mapper.findByMetricYearMonthTypeAndCategories(1, 2025, 4, "category", List.of("Electronics"));
+        assertNotNull(result);
+        assertThat(result).hasSize(3); // Electronics category appears 3 times in test data
     }
 }

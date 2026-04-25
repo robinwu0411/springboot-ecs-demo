@@ -31,7 +31,8 @@ CREATE TABLE metric_breakdown_data (
     dimension_value VARCHAR(200) NOT NULL,
     product_title   VARCHAR(500),
     actual          DECIMAL(18,2),
-    jbp_goal        DECIMAL(18,2)
+    jbp_goal        DECIMAL(18,2),
+    category        VARCHAR(100)
 );
 
 -- Seed: 5 metrics
@@ -79,29 +80,29 @@ INSERT INTO metric_monthly_data (metric_id, `year`, `month`, actual, jbp_goal, c
 (3, 2025, 4, 1180000, 1240000, 'Category2');
 
 -- Seed: breakdown category metric_id=1, 2025-04
-INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
-(1, 2025, 4, 'category', '1080 Car Navigation', NULL, 3229500, 2560000),
-(1, 2025, 4, 'category', '1080 Car Recording',  NULL, 3229500, 2560000),
-(1, 2025, 4, 'category', '1200 Car Audio',       NULL, 3229500, 2560000),
-(1, 2025, 4, 'category', '1200 Dashboard Cam',   NULL, 3229500, 2560000);
+INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal, category) VALUES
+(1, 2025, 4, 'category', '1080 Car Navigation', NULL, 3229500, 2560000, 'Electronics'),
+(1, 2025, 4, 'category', '1080 Car Recording',  NULL, 3229500, 2560000, 'Electronics'),
+(1, 2025, 4, 'category', '1200 Car Audio',       NULL, 3229500, 2560000, 'Accessories'),
+(1, 2025, 4, 'category', '1200 Dashboard Cam',   NULL, 3229500, 2560000, 'Electronics');
 
 -- Seed: breakdown category metric_id=1, 2025-03 (prev month for MoM CtC)
-INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
-(1, 2025, 3, 'category', '1080 Car Navigation', NULL, 3250000, 3125000),
-(1, 2025, 3, 'category', '1080 Car Recording',  NULL, 3250000, 3125000),
-(1, 2025, 3, 'category', '1200 Car Audio',       NULL, 3250000, 3125000),
-(1, 2025, 3, 'category', '1200 Dashboard Cam',   NULL, 3250000, 3125000);
+INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal, category) VALUES
+(1, 2025, 3, 'category', '1080 Car Navigation', NULL, 3250000, 3125000, 'Electronics'),
+(1, 2025, 3, 'category', '1080 Car Recording',  NULL, 3250000, 3125000, 'Electronics'),
+(1, 2025, 3, 'category', '1200 Car Audio',       NULL, 3250000, 3125000, 'Accessories'),
+(1, 2025, 3, 'category', '1200 Dashboard Cam',   NULL, 3250000, 3125000, 'Electronics');
 
 -- Seed: breakdown category metric_id=1, 2024-04 (last year for YoY CtC)
-INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
-(1, 2024, 4, 'category', '1080 Car Navigation', NULL, 2875000, 2875000),
-(1, 2024, 4, 'category', '1080 Car Recording',  NULL, 2875000, 2875000),
-(1, 2024, 4, 'category', '1200 Car Audio',       NULL, 2875000, 2875000),
-(1, 2024, 4, 'category', '1200 Dashboard Cam',   NULL, 2875000, 2875000);
+INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal, category) VALUES
+(1, 2024, 4, 'category', '1080 Car Navigation', NULL, 2875000, 2875000, 'Electronics'),
+(1, 2024, 4, 'category', '1080 Car Recording',  NULL, 2875000, 2875000, 'Electronics'),
+(1, 2024, 4, 'category', '1200 Car Audio',       NULL, 2875000, 2875000, 'Accessories'),
+(1, 2024, 4, 'category', '1200 Dashboard Cam',   NULL, 2875000, 2875000, 'Electronics');
 
 -- Seed: breakdown asin metric_id=1, 2025-04
-INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
-(1, 2025, 4, 'asin', 'B08XYZ1234', 'AutoVision 4K Dashcam Pro',   3229500, 2560000),
-(1, 2025, 4, 'asin', 'B08XYZ5678', 'DriveGuard Night Vision Cam', 3229500, 2560000),
-(1, 2025, 4, 'asin', 'B09ABC1234', 'SafeRide 360 Camera',          3229500, 2560000),
-(1, 2025, 4, 'asin', 'B09ABC5678', 'RoadEye Dual Lens Recorder',   3229500, 2560000);
+INSERT INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal, category) VALUES
+(1, 2025, 4, 'asin', 'B08XYZ1234', 'AutoVision 4K Dashcam Pro',   3229500, 2560000, 'Electronics'),
+(1, 2025, 4, 'asin', 'B08XYZ5678', 'DriveGuard Night Vision Cam', 3229500, 2560000, 'Electronics'),
+(1, 2025, 4, 'asin', 'B09ABC1234', 'SafeRide 360 Camera',          3229500, 2560000, 'Accessories'),
+(1, 2025, 4, 'asin', 'B09ABC5678', 'RoadEye Dual Lens Recorder',   3229500, 2560000, 'Electronics');
