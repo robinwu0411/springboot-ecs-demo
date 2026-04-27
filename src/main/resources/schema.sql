@@ -22,9 +22,9 @@ CREATE TABLE IF NOT EXISTS metrics (
     id            INT PRIMARY KEY AUTO_INCREMENT,
     metric_key    VARCHAR(50)  NOT NULL UNIQUE,
     metric_name   VARCHAR(100) NOT NULL,
-    metric_type   VARCHAR(20)  NOT NULL,
+    metric_type   ENUM('financial', 'percentage', 'integer') NOT NULL,
     sort_order    INT NOT NULL DEFAULT 0,
-    bad_direction VARCHAR(10)  NOT NULL DEFAULT 'down'
+    bad_direction ENUM('up', 'down') NOT NULL DEFAULT 'down'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS metric_monthly_data (
@@ -152,3 +152,91 @@ INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_
 (1, 2025, 4, 'asin', 'B08XYZ5678', 'DriveGuard Night Vision Cam', 3229500, 2560000),
 (1, 2025, 4, 'asin', 'B09ABC1234', 'SafeRide 360 Camera',          3229500, 2560000),
 (1, 2025, 4, 'asin', 'B09ABC5678', 'RoadEye Dual Lens Recorder',   3229500, 2560000);
+
+-- Seed: Breakdown data for Revenue 2025-04 subcategory
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(1, 2025, 4, 'subcategory', '1080P Dashcams', NULL, 1800000, 1500000),
+(1, 2025, 4, 'subcategory', '720P Dashcams',  NULL, 900000,  800000),
+(1, 2025, 4, 'subcategory', 'Dual Lens',      NULL, 529500,  260000);
+
+-- Seed: Breakdown data for Revenue 2025-04 brand
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(1, 2025, 4, 'brand', 'AutoVision', NULL, 1000000, 800000),
+(1, 2025, 4, 'brand', 'DriveGuard', NULL, 900000,  900000),
+(1, 2025, 4, 'brand', 'SafeRide',   NULL, 1329500, 860000);
+
+-- Seed: Breakdown data for Net PPM (metric_id=2) 2025-04 category
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(2, 2025, 4, 'category', '1080 Car Navigation', NULL, 245000, 240000),
+(2, 2025, 4, 'category', '1080 Car Recording',  NULL, 245000, 240000),
+(2, 2025, 4, 'category', '1200 Car Audio',       NULL, 245000, 240000),
+(2, 2025, 4, 'category', '1200 Dashboard Cam',   NULL, 245000, 240000);
+
+-- Seed: Breakdown data for Net PPM 2025-04 subcategory
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(2, 2025, 4, 'subcategory', '1080P Dashcams', NULL, 140000, 140000),
+(2, 2025, 4, 'subcategory', '720P Dashcams',  NULL, 70000,  70000),
+(2, 2025, 4, 'subcategory', 'Dual Lens',      NULL, 35000,  30000);
+
+-- Seed: Breakdown data for Net PPM 2025-04 brand
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(2, 2025, 4, 'brand', 'AutoVision', NULL, 80000,  80000),
+(2, 2025, 4, 'brand', 'DriveGuard', NULL, 90000,  90000),
+(2, 2025, 4, 'brand', 'SafeRide',   NULL, 75000,  70000);
+
+-- Seed: Breakdown data for Deal OPS (metric_id=3) 2025-04 category
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(3, 2025, 4, 'category', '1080 Car Navigation', NULL, 420000, 450000),
+(3, 2025, 4, 'category', '1080 Car Recording',  NULL, 420000, 450000),
+(3, 2025, 4, 'category', '1200 Car Audio',       NULL, 420000, 450000),
+(3, 2025, 4, 'category', '1200 Dashboard Cam',   NULL, 420000, 450000);
+
+-- Seed: Breakdown data for Deal OPS 2025-04 subcategory
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(3, 2025, 4, 'subcategory', '1080P Dashcams', NULL, 250000, 270000),
+(3, 2025, 4, 'subcategory', '720P Dashcams',  NULL, 120000, 120000),
+(3, 2025, 4, 'subcategory', 'Dual Lens',      NULL, 50000,  60000);
+
+-- Seed: Breakdown data for Deal OPS 2025-04 brand
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(3, 2025, 4, 'brand', 'AutoVision', NULL, 150000, 160000),
+(3, 2025, 4, 'brand', 'DriveGuard', NULL, 170000, 170000),
+(3, 2025, 4, 'brand', 'SafeRide',   NULL, 100000, 120000);
+
+-- Seed: Breakdown data for New Customer Count (metric_id=4) 2025-04 category
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(4, 2025, 4, 'category', '1080 Car Navigation', NULL, 1100, 1200),
+(4, 2025, 4, 'category', '1080 Car Recording',  NULL, 1100, 1200),
+(4, 2025, 4, 'category', '1200 Car Audio',       NULL, 1100, 1200),
+(4, 2025, 4, 'category', '1200 Dashboard Cam',   NULL, 1100, 1200);
+
+-- Seed: Breakdown data for New Customer Count 2025-04 subcategory
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(4, 2025, 4, 'subcategory', '1080P Dashcams', NULL, 600,  650),
+(4, 2025, 4, 'subcategory', '720P Dashcams',  NULL, 300,  300),
+(4, 2025, 4, 'subcategory', 'Dual Lens',      NULL, 200,  250);
+
+-- Seed: Breakdown data for New Customer Count 2025-04 brand
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(4, 2025, 4, 'brand', 'AutoVision', NULL, 300,  350),
+(4, 2025, 4, 'brand', 'DriveGuard', NULL, 400,  400),
+(4, 2025, 4, 'brand', 'SafeRide',   NULL, 400,  450);
+
+-- Seed: Breakdown data for Net Ordered GMS (metric_id=5) 2025-04 category
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(5, 2025, 4, 'category', '1080 Car Navigation', NULL, 2550000, 2400000),
+(5, 2025, 4, 'category', '1080 Car Recording',  NULL, 2550000, 2400000),
+(5, 2025, 4, 'category', '1200 Car Audio',       NULL, 2550000, 2400000),
+(5, 2025, 4, 'category', '1200 Dashboard Cam',   NULL, 2550000, 2400000);
+
+-- Seed: Breakdown data for Net Ordered GMS 2025-04 subcategory
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(5, 2025, 4, 'subcategory', '1080P Dashcams', NULL, 1500000, 1400000),
+(5, 2025, 4, 'subcategory', '720P Dashcams',  NULL, 600000,  600000),
+(5, 2025, 4, 'subcategory', 'Dual Lens',      NULL, 450000,  400000);
+
+-- Seed: Breakdown data for Net Ordered GMS 2025-04 brand
+INSERT IGNORE INTO metric_breakdown_data (metric_id, `year`, `month`, dimension_type, dimension_value, product_title, actual, jbp_goal) VALUES
+(5, 2025, 4, 'brand', 'AutoVision', NULL, 800000,  800000),
+(5, 2025, 4, 'brand', 'DriveGuard', NULL, 900000,  900000),
+(5, 2025, 4, 'brand', 'SafeRide',   NULL, 850000,  700000);

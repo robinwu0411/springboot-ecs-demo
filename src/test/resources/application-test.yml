@@ -13,3 +13,7 @@ mybatis:
   type-aliases-package: com.demo.crud.model
   configuration:
     map-underscore-to-camel-case: true
+
+mockito:
+  mockito-inline:
+    enabled: false

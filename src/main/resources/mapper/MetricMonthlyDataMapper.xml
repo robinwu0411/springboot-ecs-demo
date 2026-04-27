@@ -23,11 +23,11 @@
     </select>
 
     <select id="findByMetricYearMonthAndCategories" resultType="MetricMonthlyData">
-        SELECT id, metric_id, `year`, `month`, actual, jbp_goal, category
+        SELECT id, metric_id, `year`, `month`, actual, jbp_goal
         FROM metric_monthly_data
         WHERE metric_id = #{metricId} AND `year` = #{year} AND `month` = #{month}
         <if test="categories != null and categories.size() > 0">
-            AND category IN
+            AND metric_id IN
             <foreach collection="categories" item="cat" open="(" separator="," close=")">
                 #{cat}
             </foreach>
@@ -35,11 +35,11 @@
     </select>
 
   <select id="findByMetricYearAndCategories" resultType="MetricMonthlyData">
-        SELECT id, metric_id, `year`, `month`, actual, jbp_goal, category
+        SELECT id, metric_id, `year`, `month`, actual, jbp_goal
         FROM metric_monthly_data
         WHERE metric_id = #{metricId} AND `year` = #{year}
         <if test="categories != null and categories.size() > 0">
-            AND category IN
+            AND metric_id IN
             <foreach collection="categories" item="cat" open="(" separator="," close=")">
                 #{cat}
             </foreach>

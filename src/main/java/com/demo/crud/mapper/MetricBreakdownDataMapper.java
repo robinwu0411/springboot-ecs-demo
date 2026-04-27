@@ -32,4 +32,15 @@ public interface MetricBreakdownDataMapper {
             @Param("endMonth") Integer endMonth,
             @Param("dimensionType") String dimensionType,
             @Param("categories") List<String> categories);
+
+    List<MetricBreakdownData> findByMetricAndYear(
+            @Param("metricId") int metricId,
+            @Param("year") int year,
+            @Param("dimensionType") String dimensionType);
+
+    List<MetricBreakdownData> findByMetricYearAndCategories(
+            @Param("metricId") int metricId,
+            @Param("year") int year,
+            @Param("dimensionType") String dimensionType,
+            @Param("categories") List<String> categories);
 }

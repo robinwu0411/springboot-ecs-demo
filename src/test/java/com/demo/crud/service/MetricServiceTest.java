@@ -211,10 +211,116 @@ class MetricServiceTest {
     }
 
     @Test
-    @DisplayName("getOverview: 支持 categories 参数过滤")
-    void testGetOverviewWithCategories() {
-        OverviewResponse result = metricService.getOverview(2025, 4, List.of("TestCat"));
-        assertNotNull(result);
+    @DisplayName("getOverview: 无 categories 参数时查询所有类别")
+    void getOverview_withoutCategories_queriesAllCategories() {
+        when(metricMapper.findAll()).thenReturn(List.of(revenue));
+        when(breakdownDataMapper.findByMetricYearMonthType(anyInt(), eq(2025), eq(4), eq("category")))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearMonthType(anyInt(), eq(2025), eq(3), eq("category")))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearMonthType(anyInt(), eq(2024), eq(4), eq("category")))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricAndYear(anyInt(), eq(2025), eq("category")))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricAndYear(anyInt(), eq(2024), eq("category")))
+            .thenReturn(List.of());
+
+        metricService.getOverview(2025, 4, null);
+
+        // Verify it calls the method WITHOUT categories parameter
+        verify(breakdownDataMapper, times(4)).findByMetricYearMonthType(
+            anyInt(), eq(2025), eq(4), eq("category"));
+    }
+
+    @Test
+    @DisplayName("getOverview: 空 categories 列表时查询所有类别")
+    void getOverview_withEmptyCategories_queriesAllCategories() {
+        when(metricMapper.findAll()).thenReturn(List.of(revenue));
+        when(breakdownDataMapper.findByMetricYearMonthType(anyInt(), eq(2025), eq(4), eq("category")))
+            .thenReturn(List.of());
+
+        metricService.getOverview(2025, 4, List.of());
+
+        // Should behave same as null
+        verify(breakdownDataMapper, times(4)).findByMetricYearMonthType(
+            anyInt(), eq(2025), eq(4), eq("category"));
+    }
+
+    @Test
+    @DisplayName("getOverview: 有 categories 参数时查询指定类别")
+    void getOverview_withCategories_queriesSpecificCategories() {
+        List<String> categories = List.of("1080 Car Navigation", "1080 Car Recording");
+        when(metricMapper.findAll()).thenReturn(List.of(revenue));
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(anyInt(), eq(2025), eq(4), eq("category"), eq(categories)))
+            .thenReturn(List.of());
+
+        metricService.getOverview(2025, 4, categories);
+
+        // Verify it calls the method WITH categories parameter
+        verify(breakdownDataMapper, times(4)).findByMetricYearMonthTypeAndCategories(
+            anyInt(), eq(2025), eq(4), eq("category"), eq(categories));
+    }
+
+    @Test
+    @DisplayName("getOverview: 单个类别时正确聚合")
+    void getOverview_withSingleCategory_correctAggregation() {
+        List<String> singleCat = List.of("1080 Car Navigation");
+        List<MetricBreakdownData> navData = List.of(
+            breakdown(1, 2025, 4, "category", "1080 Car Navigation", null,
+                      new BigDecimal("3000000"), new BigDecimal("2500000"))
+        );
+
+        when(metricMapper.findAll()).thenReturn(List.of(revenue));
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(1, 2025, 4, "category", singleCat))
+            .thenReturn(navData);
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(1, 2025, 3, "category", singleCat))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(1, 2024, 4, "category", singleCat))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearAndCategories(1, 2025, "category", singleCat))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearAndCategories(1, 2024, "category", singleCat))
+            .thenReturn(List.of());
+
+        OverviewResponse resp = metricService.getOverview(2025, 4, singleCat);
+
+        // Should return single metric with the category's data
+        assertThat(resp.getMetrics()).hasSize(1);
+        assertThat(resp.getMetrics().get(0).getCurrent().getActual()).isCloseTo(3000000.0, within(1.0));
+    }
+
+    @Test
+    @DisplayName("getOverview: 多个类别时正确聚合")
+    void getOverview_withMultipleCategories_correctAggregation() {
+        List<String> categories = List.of("1080 Car Navigation", "1080 Car Recording");
+        List<MetricBreakdownData> navData = List.of(
+            breakdown(1, 2025, 4, "category", "1080 Car Navigation", null,
+                      new BigDecimal("3000000"), new BigDecimal("2500000"))
+        );
+        List<MetricBreakdownData> recData = List.of(
+            breakdown(1, 2025, 4, "category", "1080 Car Recording", null,
+                      new BigDecimal("2000000"), new BigDecimal("1800000"))
+        );
+
+        when(metricMapper.findAll()).thenReturn(List.of(revenue));
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(1, 2025, 4, "category", categories))
+            .thenReturn(List.of(navData.get(0), recData.get(0)));
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(1, 2025, 3, "category", categories))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearMonthTypeAndCategories(1, 2024, 4, "category", categories))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearAndCategories(1, 2025, "category", categories))
+            .thenReturn(List.of());
+        when(breakdownDataMapper.findByMetricYearAndCategories(1, 2024, "category", categories))
+            .thenReturn(List.of());
+
+        OverviewResponse resp = metricService.getOverview(2025, 4, categories);
+
+        // Should sum the categories: 3M + 2M = 5M
+        assertThat(resp.getMetrics()).hasSize(1);
+        assertThat(resp.getMetrics().get(0).getCurrent().getActual()).isCloseTo(5000000.0, within(1.0));
+        // Goals should also be summed: 2.5M + 1.8M = 4.3M
+        assertThat(resp.getMetrics().get(0).getCurrent().getJbpGoal()).isCloseTo(4300000.0, within(1.0));
     }
 
     // ===================== getTrendBreakdown =====================

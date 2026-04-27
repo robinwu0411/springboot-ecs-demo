@@ -40,4 +40,10 @@ public class GlobalExceptionHandler {
         log.error("系统异常 [{} {}]", request.getMethod(), request.getRequestURI(), e);
         return Result.error(500, "系统内部错误");
     }
+
+    @ExceptionHandler(org.springframework.web.bind.MissingServletRequestParameterException.class)
+    public Result<Void> handleMissingParameter(org.springframework.web.bind.MissingServletRequestParameterException e) {
+        log.warn("缺少必需参数: {}", e.getMessage());
+        return Result.error(400, "缺少必需参数: " + e.getParameterName());
+    }
 }

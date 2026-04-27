@@ -39,16 +39,21 @@ public class MetricController {
     @Operation(summary = "指标详情页数据")
     public Result<?> breakdown(
             @Parameter(description = "指标ID", required = true) @RequestParam Integer metricId,
-            @Parameter(description = "视图类型：trend/category/subcategory/brand/asin") @RequestParam(defaultValue = "trend") String type,
-            @Parameter(description = "聚合维度，月度=monthly") @RequestParam(defaultValue = "monthly") String viewBy,
-            @Parameter(description = "年份") @RequestParam(required = false) Integer year,
-            @Parameter(description = "月份") @RequestParam(required = false) Integer month,
-            @Parameter(description = "类别过滤，为空不过滤") @RequestParam(required = false) List<String> categories) {
+            @Parameter(description = "视图类型") @RequestParam(defaultValue = "trend") String type,
+            @Parameter(description = "年份，必填") @RequestParam(required = true) Integer year,
+            @Parameter(description = "月份，必填") @RequestParam(required = true) Integer month,
+            @Parameter(description = "聚合维度") @RequestParam(defaultValue = "monthly") String viewBy,
+            @Parameter(description = "类别筛选，逗号分隔") @RequestParam(required = false) String categories) {
+
+        List<String> categoryList = (categories != null && !categories.isEmpty())
+            ? Arrays.asList(categories.split(","))
+            : null;
+
         if ("trend".equals(type)) {
             TrendBreakdownResponse resp = metricService.getTrendBreakdown(metricId, viewBy, year, month);
             return Result.success(resp);
         } else {
-            DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(metricId, type, year, month, categories);
+            DimensionBreakdownResponse resp = metricService.getDimensionBreakdown(metricId, type, year, month, categoryList);
             return Result.success(resp);
         }
     }

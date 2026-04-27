@@ -26,14 +26,14 @@
 
     <select id="findByMetricYearMonthTypeAndCategories" resultType="MetricBreakdownData">
         SELECT id, metric_id, `year`, `month`, dimension_type, dimension_value,
-               product_title, actual, jbp_goal, category
+               product_title, actual, jbp_goal
         FROM metric_breakdown_data
         WHERE metric_id = #{metricId}
           AND `year` = #{year}
           AND `month` = #{month}
           AND dimension_type = #{dimensionType}
         <if test="categories != null and categories.size() > 0">
-            AND category IN
+            AND dimension_value IN
             <foreach collection="categories" item="cat" open="(" separator="," close=")">
                 #{cat}
             </foreach>
@@ -42,7 +42,7 @@
 
   <select id="findByMetricYearMonthRangeTypeAndCategories" resultType="MetricBreakdownData">
         SELECT id, metric_id, `year`, `month`, dimension_type, dimension_value,
-               product_title, actual, jbp_goal, category
+               product_title, actual, jbp_goal
         FROM metric_breakdown_data
         WHERE metric_id = #{metricId}
           AND `year` = #{year}
@@ -50,11 +50,35 @@
           AND `month` &lt;= #{endMonth}
           AND dimension_type = #{dimensionType}
         <if test="categories != null and categories.size() > 0">
-            AND category IN
+            AND dimension_value IN
             <foreach collection="categories" item="cat" open="(" separator="," close=")">
                 #{cat}
             </foreach>
         </if>
     </select>
+
+<select id="findByMetricAndYear" resultType="MetricBreakdownData">
+        SELECT id, metric_id, `year`, `month`, dimension_type, dimension_value,
+               product_title, actual, jbp_goal
+        FROM metric_breakdown_data
+        WHERE metric_id = #{metricId}
+          AND `year` = #{year}
+          AND dimension_type = #{dimensionType}
+  </select>
+
+  <select id="findByMetricYearAndCategories" resultType="MetricBreakdownData">
+        SELECT id, metric_id, `year`, `month`, dimension_type, dimension_value,
+               product_title, actual, jbp_goal
+        FROM metric_breakdown_data
+        WHERE metric_id = #{metricId}
+          AND `year` = #{year}
+          AND dimension_type = #{dimensionType}
+        <if test="categories != null and categories.size() > 0">
+            AND dimension_value IN
+            <foreach collection="categories" item="cat" open="(" separator="," close=")">
+                #{cat}
+            </foreach>
+        </if>
+  </select>
 
 </mapper>

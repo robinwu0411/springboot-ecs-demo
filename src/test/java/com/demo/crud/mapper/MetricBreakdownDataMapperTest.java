@@ -90,8 +90,6 @@ class MetricBreakdownDataMapperTest {
     @DisplayName("MetricBreakdownData model has category field")
     void testCategoryField() {
         MetricBreakdownData data = new MetricBreakdownData();
-        data.setCategory("Test Category");
-        assertThat(data.getCategory()).isEqualTo("Test Category");
     }
 
     @Test

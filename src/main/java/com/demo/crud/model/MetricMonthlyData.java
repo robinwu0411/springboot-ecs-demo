@@ -11,5 +11,4 @@ public class MetricMonthlyData {
     private Integer month;
     private BigDecimal actual;
     private BigDecimal jbpGoal;
-    private String category;
 }

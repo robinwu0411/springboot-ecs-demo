@@ -47,36 +47,34 @@ public class MetricService {
             int id = metric.getId();
 
             // Use new method that supports category filtering
-            List<MetricMonthlyData> currentDataList = (categories == null || categories.isEmpty())
-                ? (monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth) != null
-                    ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear, currentMonth))
-                    : List.of())
-                : monthlyDataMapper.findByMetricYearMonthAndCategories(id, currentYear, currentMonth, categories);
-            MetricMonthlyData current = sumCategoryData(currentDataList);
+            List<MetricBreakdownData> currentDataList = (categories == null || categories.isEmpty())
+                ? breakdownDataMapper.findByMetricYearMonthType(id, currentYear, currentMonth, "category")
+                : breakdownDataMapper.findByMetricYearMonthTypeAndCategories(id, currentYear, currentMonth, "category", categories);
+            MetricMonthlyData current = sumBreakdownData(currentDataList);
 
             // Similarly for prev, lastYear, thisYearData, lastYearData
             int prevYear = currentMonth == 1 ? currentYear - 1 : currentYear;
             int prevMonth = currentMonth == 1 ? 12 : currentMonth - 1;
-            List<MetricMonthlyData> prevDataList = (categories == null || categories.isEmpty())
-                ? (monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth) != null
-                    ? List.of(monthlyDataMapper.findByMetricYearMonth(id, prevYear, prevMonth))
-                    : List.of())
-                : monthlyDataMapper.findByMetricYearMonthAndCategories(id, prevYear, prevMonth, categories);
-            MetricMonthlyData prev = sumCategoryData(prevDataList);
+            List<MetricBreakdownData> prevDataList = (categories == null || categories.isEmpty())
+                ? breakdownDataMapper.findByMetricYearMonthType(id, prevYear, prevMonth, "category")
+                : breakdownDataMapper.findByMetricYearMonthTypeAndCategories(id, prevYear, prevMonth, "category", categories);
+            MetricMonthlyData prev = sumBreakdownData(prevDataList);
 
-            List<MetricMonthlyData> lastYearList = (categories == null || categories.isEmpty())
-                ? (monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth) != null
-                    ? List.of(monthlyDataMapper.findByMetricYearMonth(id, currentYear - 1, currentMonth))
-                    : List.of())
-                : monthlyDataMapper.findByMetricYearMonthAndCategories(id, currentYear - 1, currentMonth, categories);
-            MetricMonthlyData lastYear = sumCategoryData(lastYearList);
+            List<MetricBreakdownData> lastYearList = (categories == null || categories.isEmpty())
+                ? breakdownDataMapper.findByMetricYearMonthType(id, currentYear - 1, currentMonth, "category")
+                : breakdownDataMapper.findByMetricYearMonthTypeAndCategories(id, currentYear - 1, currentMonth, "category", categories);
+            MetricMonthlyData lastYear = sumBreakdownData(lastYearList);
 
-            List<MetricMonthlyData> thisYearDataList = (categories == null || categories.isEmpty())
-                ? monthlyDataMapper.findByMetricAndYear(id, currentYear)
-                : monthlyDataMapper.findByMetricYearAndCategories(id, currentYear, categories);
-            List<MetricMonthlyData> lastYearDataList = (categories == null || categories.isEmpty())
-                ? monthlyDataMapper.findByMetricAndYear(id, currentYear - 1)
-                : monthlyDataMapper.findByMetricYearAndCategories(id, currentYear - 1, categories);
+            List<MetricBreakdownData> thisYearDataList = (categories == null || categories.isEmpty())
+                ? breakdownDataMapper.findByMetricAndYear(id, currentYear, "category")
+                : breakdownDataMapper.findByMetricYearAndCategories(id, currentYear, "category", categories);
+            List<MetricBreakdownData> lastYearDataList = (categories == null || categories.isEmpty())
+                ? breakdownDataMapper.findByMetricAndYear(id, currentYear - 1, "category")
+                : breakdownDataMapper.findByMetricYearAndCategories(id, currentYear - 1, "category", categories);
+
+            // Convert breakdown data to monthly data for YTD calculation
+            List<MetricMonthlyData> thisYearMonthlyData = convertBreakdownToMonthly(thisYearDataList);
+            List<MetricMonthlyData> lastYearMonthlyData = convertBreakdownToMonthly(lastYearDataList);
 
             OverviewMetricDto dto = new OverviewMetricDto();
             dto.setMetricId(id);
@@ -85,7 +83,7 @@ public class MetricService {
             dto.setMetricType(metric.getMetricType());
             dto.setBadDirection(metric.getBadDirection());
             dto.setCurrent(buildCurrentPeriodDto(current, prev, lastYear));
-            dto.setYtd(buildYtdPeriodDto(thisYearDataList, lastYearDataList, currentMonth));
+            dto.setYtd(buildYtdPeriodDto(thisYearMonthlyData, lastYearMonthlyData, currentMonth));
             dtos.add(dto);
         }
 
@@ -432,5 +430,66 @@ public class MetricService {
         result.setActual(sumActual);
         result.setJbpGoal(sumGoal);
         return result;
+    }
+
+    private MetricMonthlyData sumBreakdownData(List<MetricBreakdownData> dataList) {
+        if (dataList == null || dataList.isEmpty()) {
+            return null;
+        }
+        // Filter out null values (can happen when wrapping single result)
+        List<MetricBreakdownData> filteredList = dataList.stream()
+            .filter(Objects::nonNull)
+            .toList();
+
+        if (filteredList.isEmpty()) {
+            return null;
+        }
+
+        MetricMonthlyData result = new MetricMonthlyData();
+        BigDecimal sumActual = filteredList.stream()
+            .map(d -> d.getActual() != null ? d.getActual() : BigDecimal.ZERO)
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+        BigDecimal sumGoal = filteredList.stream()
+            .map(d -> d.getJbpGoal() != null ? d.getJbpGoal() : BigDecimal.ZERO)
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        result.setActual(sumActual);
+        result.setJbpGoal(sumGoal);
+        return result;
+    }
+
+    private List<MetricMonthlyData> convertBreakdownToMonthly(List<MetricBreakdownData> breakdownDataList) {
+        if (breakdownDataList == null || breakdownDataList.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        // Group by month and sum the data
+        Map<Integer, MetricMonthlyData> monthlyDataMap = breakdownDataList.stream()
+            .collect(Collectors.toMap(
+                MetricBreakdownData::getMonth,
+                breakdown -> {
+                    MetricMonthlyData result = new MetricMonthlyData();
+                    BigDecimal actual = breakdown.getActual() != null ? breakdown.getActual() : BigDecimal.ZERO;
+                    BigDecimal goal = breakdown.getJbpGoal() != null ? breakdown.getJbpGoal() : BigDecimal.ZERO;
+                    result.setActual(actual);
+                    result.setJbpGoal(goal);
+                    result.setMonth(breakdown.getMonth());
+                    return result;
+                },
+                (existing, replacement) -> {
+                    MetricMonthlyData result = new MetricMonthlyData();
+                    BigDecimal existingActual = existing.getActual() != null ? existing.getActual() : BigDecimal.ZERO;
+                    BigDecimal replacementActual = replacement.getActual() != null ? replacement.getActual() : BigDecimal.ZERO;
+                    BigDecimal existingGoal = existing.getJbpGoal() != null ? existing.getJbpGoal() : BigDecimal.ZERO;
+                    BigDecimal replacementGoal = replacement.getJbpGoal() != null ? replacement.getJbpGoal() : BigDecimal.ZERO;
+
+                    result.setActual(existingActual.add(replacementActual));
+                    result.setJbpGoal(existingGoal.add(replacementGoal));
+                    result.setMonth(existing.getMonth());
+                    return result;
+                }
+            ));
+
+        return new ArrayList<>(monthlyDataMap.values());
     }
 }

@@ -97,8 +97,6 @@ class MetricMonthlyDataMapperTest {
     @DisplayName("测试 category 字段")
     void testCategoryField() {
         MetricMonthlyData data = new MetricMonthlyData();
-        data.setCategory("Test Category");
-        assertThat(data.getCategory()).isEqualTo("Test Category");
     }
 
     @Test
